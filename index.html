@@ -89,8 +89,15 @@
   .card .stripe{position:absolute;top:0;left:0;width:4px;height:100%;z-index:3}
 
   /* FIGHTER PROFILE */
-  .fp-back{display:inline-flex;gap:8px;align-items:center;color:var(--muted);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-family:'Oswald',sans-serif;margin-bottom:28px;cursor:pointer}
+  .fp-back-bar{padding:16px 0 12px;margin-bottom:16px}
+  .fp-back{display:inline-flex;gap:8px;align-items:center;color:var(--muted);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-family:'Oswald',sans-serif;cursor:pointer}
   .fp-back:hover{color:var(--gold)}
+  /* Fixed floating back button — appears on scroll */
+  .fp-float{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,11,8,.95);backdrop-filter:blur(8px);padding:12px 24px;border-bottom:1px solid var(--line);box-shadow:0 4px 16px rgba(0,0,0,.4);transform:translateY(-100%);transition:transform .25s ease;display:none}
+  .fp-float.visible{transform:translateY(0)}
+  .fp-float .fp-float-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+  .fp-float .fp-back{font-size:12px}
+  .fp-float .fp-float-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em}
   .fp{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:48px;align-items:start}
   .fp-img{aspect-ratio:3/4;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#1a1c16,#0e110d);position:relative}
   .fp-img img{width:100%;height:100%;object-fit:cover;object-position:top center}
@@ -329,6 +336,13 @@
 
 <main id="app"></main>
 
+<div class="fp-float" id="fp-float">
+  <div class="fp-float-inner">
+    <span class="fp-back" onclick="go('roster')">← Back to Roster</span>
+    <span class="fp-float-name" id="fp-float-name"></span>
+  </div>
+</div>
+
 <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
   <figure class="lightbox-figure" onclick="event.stopPropagation()">
@@ -454,7 +468,7 @@
         <div class="flag">${flagHTML(ft.nationality)} ${ft.nationality}</div>
         <div class="nm">${ft.name}</div>
         <div class="al">“${ft.alias}”</div>
-        <div class="meta"><span>${ft.baseStyle}</span><span><b>${recStr(getRec(ft.id))}</b></span></div>
+        <div class="meta"><span>${ft.baseStyle}</span></div>
       </div></div>`;
   }
 
@@ -469,18 +483,13 @@
   function fighter(id){
     const ft=f(id); if(!ft) return roster();
     return `<section><div class="wrap">
-      <span class="fp-back" onclick="go('roster')">← Back to roster</span>
+      <div class="fp-back-bar"><span class="fp-back" onclick="go('roster')">← Back to roster</span></div>
       <div class="fp">
         <div class="fp-img">${imgOrPlaceholder(ft)}</div>
         <div>
           <div class="fp-flag">${flagHTML(ft.nationality)} ${ft.nationality} — ${ft.hometown}</div>
           <h1>${ft.name}</h1>
           <div class="alias">“${ft.alias}”</div>
-          <div class="rec">
-            <div class="r"><div class="n">${getRec(ft.id).w}</div><div class="l">Wins</div></div>
-            <div class="r"><div class="n">${getRec(ft.id).l}</div><div class="l">Losses</div></div>
-            <div class="r"><div class="n">${getRec(ft.id).ko}</div><div class="l">Knockouts</div></div>
-          </div>
           <div class="tags">
             <span class="tag">Age <b>${ft.stats.age}</b></span>
             <span class="tag">Discipline <b>${ft.baseStyle}</b></span>
@@ -580,10 +589,10 @@
   function matchupCard(a,b,tag){
     return `<div class="mu-card">
       <div class="mu-side"><div class="nm">${a.name}</div><div class="al">“${a.alias}”</div>
-        <div class="rc">${flagHTML(a.nationality)} ${recStr(getRec(a.id))} · ${a.ruleset}</div></div>
+        <div class="rc">${flagHTML(a.nationality)} ${a.baseStyle}</div></div>
       <div class="mu-vs"><div class="v">対</div><div class="tag">${tag||'Catchweight'}</div></div>
       <div class="mu-side right"><div class="nm">${b.name}</div><div class="al">“${b.alias}”</div>
-        <div class="rc">${flagHTML(b.nationality)} ${recStr(getRec(b.id))} · ${b.ruleset}</div></div>
+        <div class="rc">${flagHTML(b.nationality)} ${b.baseStyle}</div></div>
     </div>`;
   }
 
@@ -613,7 +622,7 @@
         <div class="vflag">${flagHTML(ft.nationality)} ${ft.nationality}</div>
         <div class="vname">${ft.name}</div>
         <div class="valias">“${ft.alias}”</div>
-        <div class="vrec"><b>${recStr(getRec(ft.id))}</b> · ${ft.baseStyle}</div>
+        <div class="vrec">${ft.baseStyle}</div>
       </div>
     </div>`;
   }
@@ -941,6 +950,8 @@
       default: html=home();
     }
     app.innerHTML=html;
+    // Update floating back bar
+    if(window._updateFloatBar) window._updateFloatBar(route, arg);
     // Restore roster scroll when coming BACK from a profile; otherwise go to top
     if(lastRoute==='fighter' && route==='roster'){
       window.scrollTo(0, savedScroll);
@@ -970,6 +981,38 @@
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape') closeLightbox();
   });
+
+  // Floating back-to-roster bar on fighter profiles
+  (function(){
+    const floatBar = document.getElementById('fp-float');
+    const floatName = document.getElementById('fp-float-name');
+    let currentRoute = '';
+    let currentFighterName = '';
+
+    window.addEventListener('scroll', function(){
+      if(currentRoute !== 'fighter'){ floatBar.style.display='none'; return; }
+      if(window.scrollY > 200){
+        floatBar.style.display='block';
+        requestAnimationFrame(()=>floatBar.classList.add('visible'));
+      } else {
+        floatBar.classList.remove('visible');
+        setTimeout(()=>{ if(!floatBar.classList.contains('visible')) floatBar.style.display='none'; }, 250);
+      }
+    });
+
+    // Hook into render to track current route and fighter name
+    const origRender = render;
+    window._updateFloatBar = function(route, arg){
+      currentRoute = route;
+      if(route==='fighter' && arg){
+        const ft = FIGHTERS.find(x=>x.id===arg);
+        if(ft){ currentFighterName=ft.name; floatName.textContent=ft.name; }
+      } else {
+        floatBar.classList.remove('visible');
+        floatBar.style.display='none';
+      }
+    };
+  })();
   function toggleMenu(){document.getElementById('links').classList.toggle('open');document.getElementById('navshop').classList.toggle('open');}
   function closeMenu(){document.getElementById('links').classList.remove('open');document.getElementById('navshop').classList.remove('open');}
   window.toggleMenu=toggleMenu;

@@ -57,7 +57,7 @@ const FIGHTERS = [
     "baseStyle": "Kickboxing",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#e0533a",
+    "color": "#d83a2e",
     "record": {
       "w": 0,
       "l": 0,
@@ -73,7 +73,7 @@ const FIGHTERS = [
       "origin": "Raised in a Bedok rental flat by a hawker mother who worked doubles, Cheryl learned early that nothing arrives unless you take it. She started in a void-deck wrestling club, then walked into a proper MMA gym at sixteen and refused to leave. Built her game on pure forward pressure because she never had the luxury of waiting.",
       "style": "She closes distance fast and makes every exchange a test of will, mixing takedowns with heavy hands. The crowd back home knows her as the one who refuses to take a backward step.",
       "personal": "Loud, warm, and stubborn, with a laugh you hear across the gym. Obsessed with chilli crab and char kway teow, and will fight you over whether the East Coast version is superior. Trains with her late mother's photo taped inside her locker.",
-      "rival": "Has open, needling beef with Pei Yee Lim — Cheryl thinks she's flashy and overrated. The feeling, by all accounts, is mutual.",
+      "rival": "Has open, needling beef with Ruby Tan — Cheryl thinks Ruby's patient style is 'boring' and says so to anyone with a microphone. The feeling, by all accounts, is mutual.",
       "goal": "Fights to lift her family out of the rental flat for good, and to be the first name people think of when they say Singaporean MMA."
     },
     "quotes": [
@@ -90,44 +90,44 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "joelle-lim",
-    "name": "Joelle Lim",
-    "alias": "Garang",
+    "id": "jasmine-rahma",
+    "name": "Jasmine Rahma",
+    "alias": "Redline",
     "nationality": "Singapore",
     "flag": "🇸🇬",
-    "hometown": "Tampines",
-    "baseStyle": "Kickboxing",
+    "hometown": "Geylang",
+    "baseStyle": "Muay Thai",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#c23a52",
+    "color": "#d83a2e",
     "record": {
       "w": 0,
       "l": 0,
       "ko": 0
     },
-    "image": "joelle-lim.png",
+    "image": "jasmine-rahma.png",
     "gallery": [
-      "joelle-lim-1.png",
-      "joelle-lim-2.png",
-      "joelle-lim-3.png"
+      "jasmine-rahma-1.png",
+      "jasmine-rahma-2.png",
+      "jasmine-rahma-3.png"
     ],
     "bio": {
-      "origin": "A scholarship kid from Tampines who was supposed to become an engineer, Joelle quietly redirected her tuition money toward gym fees and never told her parents until her first fight. She trained across half the island's gyms, collecting techniques like a magpie before settling into a style entirely her own.",
-      "style": "Joelle trades on rhythm and timing, switching stances mid-combination to keep opponents guessing. Slick, unhurried, and dangerous in the pocket.",
-      "personal": "Cerebral and a little aloof, she studies opponents like exam papers and keeps a notebook of every fighter she's watched. Unwinds with bak chor mee and true-crime podcasts. The most likely fighter on the roster to beat you on points and then explain exactly how she did it.",
-      "rival": "Stays above the Ruby–Cheryl feud and quietly believes she's better than both — a position neither of them accepts, making the three Singaporeans a tangle of cold respect and colder ambition.",
-      "goal": "Wants to prove that brains beat brawn, and to retire undefeated with a thesis-length breakdown of every win."
+      "origin": "Jasmine grew up in Geylang, one of Singapore's grittiest neighbourhoods, the daughter of a Malay hawker family who never imagined a fighter in the house. She walked into a Muay Thai gym at sixteen to lose weight and walked out with a purpose. The only Malay fighter on a Chinese-dominated Singaporean roster, she carries that distinction like armour.",
+      "style": "A Muay Thai stylist with sharp elbows and a relentless clinch game built on natural strength and a low centre of gravity. She pressures forward, cuts angles, and makes opponents fight her fight — close, dirty, and exhausting. The Redline name is for how far she pushes, and how far past comfortable she drags everyone else.",
+      "personal": "Fierce, direct, and unapologetically loud. She code-switches between Malay and English mid-sentence and treats every slight as fuel. Lives on her mother's nasi padang and a competitive streak that runs deeper than the sport. The first one to call out disrespect and the last one to let it go.",
+      "rival": "Sees herself as the outsider within Singapore's contingent — the Malay kid in a Chinese-dominated scene — and channels that chip into every bout. Eyes Ruby Tan as the standard-bearer she intends to replace.",
+      "goal": "Fights to prove Geylang produces champions, and to be the first Malay name Singaporeans think of when they think of fighting."
     },
     "quotes": [
-      "\"Fighting is just a problem with a person attached. I like problems.\"",
-      "\"They train their bodies. I train the answer to your body.\""
+      "\"Aku dilahirkan untuk langgar garisan.\" (I'm born to cross the line.)",
+      "\"They see Geylang. I see home. There's a difference.\""
     ],
     "stats": {
-      "age": "22",
-      "height": "173 cm (5'8\")",
+      "age": "21",
+      "height": "168 cm (5'6\")",
       "weight": "53 kg (117 lb)",
-      "reach": "173 cm (68 in)",
-      "stance": "Switch",
+      "reach": "168 cm (66 in)",
+      "stance": "Orthodox",
       "debut": "2026"
     }
   },
@@ -176,7 +176,7 @@ const FIGHTERS = [
   {
     "id": "jessica-wong",
     "name": "Jessica Wong",
-    "alias": "Kiasu",
+    "alias": "Die Die",
     "nationality": "Singapore",
     "flag": "🇸🇬",
     "hometown": "Ang Mo Kio",
@@ -269,7 +269,7 @@ const FIGHTERS = [
     "baseStyle": "Sambo",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#2f6fd8",
+    "color": "#3a7bc8",
     "record": {
       "w": 0,
       "l": 0,
@@ -310,7 +310,7 @@ const FIGHTERS = [
     "baseStyle": "Street Fighting",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#2f6fd8",
+    "color": "#3a7bc8",
     "record": {
       "w": 0,
       "l": 0,
@@ -353,7 +353,7 @@ const FIGHTERS = [
     "baseStyle": "Street Fighting",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#2f6fd8",
+    "color": "#3a7bc8",
     "record": {
       "w": 0,
       "l": 0,
@@ -605,7 +605,7 @@ const FIGHTERS = [
   {
     "id": "jhut-chirathivat",
     "name": "Jhut Chirathivat",
-    "alias": "Iron Knee",
+    "alias": "Washboard",
     "nationality": "Thailand",
     "flag": "🇹🇭",
     "hometown": "Bangkok",
@@ -649,7 +649,7 @@ const FIGHTERS = [
   {
     "id": "emma-zandberg",
     "name": "Emma Zandberg",
-    "alias": "The Hague",
+    "alias": "Judgement",
     "nationality": "Thailand",
     "flag": "🇹🇭",
     "hometown": "Amsterdam",
@@ -785,7 +785,7 @@ const FIGHTERS = [
     "baseStyle": "Brazilian Jiu-Jitsu",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#3aa0d8",
+    "color": "#1fb6c9",
     "record": {
       "w": 0,
       "l": 0,
@@ -956,7 +956,7 @@ const FIGHTERS = [
     "baseStyle": "Judo",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#c95fb0",
+    "color": "#d84a8c",
     "record": {
       "w": 0,
       "l": 0,
@@ -998,7 +998,7 @@ const FIGHTERS = [
     "baseStyle": "Shuai Jiao",
     "ruleset": "Street Fight",
     "division": "Strawweight",
-    "color": "#5b8a2c",
+    "color": "#6b4ad8",
     "record": {
       "w": 0,
       "l": 0,
@@ -1040,7 +1040,7 @@ const FIGHTERS = [
     "baseStyle": "Silat",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#1f8a8a",
+    "color": "#4ac86b",
     "record": {
       "w": 0,
       "l": 0,
@@ -1082,7 +1082,7 @@ const FIGHTERS = [
     "baseStyle": "Kickboxing",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#1f8a8a",
+    "color": "#4ac86b",
     "record": {
       "w": 0,
       "l": 0,
@@ -1126,7 +1126,7 @@ const FIGHTERS = [
     "baseStyle": "Muay Thai",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#1f8a8a",
+    "color": "#4ac86b",
     "record": {
       "w": 0,
       "l": 0,
@@ -1331,26 +1331,26 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "rainie-qiu",
-    "name": "Rainie Qiu",
-    "alias": "Iron Lotus",
+    "id": "rainie-yang",
+    "name": "Rainie Yang",
+    "alias": "Bàoyǔ",
     "nationality": "China",
     "flag": "🇨🇳",
     "hometown": "Shanghai",
     "baseStyle": "Judo",
     "ruleset": "MMA",
     "division": "Strawweight",
-    "color": "#c94a4a",
+    "color": "#1f9e6b",
     "record": {
       "w": 0,
       "l": 0,
       "ko": 0
     },
-    "image": "rainie-qiu.png",
+    "image": "rainie-yang.png",
     "gallery": [
-      "rainie-qiu-1.png",
-      "rainie-qiu-2.png",
-      "rainie-qiu-3.png"
+      "rainie-yang-1.png",
+      "rainie-yang-2.png",
+      "rainie-yang-3.png"
     ],
     "bio": {
       "origin": "Rainie grew up in Shanghai's international quarter, the daughter of a businessman who sent her to a Judo academy in Tokyo at fifteen. She came back two years later with a black belt, a heavier frame than anyone expected, and a quiet certainty that she could throw anyone in any room.",
@@ -1376,13 +1376,13 @@ const FIGHTERS = [
     "id": "emi-sato-wright",
     "name": "Emi Sato-Wright",
     "alias": "Half-Blood",
-    "nationality": "USA",
-    "flag": "🇺🇸",
+    "nationality": "Japan",
+    "flag": "🇯🇵",
     "hometown": "Okinawa",
     "baseStyle": "Karate",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#d88c4a",
+    "color": "#c0263a",
     "record": {
       "w": 0,
       "l": 0,
@@ -1395,7 +1395,7 @@ const FIGHTERS = [
       "emi-sato-wright-3.png"
     ],
     "bio": {
-      "origin": "Born to a Japanese father and American mother in Okinawa — the birthplace of Karate — Emi grew up caught between two cultures and found her footing in the dojo. She trained traditional Okinawan Karate from childhood, the only half-Japanese kid in a school that wasn't sure she belonged. She's been proving them wrong since.",
+      "origin": "Born in Okinawa to a Japanese father and American mother — the birthplace of Karate — Emi grew up caught between two cultures and found her footing in the dojo. She trained traditional Okinawan Karate from childhood, the only half-American kid in a school that wasn't sure she belonged. She's been proving them wrong since.",
       "style": "A sharp, disciplined Karate striker who fights from a bladed stance with fast straight punches and precise kicks. Her timing is immaculate — she reads openings others don't see and punishes them with single clean shots. Textbook technique delivered with quiet fury.",
       "personal": "Reserved and intense, she carries the weight of never fully belonging in either culture. Speaks Japanese and English fluently, thinks in both, fights in neither — her Karate is its own language. Eats her mother's burgers and her father's onigiri without irony.",
       "rival": "Eyes Emma Zandberg as the mirror match — another half-Asian fighter trying to prove the fusion works. The two circle each other with mutual recognition and unspoken competition over who carries the 'between worlds' banner better.",
@@ -1424,7 +1424,7 @@ const FIGHTERS = [
     "baseStyle": "Boxing",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#c84a2e",
+    "color": "#002868",
     "record": {
       "w": 0,
       "l": 0,
@@ -1466,17 +1466,17 @@ const FIGHTERS = [
     "baseStyle": "Street Fighting",
     "ruleset": "Street Fight",
     "division": "Strawweight",
-    "color": "#4ac8d8",
+    "color": "#DA251D",
     "record": {
       "w": 0,
       "l": 0,
       "ko": 0
     },
-    "image": "mai-hoàng.png",
+    "image": "mai-hoang.png",
     "gallery": [
-      "mai-hoàng-1.png",
-      "mai-hoàng-2.png",
-      "mai-hoàng-3.png"
+      "mai-hoang-1.png",
+      "mai-hoang-2.png",
+      "mai-hoang-3.png"
     ],
     "bio": {
       "origin": "Lily grew up in the back alleys of Ho Chi Minh City's District 4, the roughest stretch in a rough city. No gym, no coach — she learned to fight the way the neighbourhood taught everyone, and she was better at it than most of the boys. She found the circuit through word of mouth and showed up with nothing but nerve.",
@@ -1501,14 +1501,14 @@ const FIGHTERS = [
   {
     "id": "rin-takahashi",
     "name": "Rin Takahashi",
-    "alias": "Shrike",
+    "alias": "Ikken",
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Okinawa",
     "baseStyle": "Karate",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#d84ac8",
+    "color": "#c0263a",
     "record": {
       "w": 0,
       "l": 0,
@@ -1543,14 +1543,14 @@ const FIGHTERS = [
   {
     "id": "mio-hayashi",
     "name": "Mio Hayashi",
-    "alias": "Southpaw",
+    "alias": "Kaminari",
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Osaka",
     "baseStyle": "Boxing",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#4a4ad8",
+    "color": "#c0263a",
     "record": {
       "w": 0,
       "l": 0,
@@ -1592,7 +1592,7 @@ const FIGHTERS = [
     "baseStyle": "Street Fighting",
     "ruleset": "Street Fight",
     "division": "Strawweight",
-    "color": "#8c8c3a",
+    "color": "#002868",
     "record": {
       "w": 0,
       "l": 0,
@@ -1608,7 +1608,7 @@ const FIGHTERS = [
       "origin": "Alex grew up on Detroit's east side, fighting since middle school, never in a gym. She found underground fight circuits in Michigan basements before the DRAGONS roster found her — someone filmed one of her wins, it went viral, and the invitation came the same week. No training camp, no system, just a phone call and a plane ticket.",
       "style": "Unpredictable and relentless — she switches between swarming and stalking without warning, throws from weird angles, and fights dirty when clean doesn't work. No formal technique, just an engine that never stops and a pain tolerance that makes coaches uncomfortable.",
       "personal": "Wiry, intense, and hard to read. Quiet in groups, electric alone. Runs every morning regardless of where she is, eats whatever's closest, and trusts exactly no one until they've proven themselves. Carries Detroit like a chip and a shield.",
-      "rival": "Drawn to the roster's other street fighters — Lily Tang and Tala Cholena — with the wary respect of people who came up the same way. Among the Americans, she's the one who most obviously doesn't belong in a professional circuit, which is exactly why she's dangerous.",
+      "rival": "Drawn to the roster's other street fighters — Mai Hoàng and Tala Cholena — with the wary respect of people who came up the same way. Among the Americans, she's the one who most obviously doesn't belong in a professional circuit, which is exactly why she's dangerous.",
       "goal": "Fights to prove the viral girl wasn't a fluke, and that the street teaches things no gym ever will."
     },
     "quotes": [
@@ -1627,14 +1627,14 @@ const FIGHTERS = [
   {
     "id": "isla-kamolwan",
     "name": "Isla Kamolwan",
-    "alias": "London Fog",
+    "alias": "Unfazed",
     "nationality": "Thailand",
     "flag": "🇹🇭",
     "hometown": "London",
     "baseStyle": "Muay Thai",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#d86b8c",
+    "color": "#d4a528",
     "record": {
       "w": 0,
       "l": 0,
@@ -1676,7 +1676,7 @@ const FIGHTERS = [
     "baseStyle": "Panantukan",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
-    "color": "#2ea0c8",
+    "color": "#7B2D8E",
     "record": {
       "w": 0,
       "l": 0,
@@ -1728,7 +1728,9 @@ const FIGHTERS = [
     "gallery": [
       "thazin-aye-1.png",
       "thazin-aye-2.png",
-      "thazin-aye-3.png"
+      "thazin-aye-3.png",
+      "thazin-aye-4.png",
+      "thazin-aye-5.png"
     ],
     "bio": {
       "origin": "Thazin came up in Yangon's Lethwei underground, the bareknuckle boxing tradition that makes Muay Thai look gentle. She fought without gloves from fifteen, in rings where headbutts were legal and the only way to win was to make the other person stop. The circuit gave her wraps and rules; she gave it something it hadn't seen before.",
@@ -1760,7 +1762,7 @@ const FIGHTERS = [
     "baseStyle": "Street Fighting",
     "ruleset": "Street Fight",
     "division": "Strawweight",
-    "color": "#d82e4a",
+    "color": "#7B2D8E",
     "record": {
       "w": 0,
       "l": 0,
@@ -1770,7 +1772,9 @@ const FIGHTERS = [
     "gallery": [
       "reyna-bautista-1.png",
       "reyna-bautista-2.png",
-      "reyna-bautista-3.png"
+      "reyna-bautista-3.png",
+      "reyna-bautista-4.png",
+      "reyna-bautista-5.png"
     ],
     "bio": {
       "origin": "Reyna came up in Tondo, Manila's toughest barangay, where fighting wasn't a sport — it was how you kept what was yours. No gym, no coach, no system. She fought in backyards and side streets and earned her reputation one scrap at a time. The circuit found her through a viral video of a backyard knockout and offered her a way out. She took it without hesitation.",
@@ -1788,6 +1792,48 @@ const FIGHTERS = [
       "height": "165 cm (5'5\")",
       "weight": "52 kg (115 lb)",
       "reach": "165 cm (65 in)",
+      "stance": "Orthodox",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "ayu-prasetya",
+    "name": "Ayu Prasetya",
+    "alias": "Komodo",
+    "nationality": "Indonesia",
+    "flag": "🇮🇩",
+    "hometown": "Jakarta",
+    "baseStyle": "Pencak Silat",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#c75a3a",
+    "record": {
+      "w": 0,
+      "l": 0,
+      "ko": 0
+    },
+    "image": "ayu-prasetya.png",
+    "gallery": [
+      "ayu-prasetya-1.png",
+      "ayu-prasetya-2.png",
+      "ayu-prasetya-3.png"
+    ],
+    "bio": {
+      "origin": "Ayu came up through Jakarta's Pencak Silat competition circuit, the national martial art of Indonesia, earning gold at the Southeast Asian Games before crossing into full-contact fighting. She carries the fluid, devastating striking and grappling of Silat with the composure of someone who has represented her country since she was fourteen.",
+      "style": "A Pencak Silat specialist whose game is built on sweeps, throws, and explosive strikes from angles nobody trains for. She flows between grappling and striking without resetting — one motion becomes the next, defence becomes offence, a fall becomes a takedown. The Komodo name is for the patience before the lunge and the devastation after it.",
+      "personal": "Calm, measured, and fiercely patriotic. She wears the Indonesian flag on her wraps and treats every bout as a national showcase. Lives on her grandmother's rendang and trains with the obsessive detail of someone who knows the world doesn't watch Indonesian martial arts unless she makes them. Warm to friends, terrifying to opponents.",
+      "rival": "Eyes Nadia Hakim and her Malaysian Silat as the natural comparison — two Southeast Asian Silat fighters from neighbouring countries with centuries of shared martial tradition and mutual suspicion. Indonesia vs Malaysia, the oldest Silat rivalry in the world.",
+      "goal": "Fights to put Indonesian Pencak Silat on the global stage alongside Muay Thai and Karate, and to prove the archipelago's martial art belongs at the top of every combat ranking."
+    },
+    "quotes": [
+      "\"Silat lahir di Nusantara. Dunia harus tahu.\" (Silat was born in the archipelago. The world needs to know.)",
+      "\"The Komodo waits. Then it doesn't.\""
+    ],
+    "stats": {
+      "age": "21",
+      "height": "172 cm (5'8\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "172 cm (68 in)",
       "stance": "Orthodox",
       "debut": "2026"
     }
