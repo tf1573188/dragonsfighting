@@ -1457,7 +1457,7 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "mai-hoàng",
+    "id": "mai-hoang",
     "name": "Mai Hoàng",
     "alias": "Saigon Rose",
     "nationality": "Vietnam",
