@@ -1457,8 +1457,8 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "lily-tang",
-    "name": "Lily Tang",
+    "id": "mai-hoàng",
+    "name": "Mai Hoàng",
     "alias": "Saigon Rose",
     "nationality": "Vietnam",
     "flag": "🇻🇳",
@@ -1472,11 +1472,11 @@ const FIGHTERS = [
       "l": 0,
       "ko": 0
     },
-    "image": "lily-tang.png",
+    "image": "mai-hoàng.png",
     "gallery": [
-      "lily-tang-1.png",
-      "lily-tang-2.png",
-      "lily-tang-3.png"
+      "mai-hoàng-1.png",
+      "mai-hoàng-2.png",
+      "mai-hoàng-3.png"
     ],
     "bio": {
       "origin": "Lily grew up in the back alleys of Ho Chi Minh City's District 4, the roughest stretch in a rough city. No gym, no coach — she learned to fight the way the neighbourhood taught everyone, and she was better at it than most of the boys. She found the circuit through word of mouth and showed up with nothing but nerve.",
