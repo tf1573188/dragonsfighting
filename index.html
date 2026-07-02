@@ -412,6 +412,7 @@
   // ============================
 
   const app = document.getElementById('app');
+  function shuffleFighters(){const a=[...FIGHTERS];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
   const f = (id)=>FIGHTERS.find(x=>x.id===id);
   // Map nationality -> ISO 3166-1 alpha-2 for flag-icons
   const FLAG_CC = {
@@ -477,7 +478,7 @@
       <div class="wrap">
         <div class="sec-head"><div><span class="eyebrow">The Stable</span><h2>The Roster</h2></div>
         <p>Every fighter carries a record and a reason. Click through.</p></div>
-        <div class="grid">${(()=>{const a=[...FIGHTERS];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}()).slice(0,8).map(card).join('')}</div>
+        <div class="grid">${shuffleFighters().slice(0,8).map(card).join('')}</div>
         <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">View full roster</button></div>
       </div>
     </section>
