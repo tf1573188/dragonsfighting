@@ -4,13 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DRAGONS — Pan-Asian Fighting Circuit</title>
+<meta name="description" content="DRAGONS is a fictional pan-Asian female fighting circuit. 43 original fighters across 14 nations — AI-generated fight videos sold on Gumroad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dragonsfighting.com/">
+<meta property="og:title" content="DRAGONS — Pan-Asian Fighting Circuit">
+<meta property="og:description" content="43 original fighters. 14 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta property="og:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
+<meta property="og:image:width" content="630">
+<meta property="og:image:height" content="840">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DRAGONS — Pan-Asian Fighting Circuit">
+<meta name="twitter:description" content="43 original fighters. 14 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta name="twitter:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
 <style>
   :root{
-    --bg:#0a0c0b;--bg-2:#11150f;--panel:#15140f;--ink:#ece7d8;--muted:#8d8c7e;
+    --bg:#0a0c0b;--bg-2:#11150f;--panel:#15140f;--ink:#ece7d8;--muted:#a8a79a;
     --gold:#d4a528;--gold-bright:#f0c44a;--emerald:#1f9e6b;--emerald-deep:#0e6b46;
     --line:rgba(212,165,40,.18);--maxw:1200px;
   }
@@ -72,6 +84,21 @@
 
   /* ROSTER GRID */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px}
+
+  /* ROSTER FILTER */
+  .filter-bar{margin-bottom:32px}
+  .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+  .filter-row:last-child{margin-bottom:0}
+  .filter-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);min-width:80px;flex-shrink:0}
+  .fsort{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--line);border-radius:2px;cursor:pointer;background:transparent;color:var(--muted);transition:.15s}
+  .fsort.active{color:var(--gold);border-color:var(--gold)}
+  .fsort:hover{border-color:var(--gold);color:var(--ink)}
+  .fpill{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--line);border-radius:2px;cursor:pointer;background:transparent;color:var(--muted);transition:.15s;white-space:nowrap}
+  .fpill:hover{border-color:var(--gold);color:var(--ink)}
+  .fpill.active{background:var(--gold);border-color:var(--gold);color:#0a0c0b}
+  .filter-count{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--muted);margin-top:12px}
+  .filter-count b{color:var(--gold)}
+  .card.hidden{display:none}
   .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;cursor:pointer;transition:.25s}
   .card:hover{transform:translateY(-4px);border-color:var(--gold)}
   .card .imgwrap{aspect-ratio:3/4;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d)}
@@ -232,9 +259,10 @@
   .note{margin-top:28px;padding:16px 20px;border-left:3px solid var(--emerald);background:rgba(31,158,107,.06);color:var(--muted);font-size:14px;max-width:680px;border-radius:0 4px 4px 0}
 
   /* PROFILE QUOTES */
-  .quotes-sec{margin-top:40px;padding-top:40px;border-top:1px solid var(--line)}
-  .fp-bottom-nav{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:center}
+  .quotes-sec{margin-top:28px;padding-top:28px;border-top:1px solid var(--line);margin-bottom:28px}
+  .fp-bottom-nav{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
   .fp-bottom-nav .btn{cursor:pointer}
+  .fp-nav-center{flex:1;text-align:center}
   .quotes-grid{display:flex;flex-direction:column;gap:18px;max-width:760px}
   .fq{position:relative;background:var(--panel);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:18px 22px;margin:0}
   .fq-native{display:block;font-family:'Oswald',sans-serif;font-weight:500;font-size:18px;line-height:1.4;color:var(--ink);letter-spacing:.01em}
@@ -364,6 +392,10 @@
         <a href="#about" onclick="go('about')">About</a>
         <a href="#shop" onclick="go('shop')">Shop</a>
       </div>
+      <div class="fl" style="margin-top:12px;gap:18px">
+        <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" style="color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:'Oswald',sans-serif">Instagram</a>
+        <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" style="color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:'Oswald',sans-serif">TikTok</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -372,8 +404,10 @@
 <script>
   // ===== EDIT THESE LINKS =====
   const SHOP = {
-    gumroad: "https://gumroad.com/",   // your Gumroad store URL
-    kofi:    "https://ko-fi.com/"        // your Ko-fi shop URL
+    gumroad: "https://dragonsfighting.gumroad.com/",
+    kofi:    "https://ko-fi.com/",
+    instagram: "https://www.instagram.com/dragonsfighting123/",
+    tiktok:    "https://www.tiktok.com/@dragonsfighting"
   };
   // ============================
 
@@ -396,7 +430,7 @@
     <div>${nat}</div><div style="opacity:.6">${disc}</div>
     <div style="opacity:.4;font-size:10px">add image</div></div>`;
   function imgOrPlaceholder(ft){
-    return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy"
+    return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" width="630" height="840"
       onerror="this.style.display='none';this.insertAdjacentHTML('afterend', placeholderHTML('${ft.color}','${ft.nationality}','${ft.baseStyle}'))">`;
   }
 
@@ -443,7 +477,7 @@
       <div class="wrap">
         <div class="sec-head"><div><span class="eyebrow">The Stable</span><h2>The Roster</h2></div>
         <p>Every fighter carries a record and a reason. Click through.</p></div>
-        <div class="grid">${[...FIGHTERS].sort(()=>Math.random()-0.5).slice(0,8).map(card).join('')}</div>
+        <div class="grid">${(()=>{const a=[...FIGHTERS];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}()).slice(0,8).map(card).join('')}</div>
         <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">View full roster</button></div>
       </div>
     </section>
@@ -461,7 +495,7 @@
   }
 
   function card(ft){
-    return `<div class="card" onclick="go('fighter/${ft.id}')">
+    return `<div class="card" onclick="go('fighter/${ft.id}')" role="button" tabindex="0" aria-label="${ft.name}, ${ft.nationality} ${ft.baseStyle}" onkeydown="if(event.key==='Enter'||event.key===' ')go('fighter/${ft.id}')">
       <div class="stripe" style="background:${ft.color}"></div>
       <div class="imgwrap">${imgOrPlaceholder(ft)}</div>
       <div class="body">
@@ -472,16 +506,111 @@
       </div></div>`;
   }
 
+  // ── ROSTER FILTER STATE ──
+  let rosterFilter = { nation: null, discipline: null };
+  let rosterSort = "name";
+
+  function applyRosterFilter(){
+    const grid = document.querySelector('.roster-grid');
+    if(!grid) return;
+    const cards = [...grid.querySelectorAll('.card')];
+    // Sort
+    cards.sort((a,b)=>{
+      if(rosterSort==='nation') return a.dataset.nation.localeCompare(b.dataset.nation)||a.dataset.name.localeCompare(b.dataset.name);
+      if(rosterSort==='discipline') return a.dataset.discipline.localeCompare(b.dataset.discipline)||a.dataset.name.localeCompare(b.dataset.name);
+      if(rosterSort==='debut') return (a.dataset.debut||'').localeCompare(b.dataset.debut||'')||a.dataset.name.localeCompare(b.dataset.name);
+      return a.dataset.name.localeCompare(b.dataset.name); // default A-Z
+    });
+    cards.forEach(c=>grid.appendChild(c));
+    // Filter
+    let visible = 0;
+    cards.forEach(el => {
+      const n = el.dataset.nation;
+      const d = el.dataset.discipline;
+      const show = (!rosterFilter.nation || rosterFilter.nation === n) &&
+                   (!rosterFilter.discipline || rosterFilter.discipline === d);
+      el.classList.toggle('hidden', !show);
+      if(show) visible++;
+    });
+    const counter = document.getElementById('roster-count');
+    if(counter) counter.innerHTML = `Showing <b>${visible}</b> of <b>${FIGHTERS.length}</b> fighters`;
+  }
+
+  window.rosterSortBy = function(val){
+    rosterSort = val;
+    document.querySelectorAll('.fsort').forEach(b=>b.classList.toggle('active', b.dataset.sort===val));
+    applyRosterFilter();
+  };
+
+  window.rosterPill = function(type, value, el){
+    if(rosterFilter[type] === value){
+      rosterFilter[type] = null;
+    } else {
+      rosterFilter[type] = value;
+    }
+    // Update pill active states
+    document.querySelectorAll(`.fpill[data-type="${type}"]`).forEach(p => {
+      p.classList.toggle('active', p.dataset.value === rosterFilter[type]);
+    });
+    applyRosterFilter();
+  };
+
   function roster(){
+    const nations = [...new Set(FIGHTERS.map(x=>x.nationality))].sort();
+    const disciplines = [...new Set(FIGHTERS.map(x=>x.baseStyle))].sort();
+    rosterFilter = { nation: null, discipline: null };
+
+    const nationPills = nations.map(n =>
+      `<button class="fpill" data-type="nation" data-value="${n}" onclick="rosterPill('nation','${n}',this)">${n}</button>`
+    ).join('');
+
+    const discPills = disciplines.map(d =>
+      `<button class="fpill" data-type="discipline" data-value="${d}" onclick="rosterPill('discipline','${d}',this)">${d}</button>`
+    ).join('');
+
+    const sorted = [...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
+
     return `<section><div class="wrap">
-      <span class="eyebrow">${new Set(FIGHTERS.map(x=>x.nationality)).size} Nations · One Division</span>
-      <div class="sec-head"><h2>The Roster</h2><p>Boxers, Muay Thai killers, Sambo grapplers, street fighters. Twelve disciplines, one ring. Find your fighter.</p></div>
-      <div class="grid">${[...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name)).map(card).join('')}</div>
+      <span class="eyebrow">${nations.length} Nations · One Division</span>
+      <div class="sec-head"><h2>The Roster</h2><p>Boxers, Muay Thai killers, Sambo grapplers, street fighters. Find your fighter.</p></div>
+      <div class="filter-bar">
+        <div class="filter-row">
+          <span class="filter-label">Nation</span>
+          ${nationPills}
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">Discipline</span>
+          ${discPills}
+        </div>
+        <div class="filter-row" style="margin-top:4px">
+          <span class="filter-label">Sort</span>
+          <button class="fsort active" data-sort="name" onclick="rosterSortBy('name')">Name</button>
+          <button class="fsort" data-sort="nation" onclick="rosterSortBy('nation')">Nation</button>
+          <button class="fsort" data-sort="discipline" onclick="rosterSortBy('discipline')">Discipline</button>
+          <button class="fsort" data-sort="debut" onclick="rosterSortBy('debut')">Debut Year</button>
+        </div>
+        <div class="filter-count" id="roster-count">Showing <b>${FIGHTERS.length}</b> of <b>${FIGHTERS.length}</b> fighters</div>
+      </div>
+      <div class="grid roster-grid">${sorted.map(ft =>
+        `<div class="card" onclick="go('fighter/${ft.id}')" data-nation="${ft.nationality}" data-discipline="${ft.baseStyle}" data-name="${ft.name}" data-debut="${ft.stats.debut||''}" role="button" tabindex="0" aria-label="${ft.name}, ${ft.nationality} ${ft.baseStyle}" onkeydown="if(event.key==='Enter'||event.key===' ')go('fighter/${ft.id}')">
+          <div class="stripe" style="background:${ft.color}"></div>
+          <div class="imgwrap">${imgOrPlaceholder(ft)}</div>
+          <div class="body">
+            <div class="flag">${flagHTML(ft.nationality)} ${ft.nationality}</div>
+            <div class="nm">${ft.name}</div>
+            <div class="al">"${ft.alias}"</div>
+            <div class="meta"><span>${ft.baseStyle}</span></div>
+          </div></div>`
+      ).join('')}</div>
     </div></section>`;
   }
 
   function fighter(id){
     const ft=f(id); if(!ft) return roster();
+    const sorted=[...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
+    const idx=sorted.findIndex(x=>x.id===id);
+    const prev=sorted[idx-1]||null;
+    const next=sorted[idx+1]||null;
     return `<section><div class="wrap">
       <div class="fp-back-bar"><span class="fp-back" onclick="go('roster')">← Back to roster</span></div>
       <div class="fp">
@@ -497,12 +626,13 @@
             <span class="tag">Stance <b>${ft.stats.stance}</b></span>
             <span class="tag">Debut <b>${ft.stats.debut}</b></span>
           </div>
-          <div class="bio">${bioHTML(ft.bio, ft.id)}</div>
           <div class="specs">
             <div class="sp"><div class="l">Height</div><div class="v">${ft.stats.height}</div></div>
             <div class="sp"><div class="l">Weight</div><div class="v">${ft.stats.weight}</div></div>
             <div class="sp"><div class="l">Reach</div><div class="v">${ft.stats.reach}</div></div>
           </div>
+          <div class="bio">${bioHTML(ft.bio, ft.id)}</div>
+          ${quotesHTML(ft)}
           <div class="watch">
             <button class="btn btn-gold" onclick="go('shop')">Watch her fights</button>
             <button class="btn btn-ghost" onclick="go('watch/${ft.id}')">Past fights</button>
@@ -510,9 +640,10 @@
         </div>
       </div>
       ${galleryHTML(ft)}
-      ${quotesHTML(ft)}
       <div class="fp-bottom-nav">
-        <span class="btn btn-ghost" onclick="go('roster')">← Back to Roster</span>
+        ${prev?`<span class="btn btn-ghost" onclick="go('fighter/${prev.id}')">← ${prev.name}</span>`:'<span></span>'}
+        <span class="fp-nav-center"><span class="btn btn-ghost" onclick="go('roster')">Roster</span></span>
+        ${next?`<span class="btn btn-ghost" onclick="go('fighter/${next.id}')">${next.name} →</span>`:'<span></span>'}
       </div>
     </div></section>`;
   }
@@ -527,7 +658,7 @@
       }
       return `<blockquote class="fq"><span class="fq-native">“${q.replace(/^"|"$/g,'')}”</span></blockquote>`;
     }).join('');
-    return `<div class="quotes-sec">
+    return `<div class="quotes-sec" style="max-width:660px;margin-left:0">
       <div class="gh">In Her Words</div>
       <div class="quotes-grid">${items}</div>
     </div>`;
@@ -609,6 +740,16 @@
     ['maya-lin','jia-park','Import vs All-Rounder'],
     ['mihn-anh','vanessa-chow','Unknown vs Untamed'],
     ['amanda-lee','jenny-kwok','Young Blood'],
+    ['jasmine-rahma','nong-pim','Singapore vs Thailand'],
+    ['amihan-reyes','vanessa-chow','Pacific Rim Brawl'],
+    ['reyna-bautista','tala-cholena','Street vs Street'],
+    ['ayu-prasetya','nadia-hakim','Southeast Asia Showdown'],
+    ['emi-sato-wright','rin-takahashi','Half-Blood vs Pure'],
+    ['mio-hayashi','shihan-chen','Southpaw Showdown'],
+    ['jhut-chirathivat','emma-zandberg','Thai Roots, Foreign Blood'],
+    ['isla-kamolwan','kanyarat-srisuk','Unfazed vs Phaya Suea'],
+    ['safiya-aronov','mandy-koh','Snow Leopard vs Cotton Candy'],
+    ['chayanne-locklear','reyna-bautista','Spirit vs Siga'],
   ];
   let muIndex=0;
 
@@ -642,6 +783,21 @@
     document.querySelectorAll('.cdot').forEach((d,i)=>d.classList.toggle('active',i===muIndex));
   };
   window.muGo=(i)=>{muIndex=i;muNav(0);};
+
+  // Carousel swipe support
+  (function(){
+    let tx=0;
+    document.addEventListener('touchstart',function(e){
+      const s=document.getElementById('cstage');
+      if(s&&s.contains(e.target)) tx=e.touches[0].clientX;
+    },{passive:true});
+    document.addEventListener('touchend',function(e){
+      const s=document.getElementById('cstage');
+      if(!s) return;
+      const dx=e.changedTouches[0].clientX-tx;
+      if(Math.abs(dx)>40) muNav(dx<0?1:-1);
+    },{passive:true});
+  })();
 
   function matchups(){
     muIndex=0;
@@ -734,6 +890,7 @@
             <span class="rc-glyph">対</span>
             <span class="rc-method">${b.method}</span>
             <span class="rc-round">${b.round?`Round ${b.round}`:''}</span>
+            ${b.video?`<button class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em" onclick="go('shop')">Watch ↗</button>`:''}
           </div>
           <div class="rc-side loss" onclick="go('fighter/${l.id}')">
             ${fightFace(l)}
@@ -752,6 +909,10 @@
 
     return `<section><div class="wrap">
       ${header}
+      <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px">
+        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ Spoilers</span>
+        <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Vault</span>.</span>
+      </div>
       <div class="rec-cards">${cards}</div>
       ${filterId?`<div style="margin-top:28px"><span class="btn btn-ghost" onclick="go('records')">← All records</span></div>`:''}
     </div></section>`;
@@ -815,6 +976,14 @@
         <p>The circuit runs on style clashes — a clinch artist against a distance striker, a pressure fighter against a counter specialist. Every bout is built to answer the question that drives the underground: when the venue changes and the lights come up, who actually wins the fight.</p>
         <p>The stable grows as new fighters are added. Fights drop in the vault as they are produced, and the most-requested matchups move to the front of the line.</p>
       </div>
+      <div style="margin:40px 0 32px">
+        <p class="eyebrow" style="margin-bottom:16px">Enter the Dragon</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">Instagram — @dragonsfighting123 ↗</a>
+          <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">TikTok — @dragonsfighting ↗</a>
+          <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:13px;padding:12px 24px">Shop on Gumroad ↗</a>
+        </div>
+      </div>
       <div class="note">All imagery and video on this site is AI-generated and depicts fictional characters. DRAGONS is a work of fiction: the fighters, records, and events are invented, and any resemblance to real persons is coincidental. All video content is AI-generated.</div>
     </div></section>`;
   }
@@ -831,6 +1000,9 @@
         <div class="shop-card"><span class="k">Membership</span><h3>Back the Circuit</h3>
           <p>Support the stable and get every new fight first, plus behind-the-scenes material and matchup requests.</p>
           <a class="btn btn-gold" href="${SHOP.kofi}" target="_blank" rel="noopener">Join on Ko-fi ↗</a></div>
+        <div class="shop-card"><span class="k">Support</span><h3>Buy Us a Coffee</h3>
+          <p>No strings attached. If you enjoy the circuit and want to keep it running, any contribution goes directly into production.</p>
+          <a class="btn" style="border-color:var(--line);color:var(--ink)" href="${SHOP.kofi}" target="_blank" rel="noopener">Donate on Ko-fi ↗</a></div>
       </div>
     </div></section>`;
   }
@@ -898,7 +1070,14 @@
       'Fighter B: '+b.name+' "'+b.alias+'" ('+b.nationality+', '+b.baseStyle+')\n\n'+
       'Why this fight:\n\n'
     );
-    window.open('mailto:plutonion2222@gmail.com?subject='+subj+'&body='+body, '_self');
+    window.open('mailto:tf1573188@gmail.com?subject='+subj+'&body='+body, '_self');
+    // Show confirmation state after a short delay
+    setTimeout(function(){
+      const note = document.getElementById('comm-confirm');
+      if(note){ note.style.display='block'; }
+      const btn = document.getElementById('comm-btn');
+      if(btn){ btn.textContent='Request Sent ✓'; btn.disabled=true; btn.style.opacity='0.6'; }
+    }, 600);
   };
 
   function commission(){
@@ -906,7 +1085,7 @@
     const sorted = [...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
     return `<section><div class="wrap">
       <span class="eyebrow">Make the Card</span>
-      <div class="sec-head"><h2>Commission a Matchup</h2><p>Pick any two fighters. The most-requested bouts get produced and added to the vault.</p></div>
+      <div class="sec-head"><h2>Commission a Matchup</h2><p>Pick any two fighters and email us for a quote. Commissions are paid productions — the most-requested bouts get prioritised.</p></div>
 
       <div class="comm-selected">
         <div class="comm-pick empty" id="comm-pick-a">
@@ -924,6 +1103,11 @@
         <button class="btn btn-gold" id="comm-btn" disabled onclick="commSubmit()">Commission This Fight</button>
       </div>
       <div class="comm-note">Your commission request will be sent via email. The most-requested bouts are produced first.</div>
+      <div id="comm-confirm" style="display:none;margin-top:16px;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px;margin-left:auto;margin-right:auto">
+        <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
+        <p style="color:var(--muted);font-size:13px;margin-top:6px">If your email client didn't open, send your commission request directly to <a href="mailto:tf1573188@gmail.com" style="color:var(--gold)">tf1573188@gmail.com</a></p>
+      </div>
+      <div class="comm-note" style="margin-top:10px">Enter the Dragon — follow us for fight announcements and previews: <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" style="color:var(--gold)">Instagram</a> · <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" style="color:var(--gold)">TikTok</a></div>
 
       <div class="comm-grid">${sorted.map(commCard).join('')}</div>
 
@@ -947,7 +1131,20 @@
       case 'about': html=about(); break;
       case 'shop': html=shop(); break;
       case 'commission': html=commission(); break;
-      default: html=home();
+      default:
+        if(route && route !== 'home'){
+          html=`<section><div class="wrap" style="text-align:center;padding:80px 24px">
+            <span class="eyebrow">404</span>
+            <h2 style="font-size:clamp(34px,6vw,64px);margin:16px 0 20px">Page Not Found</h2>
+            <p style="color:var(--muted);max-width:400px;margin:0 auto 32px">That route doesn't exist in the circuit. Head back and find your fighter.</p>
+            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+              <button class="btn btn-gold" onclick="go('roster')">View the Roster</button>
+              <button class="btn btn-ghost" onclick="go('home')">Back to Home</button>
+            </div>
+          </div></section>`;
+        } else {
+          html=home();
+        }
     }
     app.innerHTML=html;
     // Update floating back bar
@@ -965,21 +1162,37 @@
   function go(p){location.hash=p;} window.go=go;
 
   // ---- Lightbox (gallery zoom) ----
+  let _prevFocus=null;
   window.openLightbox=function(src,cap){
+    _prevFocus=document.activeElement;
     document.getElementById('lightbox-img').src=src;
     document.getElementById('lightbox-img').alt=cap||'';
     document.getElementById('lightbox-cap').textContent=cap||'';
-    document.getElementById('lightbox').classList.add('open');
+    const lb=document.getElementById('lightbox');
+    lb.classList.add('open');
     document.body.style.overflow='hidden';
+    // Focus the close button
+    const closeBtn=lb.querySelector('.lightbox-close');
+    if(closeBtn) setTimeout(()=>closeBtn.focus(),50);
   };
   window.closeLightbox=function(e){
     if(e) e.stopPropagation();
     document.getElementById('lightbox').classList.remove('open');
     document.getElementById('lightbox-img').src='';
     document.body.style.overflow='';
+    if(_prevFocus) _prevFocus.focus();
   };
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape') closeLightbox();
+    const lb=document.getElementById('lightbox');
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape'){ closeLightbox(); return; }
+    // Focus trap — keep Tab inside lightbox
+    if(e.key==='Tab'){
+      const focusable=lb.querySelectorAll('button,[tabindex]:not([tabindex="-1"])');
+      const first=focusable[0], last=focusable[focusable.length-1];
+      if(e.shiftKey){ if(document.activeElement===first){e.preventDefault();last.focus();} }
+      else { if(document.activeElement===last){e.preventDefault();first.focus();} }
+    }
   });
 
   // Floating back-to-roster bar on fighter profiles

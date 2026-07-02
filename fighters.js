@@ -12,7 +12,7 @@ const FIGHTERS = [
     "nationality": "Singapore",
     "flag": "🇸🇬",
     "hometown": "Toa Payoh",
-    "baseStyle": "Western Boxing",
+    "baseStyle": "Boxing",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
     "color": "#d83a2e",
@@ -138,7 +138,7 @@ const FIGHTERS = [
     "nationality": "Singapore",
     "flag": "🇸🇬",
     "hometown": "Jurong",
-    "baseStyle": "MMA",
+    "baseStyle": "Boxing",
     "ruleset": "MMA",
     "division": "Strawweight",
     "color": "#d83a2e",
@@ -154,8 +154,8 @@ const FIGHTERS = [
       "mandy-koh-3.png"
     ],
     "bio": {
-      "origin": "Mandy came out of Jurong, the kid sister in a family of four brothers who learned to scrap before she learned to back down. She drifted into an MMA gym chasing one of her brothers and discovered she was the only Koh with real timing. What started as keeping up with the boys became the only thing she wanted to do.",
-      "style": "Deceptively sweet-faced and all venom once the bell goes, she swarms with combinations and drags opponents into chaos. Her soft looks have fooled exactly one opponent each.",
+      "origin": "Mandy came out of Jurong, the kid sister in a family of four brothers who learned to scrap before she learned to back down. She followed one of her brothers into a boxing gym at thirteen and discovered she was the only Koh with real timing. The brothers gave up. She didn't.",
+      "style": "Deceptively sweet-faced and all venom once the bell goes, she swarms behind fast hands and cuts angles her opponents don't see coming. A boxer who fights shorter than her reach and makes everyone pay for assuming she's soft. Her looks have fooled exactly one opponent each.",
       "personal": "Bubbly, chatty, and impossible to rattle, she earned the name Cotton Candy for the pink in her hair and the sugar she runs on. Inhales bubble tea by the litre and keeps a plushie in her gym bag she swears is non-negotiable. The locker room's mood-lifter.",
       "rival": "Looks up to the established Singaporeans with open admiration that needles them — she keeps telling Ruby Tan and Cheryl Ong she'll take their spot, grinning the whole time, which neither finds as charming as she does.",
       "goal": "Wants to prove the cheerful one can be the most dangerous on the card, and to headline a hometown show with her brothers in the front row."
@@ -307,7 +307,7 @@ const FIGHTERS = [
     "nationality": "Kazakhstan",
     "flag": "🇰🇿",
     "hometown": "Shymkent",
-    "baseStyle": "Street Fighting",
+    "baseStyle": "Kazakh Kuresh",
     "ruleset": "MMA",
     "division": "Strawweight",
     "color": "#3a7bc8",
@@ -324,8 +324,8 @@ const FIGHTERS = [
       "ainur-nazar-4.png"
     ],
     "bio": {
-      "origin": "Ainur grew up scrapping in the markets of Shymkent, where being a girl who fought back earned a reputation fast. She had no formal gym for years, just instinct and a refusal to lose, before a coach finally pulled her off the street and into structured MMA.",
-      "style": "Raw, aggressive, and powered by something she never fully switches off, she overwhelms with volume and grit. Rough edges, real damage.",
+      "origin": "Ainur grew up in the markets of Shymkent, the daughter of a man who competed in Kazakh Kuresh at every village festival. She was wrestling before she was ten — belt grabs on concrete, throws with no mat. The instinct was always there; the structure came when a coach formalised what the market had already built and channelled it into MMA.",
+      "style": "She closes distance fast and drags the fight into the clinch where her Kazakh Kuresh grip work takes over. Belt-grab throws, off-balance takedowns, and a ground-and-pound that arrives before opponents have processed the trip. The rough edges are still there — she just has a tradition behind them now.",
       "personal": "Fierce and loyal, with a loud laugh and a short fuse outside the cage. Lives on horse-meat sausage her family sends and refuses to apologise for the smell in the gym fridge. Wears a gold thread bracelet her grandmother tied on her and never removes it.",
       "rival": "Has a needling rapport with her compatriot Alina Bek — Ainur thinks Alina's cold precision is overrated and that the steppe's real fighters come up scrapping, like she did.",
       "goal": "Fights to drag her whole family up with her, and to prove the market kid can stand with the medal winners."
@@ -350,7 +350,7 @@ const FIGHTERS = [
     "nationality": "Kazakhstan",
     "flag": "🇰🇿",
     "hometown": "Almaty Region",
-    "baseStyle": "Street Fighting",
+    "baseStyle": "Kickboxing",
     "ruleset": "MMA",
     "division": "Strawweight",
     "color": "#3a7bc8",
@@ -368,7 +368,7 @@ const FIGHTERS = [
     ],
     "bio": {
       "origin": "Safiya came from a mountain village near the Kyrgyz border, the quiet one who learned to fight from older cousins and a stubborn streak. She made the long move to the city alone at seventeen, slept in the gym she trained at, and earned her spot the hardest way there is.",
-      "style": "Patient and powerful, she stalks forward and lets her opponents tire themselves out before she closes. Slow-building pressure that turns sudden.",
+      "style": "Patient and powerful, she works behind a long jab and lets opponents burn themselves out chasing her before she steps in. Her combinations are unhurried and land heavy — a kickboxer who fights like she has all the time in the world, until she doesn't.",
       "personal": "Calm, watchful, and self-contained, she speaks softly and means everything she says. Drinks endless cups of black tea and keeps a photo of her village taped inside her locker. The kind of quiet that makes people behave.",
       "rival": "Stays out of the Ainur–Alina noise between the Kazakh fighters, regarding both as too busy talking, which is its own kind of provocation in a three-way standoff.",
       "goal": "Fights to build a home her parents never had, and to show the mountain villages produce fighters the cities should fear."
@@ -739,7 +739,7 @@ const FIGHTERS = [
     "nationality": "South Korea",
     "flag": "🇰🇷",
     "hometown": "Incheon",
-    "baseStyle": "Kick Boxing",
+    "baseStyle": "Kickboxing",
     "ruleset": "Kickboxing",
     "division": "Strawweight",
     "color": "#1fb6c9",
@@ -782,7 +782,7 @@ const FIGHTERS = [
     "nationality": "South Korea",
     "flag": "🇰🇷",
     "hometown": "Seoul",
-    "baseStyle": "Brazilian Jiu-Jitsu",
+    "baseStyle": "Ssireum",
     "ruleset": "MMA",
     "division": "Strawweight",
     "color": "#1fb6c9",
@@ -798,15 +798,15 @@ const FIGHTERS = [
       "hana-jung-3.png"
     ],
     "bio": {
-      "origin": "Hana came up through the Seoul amateur scene, a quiet university dropout who found in the cage the only place her restless mind went still. She built a reputation for never losing her composure, fighting with a stillness that unnerves people.",
-      "style": "She picks opponents apart with clean angles and a counter that arrives without warning. Ice in the ring, every round.",
+      "origin": "Hana grew up watching her grandfather compete in ssireum tournaments on the Han River banks, a childhood spent learning that the belt grab is not a beginning — it is the whole conversation. She trained through university, twice regional champion in the amateur circuit, before deciding that MMA was the only arena large enough for what ssireum had built in her.",
+      "style": "She fights from the clinch inward, neutralising distance before opponents have registered the contact. Her throws are clean and economical — no telegraphing, no wind-up, just a pivot and sudden floor. Opponents who expect a grappler's patience get a finisher's timing instead.",
       "personal": "Introverted and watchful, she journals after every session and barely speaks before a fight. Lives on convenience-store gimbap and herbal tea, and disappears into the mountains alone between camps. Her calm reads as arrogance to people who don't know her; it's actually focus.",
-      "rival": "Keeps a respectful distance from her louder compatriot Yuna Seo, privately certain that her own quiet game would unravel Yuna's showmanship — a contrast of Korean styles the fans have already noticed.",
-      "goal": "Fights to understand herself, not to be seen, and would trade the spotlight for a perfect, unanswered counter."
+      "rival": "Keeps a respectful distance from her louder compatriot Yuna Seo, privately certain that a ssireum game built on closing distance would dismantle Yuna's Taekwondo the moment they clinch — a contrast of Korean traditions the fans have already started debating.",
+      "goal": "Wants to prove that ssireum belongs in a modern cage, not as a curiosity but as a finishing system — and that her grandfather's sport can produce a champion."
     },
     "quotes": [
-      "\"케이지 안에서만 내 마음이 조용해져.\" (Only in the cage does my mind go quiet.)",
-      "\"Yuna performs. I just win.\""
+      "\"할아버지가 가르쳐줬어 — 잡으면 끝이야.\" (My grandfather taught me — once you grip, it's over.)",
+      "\"Yuna performs. I throw people.\""
     ],
     "stats": {
       "age": "22",
@@ -949,7 +949,7 @@ const FIGHTERS = [
   {
     "id": "vanessa-chow",
     "name": "Vanessa Chow",
-    "alias": "Kowloon Night",
+    "alias": "Kowloon KO",
     "nationality": "Hong Kong",
     "flag": "🇭🇰",
     "hometown": "Sham Shui Po",
