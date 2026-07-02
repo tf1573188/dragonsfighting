@@ -158,6 +158,7 @@
   .mu-side{padding:24px;display:flex;flex-direction:column;justify-content:center;gap:4px}
   .mu-side.right{text-align:right;align-items:flex-end}
   .mu-side .nm{font-family:'Oswald',sans-serif;font-weight:700;font-size:24px}
+  .mu-name{cursor:pointer;transition:color .15s}.mu-name:hover{color:var(--gold)}
   .mu-side .al{color:var(--gold);font-style:italic;font-size:13px}
   .mu-side .rc{color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:.08em}
   .mu-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 18px;background:linear-gradient(180deg,rgba(212,165,40,.08),rgba(31,158,107,.08));border-left:1px solid var(--line);border-right:1px solid var(--line)}
@@ -234,6 +235,8 @@
   .comm-card .comm-nm{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;margin-top:8px;padding:0 8px}
   .comm-card .comm-al{font-size:12px;color:var(--gold);font-style:italic;padding:0 8px}
   .comm-card .comm-fl{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.08em}
+  .comm-profile-link{display:block;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;padding:0 8px;text-decoration:none;transition:.15s}
+  .comm-profile-link:hover{color:var(--gold)}
   .comm-selected{display:flex;gap:20px;align-items:center;justify-content:center;margin:28px 0;flex-wrap:wrap}
   .comm-pick{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 24px;text-align:center;min-width:200px}
   .comm-pick .cp-label{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
@@ -405,7 +408,7 @@
   // ===== EDIT THESE LINKS =====
   const SHOP = {
     gumroad: "https://dragonsfighting.gumroad.com/",
-    kofi:    "https://ko-fi.com/",
+    kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
   };
@@ -720,10 +723,10 @@
 
   function matchupCard(a,b,tag){
     return `<div class="mu-card">
-      <div class="mu-side"><div class="nm">${a.name}</div><div class="al">“${a.alias}”</div>
+      <div class="mu-side"><div class="nm mu-name" onclick="go('fighter/${a.id}')">${a.name}</div><div class="al">“${a.alias}”</div>
         <div class="rc">${flagHTML(a.nationality)} ${a.baseStyle}</div></div>
       <div class="mu-vs"><div class="v">対</div><div class="tag">${tag||'Catchweight'}</div></div>
-      <div class="mu-side right"><div class="nm">${b.name}</div><div class="al">“${b.alias}”</div>
+      <div class="mu-side right"><div class="nm mu-name" onclick="go('fighter/${b.id}')">${b.name}</div><div class="al">“${b.alias}”</div>
         <div class="rc">${flagHTML(b.nationality)} ${b.baseStyle}</div></div>
     </div>`;
   }
@@ -998,12 +1001,9 @@
         <div class="shop-card"><span class="k">Per Fight</span><h3>Single Bouts</h3>
           <p>Buy individual fights and highlight clips as they drop. One-time purchase, yours to keep.</p>
           <a class="btn btn-gold" href="${SHOP.gumroad}" target="_blank" rel="noopener">Shop on Gumroad ↗</a></div>
-        <div class="shop-card"><span class="k">Membership</span><h3>Back the Circuit</h3>
-          <p>Support the stable and get every new fight first, plus behind-the-scenes material and matchup requests.</p>
-          <a class="btn btn-gold" href="${SHOP.kofi}" target="_blank" rel="noopener">Join on Ko-fi ↗</a></div>
         <div class="shop-card"><span class="k">Support</span><h3>Buy Us a Coffee</h3>
           <p>No strings attached. If you enjoy the circuit and want to keep it running, any contribution goes directly into production.</p>
-          <a class="btn" style="border-color:var(--line);color:var(--ink)" href="${SHOP.kofi}" target="_blank" rel="noopener">Donate on Ko-fi ↗</a></div>
+          <a class="btn btn-gold" href="${SHOP.kofi}" target="_blank" rel="noopener">Support on Ko-fi ↗</a></div>
       </div>
     </div></section>`;
   }
@@ -1020,6 +1020,7 @@
       <div class="comm-nm">${ft.name}</div>
       <div class="comm-al">"${ft.alias}"</div>
       <div class="comm-fl">${flagHTML(ft.nationality)} ${ft.baseStyle}</div>
+      <a class="comm-profile-link" href="#fighter/${ft.id}" onclick="event.stopPropagation();go('fighter/${ft.id}')">View Profile ↗</a>
     </div>`;
   }
 
@@ -1086,7 +1087,7 @@
     const sorted = [...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
     return `<section><div class="wrap">
       <span class="eyebrow">Make the Card</span>
-      <div class="sec-head"><h2>Commission a Matchup</h2><p>Pick any two fighters and email us for a quote. Commissions are paid productions — the most-requested bouts get prioritised.</p></div>
+      <div class="sec-head"><h2>Commission a Matchup</h2><p>Pick any two fighters and email us for a quote. All commissions are paid — get in touch for a quote and we'll confirm availability and pricing.</p></div>
 
       <div class="comm-selected">
         <div class="comm-pick empty" id="comm-pick-a">
