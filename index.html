@@ -1217,15 +1217,11 @@
     }
     return `<section><div class="wrap">
       <span class="eyebrow">The Vault</span>
-      <div class="sec-head"><h2>Features & Media</h2><p>Fighter spotlights, pre-fight pressers, interviews, and footage from inside the circuit.</p></div>
+      <div class="sec-head"><h2>Features & Media</h2><p>The world behind the fights — features, venues, and lore from inside the circuit.</p></div>
       <div class="vault-grid">${VAULT_ITEMS.slice(0,6).map(vaultCard).join('')}</div>
 
       <div style="margin-top:72px;padding-top:56px;border-top:1px solid var(--line)">
-        <div class="sec-head" style="margin-bottom:36px">
-          <div class="eyebrow">The Circuit</div>
-          <h2 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(26px,5vw,42px);text-transform:uppercase;margin-top:8px">Venues</h2>
-          <p style="color:var(--muted);font-size:14px;margin-top:10px;max-width:480px">The circuit rotates. The venue changes the fight.</p>
-        </div>
+        <div class="sec-head"><h2>Venues</h2><p>The circuit rotates. The venue changes the fight.</p></div>
         <div class="venue-grid">${VENUES.map(venueCard).join('')}</div>
       </div>
     </div></section>`;
