@@ -103,7 +103,8 @@
   .ff-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 20px;background:var(--bg-2);border-left:1px solid var(--line);border-right:1px solid var(--line);min-width:90px;z-index:1}
   .ff-vs-glyph{font-size:36px;color:var(--gold);font-family:'Noto Serif SC',serif;line-height:1}
   .ff-vs-label{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px;writing-mode:vertical-rl;text-orientation:mixed}
-  .ff-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:24px 32px;border-top:1px solid var(--line)}
+  .ff-cta{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;padding:24px 32px;border-top:1px solid var(--line)}
+  .ff-cta .btn,.ff-cta a.btn{width:auto;flex:0 0 auto}
   @media(max-width:700px){
     .ff-fighters{grid-template-columns:1fr;min-height:auto}
     .ff-fighter{min-height:280px}
@@ -217,10 +218,10 @@
   .fr-method{grid-column:2;grid-row:1/3;font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink);text-align:right;align-self:center}
 
   /* LARGE FIGHT IMAGE */
-  .ff-img{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent)}
-  .ff-img img{width:100%;height:100%;object-fit:cover;object-position:top center}
-  .ff-img.noimg{position:relative}
-  .ff-img.noimg::after{content:'No Image';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
+  .rc-face{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent)}
+  .rc-face img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .rc-face.noimg{position:relative}
+  .rc-face.noimg::after{content:'No Image';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
 
   /* RECORDS — large cards (results shown, no shop link) */
   .rec-cards{display:flex;flex-direction:column;gap:20px}
@@ -1280,7 +1281,7 @@
 
   // Large fighter image block for fight cards
   function fightFace(ft){
-    return `<span class="ff-img" style="--accent:${ft.color}">
+    return `<span class="rc-face" style="--accent:${ft.color}">
       <img src="images/${ft.image}" alt="${ft.name}" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')">
     </span>`;
   }
