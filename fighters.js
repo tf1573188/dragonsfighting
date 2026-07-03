@@ -73,7 +73,7 @@ const FIGHTERS = [
       "origin": "Raised in a Bedok rental flat by a hawker mother who worked doubles, Cheryl learned early that nothing arrives unless you take it. She started in a void-deck wrestling club, then walked into a proper MMA gym at sixteen and refused to leave. Built her game on pure forward pressure because she never had the luxury of waiting.",
       "style": "She closes distance fast and makes every exchange a test of will, mixing takedowns with heavy hands. The crowd back home knows her as the one who refuses to take a backward step.",
       "personal": "Loud, warm, and stubborn, with a laugh you hear across the gym. Obsessed with chilli crab and char kway teow, and will fight you over whether the East Coast version is superior. Trains with her late mother's photo taped inside her locker.",
-      "rival": "Has open, needling beef with Ruby Tan — Cheryl thinks Ruby's patient style is 'boring' and says so to anyone with a microphone. The feeling, by all accounts, is mutual.",
+      "rival": "Has open, needling beef with Pei Yee — Cheryl thinks she's overrated. The feeling, by all accounts, is mutual.",
       "goal": "Fights to lift her family out of the rental flat for good, and to be the first name people think of when they say Singaporean MMA."
     },
     "quotes": [
