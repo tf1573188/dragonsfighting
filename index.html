@@ -86,21 +86,31 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px}
 
   /* FEATURED FIGHT */
-  .featured-fight{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:40px 32px 32px}
-  .ff-fighters{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin-bottom:32px}
-  .ff-fighter{text-align:center}
+  .featured-fight{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .ff-fighters{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;min-height:480px}
+  .ff-fighter{display:flex;flex-direction:column;cursor:pointer;position:relative;overflow:hidden}
+  .ff-fighter::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,12,11,.85) 0%,rgba(10,12,11,.1) 60%,transparent 100%);pointer-events:none}
+  [data-theme="light"] .ff-fighter::after{background:linear-gradient(to top,rgba(245,242,235,.9) 0%,rgba(245,242,235,.2) 60%,transparent 100%)}
+  .ff-img{position:absolute;inset:0}
+  .ff-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease}
+  .ff-fighter:hover .ff-img img{transform:scale(1.03)}
+  .ff-info{position:relative;z-index:1;margin-top:auto;padding:24px 20px;text-align:center}
+  .ff-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;color:var(--ink);transition:color .2s}
   .ff-fighter:hover .ff-name{color:var(--gold)}
-  .ff-img{width:160px;height:200px;margin:0 auto 16px;border-radius:3px;overflow:hidden;border-bottom:3px solid var(--line);transition:border-color .2s}
-  .ff-fighter:hover .ff-img{border-color:var(--gold)}
-  .ff-img img{width:100%;height:100%;object-fit:cover;object-position:top}
-  .ff-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--ink);transition:color .2s}
   .ff-alias{font-size:13px;color:var(--gold);margin:4px 0}
-  .ff-nation{font-size:12px;color:var(--muted);margin-top:4px}
-  .ff-vs{text-align:center}
-  .ff-vs-glyph{display:block;font-size:40px;color:var(--gold);font-family:'Noto Serif SC',serif;line-height:1}
-  .ff-vs-label{display:block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
-  .ff-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line)}
-  @media(max-width:600px){.ff-fighters{grid-template-columns:1fr;gap:16px}.ff-img{width:120px;height:150px}.featured-fight{padding:24px 16px}}
+  .ff-nation{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.06em}
+  .ff-fighter-accent{height:3px;width:100%;flex-shrink:0}
+  .ff-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 20px;background:var(--bg-2);border-left:1px solid var(--line);border-right:1px solid var(--line);min-width:90px;z-index:1}
+  .ff-vs-glyph{font-size:36px;color:var(--gold);font-family:'Noto Serif SC',serif;line-height:1}
+  .ff-vs-label{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px;writing-mode:vertical-rl;text-orientation:mixed}
+  .ff-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:24px 32px;border-top:1px solid var(--line)}
+  @media(max-width:700px){
+    .ff-fighters{grid-template-columns:1fr;min-height:auto}
+    .ff-fighter{min-height:280px}
+    .ff-vs{flex-direction:row;padding:16px 20px;border-left:none;border-right:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-width:auto;gap:16px}
+    .ff-vs-label{writing-mode:horizontal-tb}
+    .ff-cta{padding:20px 16px}
+  }
 
   /* ROSTER FILTER */
   .filter-bar{margin-bottom:32px}
@@ -325,6 +335,12 @@
   .venue-fights{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
   .venue-fights-label{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
   .venue-fight-tag{font-size:12px;color:var(--muted)}
+  .venue-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--bg-2)}
+  .venue-thumb-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .venue-card-footer{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .venue-read-more{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .venue-card{cursor:pointer;transition:border-color .2s,transform .2s}
+  .venue-card:hover{border-color:var(--gold);transform:translateY(-2px)}
   .vault-video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;margin:32px 0;background:var(--bg-2)}
   .vault-video-tiktok{padding-bottom:0;height:auto;max-width:340px;margin-left:auto;margin-right:auto}
   .vault-video-tiktok iframe{position:static;width:100%;height:600px;border-radius:8px}
@@ -553,22 +569,27 @@
         <p>The circuit's inaugural bout. Watch it now on Gumroad.</p></div>
         <div class="featured-fight">
           <div class="ff-fighters">
-            <div class="ff-fighter" onclick="go('fighter/cheryl-ong')" style="cursor:pointer">
-              <div class="ff-img" style="border-color:#d83a2e">
-                <img src="images/cheryl-ong.png" alt="Cheryl Ong" loading="lazy" onerror="this.style.display='none'">
-              </div>
+          <div class="ff-fighter" onclick="go('fighter/cheryl-ong')">
+            <div class="ff-img">
+              <img src="images/cheryl-ong.png" alt="Cheryl Ong" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#d83a2e"></div>
+            <div class="ff-info">
               <div class="ff-name">Cheryl Ong</div>
               <div class="ff-alias">"Lionheart"</div>
               <div class="ff-nation">🇸🇬 Singapore · Kickboxing</div>
             </div>
-            <div class="ff-vs">
-              <span class="ff-vs-glyph">対</span>
-              <span class="ff-vs-label">Fight 1</span>
+          </div>
+          <div class="ff-vs">
+            <span class="ff-vs-glyph">対</span>
+            <span class="ff-vs-label">Fight 1 · DRAGONS</span>
+          </div>
+          <div class="ff-fighter" onclick="go('fighter/pei-yee')">
+            <div class="ff-img">
+              <img src="images/pei-yee.png" alt="Pei Yee Lim" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter" onclick="go('fighter/pei-yee')" style="cursor:pointer">
-              <div class="ff-img" style="border-color:#4ac86b">
-                <img src="images/pei-yee.png" alt="Pei Yee Lim" loading="lazy" onerror="this.style.display='none'">
-              </div>
+            <div class="ff-fighter-accent" style="background:#4ac86b"></div>
+            <div class="ff-info">
               <div class="ff-name">Pei Yee Lim</div>
               <div class="ff-alias">"Tempest"</div>
               <div class="ff-nation">🇲🇾 Malaysia · Kickboxing</div>
@@ -587,7 +608,7 @@
         <div class="sec-head"><div><span class="eyebrow">The Stable</span><h2>The Fighters</h2></div>
         <p>Every fighter carries a record and a reason. Click through.</p></div>
         <div class="grid">${shuffleFighters().slice(0,8).map(card).join('')}</div>
-        <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">View full roster</button></div>
+        <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">All Fighters</button></div>
       </div>
     </section>
 
@@ -917,6 +938,7 @@
       subtitle: 'Bangkok · Permanent Venue',
       type: 'Muay Thai · Kickboxing · MMA',
       color: '#c86b2e',
+      thumb: null, // add image path e.g. 'images/venue-ring.png'
       description: 'A traditional Lumpinee-style ring in an unairconditioned hall in the outer districts of Bangkok. The canvas is old. The lights are bright. The crowd is close enough to hear the fighters breathe. The Ring is where the circuit started — it rewards technical strikers, punishes sloppiness, and has a knack for producing finishes in the third round.',
       atmosphere: 'Loud, humid, partisan. The regulars know every fighter by name.',
       fights: ['Fight 1: Cheryl Ong vs. Pei Yee Lim']
@@ -927,6 +949,7 @@
       subtitle: 'Location Classified',
       type: 'All Disciplines',
       color: '#3a6bc8',
+      thumb: null, // add image path e.g. 'images/venue-warehouse.png'
       description: 'A decommissioned industrial facility somewhere in Southeast Asia — the circuit does not publish the address. A cage sits in the centre of the floor. The ceiling is forty feet high. The acoustics are brutal. Fighters say the darkness at the edges of the venue changes how they fight — there is no crowd to play to, only the cage and whoever is across from it.',
       atmosphere: 'Silent until a finish. Then it is very loud.',
       fights: ['Fight 3: Jhut Chirathivat vs. Kanyarat Srisuk']
@@ -934,7 +957,14 @@
   ];
 
   function venueCard(v){
-    return `<div class="venue-card">
+    const thumb = v.thumb
+      ? `<img src="${v.thumb}" alt="${v.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
+      : `<div class="venue-thumb-placeholder" style="background:linear-gradient(135deg,var(--bg-2),var(--panel))">
+          <span style="font-size:48px;opacity:.12;font-family:'Noto Serif SC',serif">龍</span>
+          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px">Image Coming Soon</span>
+        </div>`;
+    return `<div class="venue-card" onclick="go('venue/${v.id}')" role="button" tabindex="0" aria-label="${v.name}" onkeydown="if(event.key==='Enter')go('venue/${v.id}')">
+      <div class="venue-thumb">${thumb}</div>
       <div class="venue-accent" style="background:${v.color}"></div>
       <div class="venue-body">
         <div class="venue-header">
@@ -944,12 +974,10 @@
           </div>
           <div class="venue-type-badge">${v.type}</div>
         </div>
-        <p class="venue-desc">${v.description}</p>
-        <p class="venue-atmosphere"><em>"${v.atmosphere}"</em></p>
-        ${v.fights.length ? `<div class="venue-fights">
-          <span class="venue-fights-label">Fights held here</span>
-          ${v.fights.map(f => `<span class="venue-fight-tag">${f}</span>`).join('')}
-        </div>` : ''}
+        <p class="venue-desc">${v.description.substring(0,120)}…</p>
+        <div class="venue-card-footer">
+          <span class="venue-read-more">Read more ↗</span>
+        </div>
       </div>
     </div>`;
   }
@@ -1155,6 +1183,32 @@
     }
     // photo-right default
     return `<section><div class="wrap">${backBar}<div class="vault-split">${textSide}${photoSide}</div></div></section>`;
+  }
+
+  function venueDetail(id){
+    const v = VENUES.find(x=>x.id===id);
+    if(!v) return vault();
+    const thumb = v.thumb
+      ? `<div class="vault-hero-img"><img src="${v.thumb}" alt="${v.name}" style="width:100%;height:520px;object-fit:cover"></div>`
+      : `<div class="vault-hero-img vault-hero-placeholder" style="background:linear-gradient(135deg,var(--bg-2) 0%,var(--panel) 100%);display:flex;align-items:center;justify-content:center;height:320px">
+          <span style="font-size:80px;opacity:.1;font-family:'Noto Serif SC',serif">龍</span>
+        </div>`;
+    return `<section>
+      ${thumb}
+      <div class="wrap" style="max-width:780px">
+        <div class="fp-back-bar"><span class="fp-back" onclick="go('vault')">← Vault</span></div>
+        <span class="venue-type-badge" style="display:inline-block;margin-bottom:16px">${v.type}</span>
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(32px,6vw,60px);text-transform:uppercase;line-height:1;margin-bottom:8px">${v.name}</h1>
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)">${v.subtitle}</div>
+        <div class="vault-article-body">
+          <p class="vault-lead">${v.description}</p>
+          <div class="vault-quote">"${v.atmosphere}"</div>
+          ${v.fights.length ? `<h3>Fights Held Here</h3>${v.fights.map(f=>`<p>${f}</p>`).join('')}` : ''}
+        </div>
+        <div class="fp-bottom-nav" style="margin-top:48px">
+          <span class="btn btn-ghost" onclick="go('vault')" style="cursor:pointer">← Return to The Vault</span>
+        </div>
+      </div></section>`;
   }
 
   function vault(arg){
@@ -1501,6 +1555,7 @@
       case 'fighter': html=fighter(arg); break;
       case 'matchups': html=commission(); break;
       case 'vault': html=vault(arg); break;
+      case 'venue': html=venueDetail(arg); break;
       case 'records': html=records(arg); break;
       case 'watch': html=watch(arg); break;
       case 'about': html=about(); break;
@@ -1620,6 +1675,10 @@
           floatName.textContent=ft.name;
           if(floatBack){ floatBack.textContent='← Back to Roster'; floatBack.onclick=function(){go('roster');}; }
         }
+      } else if(route==='venue' && arg){
+        const venue = typeof VENUES !== 'undefined' ? VENUES.find(x=>x.id===arg) : null;
+        floatName.textContent = venue ? venue.name : '';
+        if(floatBack){ floatBack.textContent='← Vault'; floatBack.onclick=function(){go('vault');}; }
       } else if(route==='vault' && arg){
         const item = typeof VAULT_ITEMS !== 'undefined' ? VAULT_ITEMS.find(x=>x.id===arg) : null;
         floatName.textContent = item ? item.title : '';
