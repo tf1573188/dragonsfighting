@@ -400,6 +400,7 @@
     </div>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     <nav class="links" id="links">
+      <a href="#commission" data-route="commission">Commission</a>
       <a href="#roster" data-route="roster">Roster</a>
       <a href="#vault" data-route="vault">The Vault</a>
       <a href="#records" data-route="records">Records</a>
@@ -414,7 +415,7 @@
 
 <div class="fp-float" id="fp-float">
   <div class="fp-float-inner">
-    <span class="fp-back" onclick="go('roster')">← Back to Roster</span>
+    <span class="fp-back" id="fp-float-back" onclick="go('roster')">← Back to Roster</span>
     <span class="fp-float-name" id="fp-float-name"></span>
   </div>
 </div>
@@ -434,6 +435,7 @@
         <span class="glyph">龍</span><span class="word">DRAGONS</span>
       </div>
       <div class="fl">
+        <a href="#commission" onclick="go('commission')">Commission</a>
         <a href="#roster" onclick="go('roster')">Roster</a>
         <a href="#vault" onclick="go('vault')">The Vault</a>
         <a href="#records" onclick="go('records')">Records</a>
@@ -607,7 +609,8 @@
   function roster(){
     const nations = [...new Set(FIGHTERS.map(x=>x.nationality))].sort();
     const disciplines = [...new Set(FIGHTERS.map(x=>x.baseStyle))].sort();
-    rosterFilter = { nation: null, discipline: null };
+    // Note: rosterFilter is NOT reset here — reset is handled in render() only when
+    // navigating to roster from outside a fighter profile
 
     const nationPills = nations.map(n =>
       `<button class="fpill" data-type="nation" data-value="${n}" onclick="rosterPill('nation','${n}',this)">${n}</button>`
@@ -1025,7 +1028,10 @@
             <iframe src="${item.videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${item.title}"></iframe>
           </div>`
       : '';
-    const body = `<div class="vault-article-body">${item.content}${videoBlock}</div>`;
+    const body = `<div class="vault-article-body">${item.content}${videoBlock}</div>
+      <div class="fp-bottom-nav" style="margin-top:48px">
+        <span class="btn btn-ghost" onclick="go('vault')" style="cursor:pointer">← Return to The Vault</span>
+      </div>`;
 
     if(item.layout === 'hero'){
       const hero = imgSrc ? `<div class="vault-hero-img"><img src="${imgSrc}" alt="${item.title}"></div>` : `<div class="vault-hero-img vault-hero-placeholder"><span class="glyph" style="font-size:80px;opacity:.15">龍</span></div>`;
@@ -1408,9 +1414,14 @@
     app.innerHTML=html;
     // Update floating back bar
     if(window._updateFloatBar) window._updateFloatBar(route, arg);
-    // Restore roster filter + sort state when coming back from a profile
+    // Roster filter state management
     if(route==='roster'){
-      // Restore active pill states
+      if(lastRoute !== 'fighter'){
+        // Coming from anywhere except a fighter profile — reset filters
+        rosterFilter = { nation: null, discipline: null };
+        rosterSort = 'name';
+      }
+      // Restore active pill visual states (works for both fresh load and back-from-profile)
       document.querySelectorAll('.fpill[data-type="nation"]').forEach(p=>{
         p.classList.toggle('active', p.dataset.value===rosterFilter.nation);
       });
@@ -1477,7 +1488,7 @@
     let currentFighterName = '';
 
     window.addEventListener('scroll', function(){
-      if(currentRoute !== 'fighter'){ floatBar.style.display='none'; return; }
+      if(currentRoute !== 'fighter' && !(currentRoute === 'vault' && window.location.hash.includes('/'))){ floatBar.style.display='none'; return; }
       if(window.scrollY > 200){
         floatBar.style.display='block';
         requestAnimationFrame(()=>floatBar.classList.add('visible'));
@@ -1491,9 +1502,18 @@
     const origRender = render;
     window._updateFloatBar = function(route, arg){
       currentRoute = route;
+      const floatBack = document.getElementById('fp-float-back');
       if(route==='fighter' && arg){
         const ft = FIGHTERS.find(x=>x.id===arg);
-        if(ft){ currentFighterName=ft.name; floatName.textContent=ft.name; }
+        if(ft){
+          currentFighterName=ft.name;
+          floatName.textContent=ft.name;
+          if(floatBack){ floatBack.textContent='← Back to Roster'; floatBack.onclick=function(){go('roster');}; }
+        }
+      } else if(route==='vault' && arg){
+        const item = typeof VAULT_ITEMS !== 'undefined' ? VAULT_ITEMS.find(x=>x.id===arg) : null;
+        floatName.textContent = item ? item.title : '';
+        if(floatBack){ floatBack.textContent='← The Vault'; floatBack.onclick=function(){go('vault');}; }
       } else {
         floatBar.classList.remove('visible');
         floatBar.style.display='none';
