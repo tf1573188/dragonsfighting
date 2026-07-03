@@ -294,6 +294,11 @@
   .vault-quote{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:var(--gold);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:36px 0;line-height:1.3}
   .vault-quote span{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:8px;font-family:'Barlow',sans-serif;font-style:italic}
   @media(max-width:768px){.vault-split{grid-template-columns:1fr;gap:32px}.vault-split-img{position:static}}
+  .vault-video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;margin:32px 0;background:var(--bg-2)}
+  .vault-video-tiktok{padding-bottom:0;height:auto;max-width:340px;margin-left:auto;margin-right:auto}
+  .vault-video-tiktok iframe{position:static;width:100%;height:600px;border-radius:8px}
+  .vault-video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:4px}
+  .vault-video-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;background:var(--bg-2);border-radius:4px;margin:32px 0;border:1px dashed var(--line)}
   .shop-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:32px;display:flex;flex-direction:column}
   .shop-card .k{font-family:'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--gold)}
   .shop-card h3{font-size:28px;margin:10px 0 8px}
@@ -883,7 +888,7 @@
       fighter: null,
       title: 'Fight 1 Press Conference: Pei Yee vs Cheryl',
       teaser: "Both fighters face the cameras ahead of the circuit's inaugural bout. Tension, respect, and one very pointed prediction.",
-      thumb: null,
+      thumb: 'images/pei-yee-1.png',
       date: 'DRAGONS Circuit · Pre-Fight',
       link: null,
       layout: 'hero',
@@ -910,14 +915,15 @@
     },
     {
       id: 'v003',
-      type: 'video',
+      type: 'spotlight',
       fighter: 'cheryl-ong',
-      title: 'Cheryl Ong — Training Camp, Fight 1',
-      teaser: "Inside Cheryl's prep for Fight 1. Pad work, sparring, and the Bedok sessions that built the Lionheart.",
-      thumb: null,
+      title: "Lionheart — Inside Cheryl Ong's Camp",
+      teaser: "Inside Cheryl's prep for Fight 1. Pad work, sparring, and the Bedok sessions that built a fighter who never learned to step back.",
+      thumb: 'images/cheryl-ong-1.png',
       date: 'DRAGONS Circuit · Camp Diary',
       link: null,
-      layout: 'hero',
+      layout: 'photo-right',
+      videoUrl: null, // paste YouTube or TikTok URL here e.g. 'https://www.youtube.com/embed/VIDEO_ID'
       content: `
         <p class="vault-lead">Cheryl Ong trains in a gym that smells of liniment oil and decades of use, in a converted shophouse ten minutes from the Bedok flat she grew up in. She chose it deliberately.</p>
         <p>"I could train somewhere newer," she says, unwrapping her hands after a session that ran forty minutes over schedule. "Fancier. Better lighting. But this place remembers what hard work looks like. The walls know."</p>
@@ -935,14 +941,15 @@
     },
     {
       id: 'v004',
-      type: 'interview',
+      type: 'spotlight',
       fighter: 'hana-jung',
       title: `"Once You Grip, It's Over" — Hana Jung`,
       teaser: "South Korea's ssireum specialist on her grandfather's legacy, the belt grab as a philosophy, and why she chose the cage over the tournament ground.",
-      thumb: null,
+      thumb: 'images/hana-jung-1.png',
       date: 'DRAGONS Circuit · Issue 01',
       link: null,
       layout: 'photo-left',
+      gifThumb: null, // paste path to GIF e.g. 'images/hana-highlight.gif'
       content: `
         <p class="vault-lead">Hana Jung speaks in short sentences. She considers each one before it arrives. In a sport full of people who perform confidence, she is the rare kind who simply has it — quiet, settled, and faintly unsettling to be across from.</p>
         <p>We met in Seoul, at a café near her gym in Mapo-gu. She ordered barley tea. She sat with her back to the wall.</p>
@@ -964,9 +971,15 @@
   ];
 
   function vaultThumb(item){
+    // GIF animated thumbnail takes priority
+    if(item.gifThumb) return `<img src="${item.gifThumb}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover">`;
     if(item.thumb) return `<img src="${item.thumb}" alt="${item.title}" loading="lazy">`;
-    if(item.type === 'video') return `<div class="vault-thumb-placeholder"><div class="vault-play">▶</div></div>`;
-    // Fighter portrait as background for non-video cards
+    // Video card with play button overlay
+    if(item.videoUrl){
+      const ft = item.fighter ? f(item.fighter) : null;
+      const bg = ft ? `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" style="opacity:.5;filter:grayscale(40%);width:100%;height:100%;object-fit:cover;object-position:top">` : '';
+      return `${bg}<div class="vault-play" style="position:absolute">▶</div>`;
+    }
     const ft = item.fighter ? f(item.fighter) : null;
     if(ft && ft.image) return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" style="opacity:.4;filter:grayscale(60%)">`;
     return `<div class="vault-thumb-placeholder"><span style="font-size:48px;opacity:.15">龍</span></div>`;
@@ -1002,7 +1015,17 @@
     const fighterLine = ft ? `<div style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">${ft.name} &ldquo;${ft.alias}&rdquo;</div>` : '';
     const headline = `<h1 class="vault-article-title">${item.title}</h1>`;
     const dateLine = `<div class="vault-article-date">${item.date}</div>`;
-    const body = `<div class="vault-article-body">${item.content}</div>`;
+    const isTikTok = item.videoUrl && item.videoUrl.includes('tiktok.com');
+    const videoBlock = item.videoUrl
+      ? isTikTok
+        ? `<div class="vault-video-wrap vault-video-tiktok">
+            <iframe src="${item.videoUrl}" frameborder="0" allow="fullscreen" allowfullscreen title="${item.title}"></iframe>
+          </div>`
+        : `<div class="vault-video-wrap">
+            <iframe src="${item.videoUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${item.title}"></iframe>
+          </div>`
+      : '';
+    const body = `<div class="vault-article-body">${item.content}${videoBlock}</div>`;
 
     if(item.layout === 'hero'){
       const hero = imgSrc ? `<div class="vault-hero-img"><img src="${imgSrc}" alt="${item.title}"></div>` : `<div class="vault-hero-img vault-hero-placeholder"><span class="glyph" style="font-size:80px;opacity:.15">龍</span></div>`;
