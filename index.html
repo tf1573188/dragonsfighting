@@ -254,6 +254,46 @@
   .prose{color:#cdc8ba;font-size:17px;line-height:1.8;max-width:680px;margin-top:20px}
   .prose p{margin-bottom:18px}
   .shop-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+
+  /* THE VAULT — editorial/media hub */
+  .vault-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:40px}
+  .vault-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer;transition:.2s;display:flex;flex-direction:column}
+  .vault-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .vault-thumb{width:100%;aspect-ratio:16/9;background:var(--bg-2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .vault-thumb img{width:100%;height:100%;object-fit:cover}
+  .vault-thumb-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--bg-2),var(--panel))}
+  .vault-type{position:absolute;top:10px;left:10px;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:2px;font-weight:600}
+  .vault-type.interview{background:var(--gold);color:#0a0c0b}
+  .vault-type.presser{background:var(--emerald);color:#fff}
+  .vault-type.spotlight{background:#c86b2e;color:#fff}
+  .vault-type.video{background:#1a1a2e;color:var(--gold);border:1px solid var(--gold)}
+  .vault-play{width:48px;height:48px;border-radius:50%;background:rgba(212,165,40,.9);display:flex;align-items:center;justify-content:center;font-size:20px;color:#0a0c0b}
+  .vault-body{padding:20px;flex:1;display:flex;flex-direction:column}
+  .vault-fighter{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .vault-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;line-height:1.2;margin-bottom:8px;color:var(--ink)}
+  .vault-teaser{font-size:13px;color:var(--muted);flex:1;line-height:1.6}
+  .vault-meta{margin-top:14px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+  .vault-empty{text-align:center;padding:80px 24px;color:var(--muted)}
+  .vault-empty .glyph{font-size:48px;display:block;margin-bottom:16px;opacity:.3}
+  /* Vault article layouts */
+  .vault-hero-img{width:100%;max-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--bg-2);margin-bottom:0}
+  .vault-hero-img img{width:100%;height:520px;object-fit:cover;object-position:top}
+  .vault-hero-placeholder{height:320px}
+  .vault-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:40px}
+  .vault-split-img{position:sticky;top:100px}
+  .vault-split-img img{width:100%;border-radius:4px;object-fit:cover;object-position:top;max-height:700px}
+  .vault-split-placeholder{height:500px;background:var(--bg-2);border-radius:4px;display:flex;align-items:center;justify-content:center}
+  .vault-split-text{padding-top:0}
+  .vault-article-title{font-size:clamp(26px,4vw,46px);line-height:1.1;margin:10px 0 12px}
+  .vault-article-date{color:var(--muted);font-size:13px;margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .vault-article-body p{margin-bottom:1.4em;line-height:1.8;font-size:16px;color:var(--ink)}
+  .vault-article-body h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;margin:2em 0 .8em;color:var(--gold)}
+  .vault-article-body strong{color:var(--ink);font-weight:600}
+  .vault-lead{font-size:19px!important;font-weight:500;line-height:1.7!important;color:var(--ink)!important}
+  .vault-speaker{padding-left:20px;border-left:3px solid var(--gold);color:var(--muted)!important;font-style:italic;margin:1em 0!important}
+  .vault-quote{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:var(--gold);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:36px 0;line-height:1.3}
+  .vault-quote span{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:8px;font-family:'Barlow',sans-serif;font-style:italic}
+  @media(max-width:768px){.vault-split{grid-template-columns:1fr;gap:32px}.vault-split-img{position:static}}
   .shop-card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:32px;display:flex;flex-direction:column}
   .shop-card .k{font-family:'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--gold)}
   .shop-card h3{font-size:28px;margin:10px 0 8px}
@@ -356,7 +396,7 @@
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     <nav class="links" id="links">
       <a href="#roster" data-route="roster">Roster</a>
-      <a href="#matchups" data-route="matchups">Matchups</a>
+      <a href="#vault" data-route="vault">The Vault</a>
       <a href="#records" data-route="records">Records</a>
       <a href="#about" data-route="about">About</a>
       <a href="#shop" data-route="shop">Shop</a>
@@ -390,7 +430,7 @@
       </div>
       <div class="fl">
         <a href="#roster" onclick="go('roster')">Roster</a>
-        <a href="#matchups" onclick="go('matchups')">Matchups</a>
+        <a href="#vault" onclick="go('vault')">The Vault</a>
         <a href="#records" onclick="go('records')">Records</a>
         <a href="#about" onclick="go('about')">About</a>
         <a href="#shop" onclick="go('shop')">Shop</a>
@@ -473,7 +513,7 @@
         <div class="sec-head"><div><span class="eyebrow">Next on the card</span><h2>Featured Matchup</h2></div>
         <p>The bout the circuit opens with. Tale of the tape below.</p></div>
         ${matchupCard(a,b,'Season Opener')}
-        <div style="text-align:center;margin-top:30px"><button class="btn btn-ghost" onclick="go('matchups')">See all matchups</button></div>
+        <div style="text-align:center;margin-top:30px"><button class="btn btn-ghost" onclick="go('vault')">The Vault ↗</button></div>
       </div>
     </section>
 
@@ -491,7 +531,7 @@
         <div class="request">
           <span class="eyebrow">Make the Card</span>
           <h3>Commission a Matchup</h3>
-          <p>Want to see two fighters meet in the ring? Pick your matchup and the most-requested bouts get produced and added to the vault.</p>
+          <p>Want to see two fighters meet in the ring? Pick your matchup and the most-requested bouts get produced first.</p>
           <span class="btn btn-gold" onclick="go('commission')">Pick Your Fighters</span>
         </div>
       </div>
@@ -803,6 +843,199 @@
     },{passive:true});
   })();
 
+  // ===== THE VAULT — editorial & media hub =====
+  // VAULT_ITEMS: add entries here as content is produced.
+  // type: 'interview' | 'presser' | 'spotlight' | 'video'
+  // fighter: fighter id (optional) | null for circuit-wide pieces
+  // thumb: image path (optional) | null for placeholder
+  // link: external URL for video | null for internal article
+  // content: full article HTML (for internal pieces)
+  const VAULT_ITEMS = [
+    {
+      id: 'v001',
+      type: 'spotlight',
+      fighter: 'pei-yee',
+      title: 'The Tempest from Penang',
+      teaser: 'Before she became the most talked-about striker in the circuit, Pei Yee Lim was throwing combinations at a punching bag above a wet market. A portrait.',
+      thumb: null,
+      date: 'DRAGONS Circuit · Issue 01',
+      link: null,
+      layout: 'photo-right',
+      content: `
+        <p class="vault-lead">She is the first one through the gym door every morning, and she will be the last one to leave. That is not a boast — it is simply what Pei Yee Lim considers the minimum.</p>
+        <p>Penang gave her the heat, the hunger, and the hours. Her mother ran a hawker stall on Chulia Street — char koay teow, six days a week, before the sun came up. Pei Yee worked the mornings before school and the evenings after, and somewhere in between she found a community gym above a row of shophouses where a retired kickboxer called Coach Rajan was charging kids fifty ringgit a month to learn how to fight. He spotted her in the second week. By the third, he was covering her fees himself.</p>
+        <p>"She trained like she was afraid of stopping," Rajan says. "Like if she stopped moving, something would catch her."</p>
+        <p>What she was outrunning, she will not say directly. But the goal has always been specific: a real home for her family. Not rented. Owned. Something that stays.</p>
+        <h3>The Volume Game</h3>
+        <p>Pei Yee's fighting style is an extension of her personality — relentless, cheerful, and fundamentally unwilling to let an opponent settle. She throws in combinations that build into walls of output, trusting her conditioning to outlast whatever answer comes back. The nickname arrived naturally. She does not storm the ring. She is the storm.</p>
+        <p>"My pace is my weapon," she says. "Not my power, not my technique — my pace. Because nobody can match it for a full fight. I know this because I have tested it. Every day."</p>
+        <p>She is not wrong. In sparring, her training partners rotate in fresh every three rounds while she continues. She finishes each session with footwork drills. The char koay teow, she says, is non-negotiable fuel.</p>
+        <h3>Fight 1</h3>
+        <p>The circuit's inaugural bout matched her against Cheryl Ong of Singapore — another forward-pressure fighter with a different philosophy. Where Pei Yee buries opponents in output, Cheryl makes every exchange personal. Two hawker-district kids from neighbouring countries, neither of whom learned to take a step back.</p>
+        <p>What happened between the bells is in the record now. Pei Yee does not discuss the details. She is already thinking about what comes next.</p>
+        <p>"I send money home first," she says, when asked how she celebrated. "Then I go back to the gym."</p>
+        <div class="vault-quote">"Saya masuk paling awal, balik paling lewat." <span>(First one in, last one out.)</span></div>
+      `
+    },
+    {
+      id: 'v002',
+      type: 'presser',
+      fighter: null,
+      title: 'Fight 1 Press Conference: Pei Yee vs Cheryl',
+      teaser: "Both fighters face the cameras ahead of the circuit's inaugural bout. Tension, respect, and one very pointed prediction.",
+      thumb: null,
+      date: 'DRAGONS Circuit · Pre-Fight',
+      link: null,
+      layout: 'hero',
+      content: `
+        <p class="vault-lead">The room was small, the table was too close, and Cheryl Ong arrived seven minutes late. Pei Yee Lim was already seated, water untouched, watching the door.</p>
+        <p>The DRAGONS Fight 1 press conference was not supposed to be contentious. Both fighters had spoken publicly about respecting each other's styles. The circuit's first official event was meant to open with good faith and mutual acknowledgement.</p>
+        <p>It lasted approximately four minutes before Cheryl said what she was thinking.</p>
+        <h3>"I Don't Take Steps Back"</h3>
+        <p><strong>On what she expects from Pei Yee:</strong></p>
+        <p class="vault-speaker">Cheryl: "She's going to come forward. That's her whole game — volume, pressure, keep coming. I know this. I've watched every clip of her I could find. But here's the thing: I come forward too. So what happens when two people who never step back walk into each other?"</p>
+        <p><strong>Pei Yee, without looking up from her water:</strong></p>
+        <p class="vault-speaker">Pei Yee: "One of them goes down."</p>
+        <p>A beat of silence. Cheryl laughed first.</p>
+        <p><strong>On the significance of Fight 1:</strong></p>
+        <p class="vault-speaker">Pei Yee: "I think about my mother watching this. She has never seen me fight in person — she cannot leave the stall. So this is the fight she watches on a screen, behind the counter, between orders. I want her to see something she is proud of."</p>
+        <p class="vault-speaker">Cheryl: "My mother will also be watching. From the crowd. She took the night off, which she has never done in twenty years. So same — I need to give her something."</p>
+        <h3>The Prediction</h3>
+        <p>Asked for a prediction, Cheryl was immediate.</p>
+        <p class="vault-speaker">Cheryl: "Finish. I don't know what round, but it doesn't go to the cards. It's not that kind of fight."</p>
+        <p>Pei Yee considered this for a moment, then nodded once.</p>
+        <p class="vault-speaker">Pei Yee: "She's right about that part."</p>
+        <p>They did not shake hands at the end. They did not need to. Both of them already knew exactly what was coming.</p>
+      `
+    },
+    {
+      id: 'v003',
+      type: 'video',
+      fighter: 'cheryl-ong',
+      title: 'Cheryl Ong — Training Camp, Fight 1',
+      teaser: "Inside Cheryl's prep for Fight 1. Pad work, sparring, and the Bedok sessions that built the Lionheart.",
+      thumb: null,
+      date: 'DRAGONS Circuit · Camp Diary',
+      link: null,
+      layout: 'hero',
+      content: `
+        <p class="vault-lead">Cheryl Ong trains in a gym that smells of liniment oil and decades of use, in a converted shophouse ten minutes from the Bedok flat she grew up in. She chose it deliberately.</p>
+        <p>"I could train somewhere newer," she says, unwrapping her hands after a session that ran forty minutes over schedule. "Fancier. Better lighting. But this place remembers what hard work looks like. The walls know."</p>
+        <p>The camp for Fight 1 ran six weeks. She trained twice daily, six days a week — mornings on the pads with her coach, afternoons on sparring and conditioning. She did not take a rest day in the final fortnight.</p>
+        <h3>The Game Plan</h3>
+        <p>Cheryl's coaching team identified Pei Yee's pace as the primary variable. The plan was not to match it — "you don't race a machine on its own track," her coach says — but to absorb the early pressure, disrupt the rhythm with clinch work, and trust Cheryl's durability to outlast the storm.</p>
+        <p class="vault-speaker">Cheryl: "I knew she was going to come. I knew it was going to hurt in the first two rounds. So we drilled for that. We made the hurt familiar so it doesn't surprise me when it arrives."</p>
+        <p>The sparring partners rotated. Cheryl did not.</p>
+        <h3>The Night Before</h3>
+        <p>She ate char kway teow — East Coast hawker, her specification — and watched two rounds of old footage before turning it off. She does not sleep well before fights. She has stopped pretending otherwise.</p>
+        <p>"My mother called at ten," she says. "She said: don't take steps back. I said: Mum, I never learned how." She pauses. "She said: I know. I taught you that."</p>
+        <div class="vault-quote">"The crowd knows me as the one who refuses to take a backward step. That's not a style. That's just who I am."</div>
+        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="${SHOP.gumroad}" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
+      `
+    },
+    {
+      id: 'v004',
+      type: 'interview',
+      fighter: 'hana-jung',
+      title: `"Once You Grip, It's Over" — Hana Jung`,
+      teaser: "South Korea's ssireum specialist on her grandfather's legacy, the belt grab as a philosophy, and why she chose the cage over the tournament ground.",
+      thumb: null,
+      date: 'DRAGONS Circuit · Issue 01',
+      link: null,
+      layout: 'photo-left',
+      content: `
+        <p class="vault-lead">Hana Jung speaks in short sentences. She considers each one before it arrives. In a sport full of people who perform confidence, she is the rare kind who simply has it — quiet, settled, and faintly unsettling to be across from.</p>
+        <p>We met in Seoul, at a café near her gym in Mapo-gu. She ordered barley tea. She sat with her back to the wall.</p>
+        <p><strong>Your grandfather competed in ssireum. When did you first understand what that meant?</strong></p>
+        <p class="vault-speaker">I was maybe six or seven. I watched him compete at a village festival — it was outdoors, a sand circle, very traditional. He was not young by then. But when he grabbed the belt, something changed. His whole body organised itself around that grip. I didn't understand technique then. I just thought: this is what certainty looks like.</p>
+        <p><strong>When did you start training it yourself?</strong></p>
+        <p class="vault-speaker">Before I knew I was training it. He taught me grip games when I was small — who can hold on longest, who can pull whom off balance. I thought we were playing. He was teaching me the fundamentals of ssireum without calling them that. By the time I got to a real gym, my grip was already there.</p>
+        <p><strong>You competed in the amateur ssireum circuit through university. Why make the move to MMA?</strong></p>
+        <p class="vault-speaker">Because ssireum ends when the throw happens. The fight is won or lost in one moment. I wanted to find out what happens after. I wanted a longer conversation.</p>
+        <p><strong>How does ssireum translate to a cage?</strong></p>
+        <p class="vault-speaker">People expect a grappler to wait. To be patient. To tie up and grind. That is not ssireum. Ssireum is a closing system. I close distance, I grip, and the throw arrives before the opponent has processed the contact. The cage wall helps. There is no stepping outside the sand circle here.</p>
+        <p><strong>You've been compared to Yuna Seo — the other Korean fighter in the circuit. Do you see it?</strong></p>
+        <p class="vault-speaker">Yuna performs. She is very good at performing. People enjoy watching her. That is a real skill and I do not diminish it. But performance and outcome are different things. When we eventually meet — and we will — the question is what happens in the clinch. I know what happens in the clinch.</p>
+        <p><strong>Last question. Your grandfather — does he watch your fights?</strong></p>
+        <p class="vault-speaker">He watches everything. He is very old now and his eyes are not good, so my cousin sits beside him and describes what is happening. She says he only ever asks one question: did she get the grip? When the answer is yes, he stops asking. He knows what comes next.</p>
+        <div class="vault-quote">"할아버지가 가르쳐줘어 — 잡으면 끝이야." <span>(My grandfather taught me — once you grip, it's over.)</span></div>
+      `
+    },
+  ];
+
+  function vaultThumb(item){
+    if(item.thumb) return `<img src="${item.thumb}" alt="${item.title}" loading="lazy">`;
+    if(item.type === 'video') return `<div class="vault-thumb-placeholder"><div class="vault-play">▶</div></div>`;
+    // Fighter portrait as background for non-video cards
+    const ft = item.fighter ? f(item.fighter) : null;
+    if(ft && ft.image) return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" style="opacity:.4;filter:grayscale(60%)">`;
+    return `<div class="vault-thumb-placeholder"><span style="font-size:48px;opacity:.15">龍</span></div>`;
+  }
+
+  function vaultCard(item){
+    const ft = item.fighter ? f(item.fighter) : null;
+    const fighterLabel = ft ? `${ft.name} "${ft.alias}"` : 'DRAGONS Circuit';
+    const onclick = item.link
+      ? `window.open('${item.link}','_blank')`
+      : `go('vault/${item.id}')`;
+    return `<div class="vault-card" onclick="${onclick}" role="button" tabindex="0" aria-label="${item.title}">
+      <div class="vault-thumb">
+        ${vaultThumb(item)}
+        <span class="vault-type ${item.type}">${item.type.toUpperCase()}</span>
+      </div>
+      <div class="vault-body">
+        <div class="vault-fighter">${fighterLabel}</div>
+        <div class="vault-title">${item.title}</div>
+        <div class="vault-teaser">${item.teaser}</div>
+        <div class="vault-meta">${item.date}</div>
+      </div>
+    </div>`;
+  }
+
+  function vaultArticle(id){
+    const item = VAULT_ITEMS.find(x=>x.id===id);
+    if(!item || !item.content) return vault();
+    const ft = item.fighter ? f(item.fighter) : null;
+    const imgSrc = item.thumb ? item.thumb : (ft ? 'images/'+ft.image : null);
+    const backBar = `<div class="fp-back-bar"><span class="fp-back" onclick="go('vault')">← The Vault</span></div>`;
+    const typeBadge = `<span class="vault-type ${item.type}" style="position:static;display:inline-block;margin-bottom:16px">${item.type.toUpperCase()}</span>`;
+    const fighterLine = ft ? `<div style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">${ft.name} &ldquo;${ft.alias}&rdquo;</div>` : '';
+    const headline = `<h1 class="vault-article-title">${item.title}</h1>`;
+    const dateLine = `<div class="vault-article-date">${item.date}</div>`;
+    const body = `<div class="vault-article-body">${item.content}</div>`;
+
+    if(item.layout === 'hero'){
+      const hero = imgSrc ? `<div class="vault-hero-img"><img src="${imgSrc}" alt="${item.title}"></div>` : `<div class="vault-hero-img vault-hero-placeholder"><span class="glyph" style="font-size:80px;opacity:.15">龍</span></div>`;
+      return `<section>
+        ${hero}
+        <div class="wrap" style="max-width:780px">
+          ${backBar}${typeBadge}${fighterLine}${headline}${dateLine}${body}
+        </div></section>`;
+    }
+
+    const photoSide = imgSrc
+      ? `<div class="vault-split-img"><img src="${imgSrc}" alt="${ft ? ft.name : item.title}"></div>`
+      : `<div class="vault-split-img vault-split-placeholder"><span class="glyph" style="font-size:64px;opacity:.15">龍</span></div>`;
+    const textSide = `<div class="vault-split-text">${typeBadge}${fighterLine}${headline}${dateLine}${body}</div>`;
+
+    if(item.layout === 'photo-left'){
+      return `<section><div class="wrap">${backBar}<div class="vault-split">${photoSide}${textSide}</div></div></section>`;
+    }
+    // photo-right default
+    return `<section><div class="wrap">${backBar}<div class="vault-split">${textSide}${photoSide}</div></div></section>`;
+  }
+
+  function vault(arg){
+    if(arg){
+      return vaultArticle(arg);
+    }
+    return `<section><div class="wrap">
+      <span class="eyebrow">The Vault</span>
+      <div class="sec-head"><h2>Features & Media</h2><p>Fighter spotlights, pre-fight pressers, interviews, and footage from inside the circuit.</p></div>
+      <div class="vault-grid">${VAULT_ITEMS.map(vaultCard).join('')}</div>
+    </div></section>`;
+  }
+
   function matchups(){
     muIndex=0;
     const dots=MATCHUPS.map((_,i)=>`<button class="cdot ${i===0?'active':''}" onclick="muGo(${i})" aria-label="Matchup ${i+1}"></button>`).join('');
@@ -824,7 +1057,7 @@
       <div class="request">
         <span class="eyebrow">Make the Card</span>
         <h3>Commission a Matchup</h3>
-        <p>Pick any two fighters from the roster and tell us who should meet. The most-requested bouts get produced and added to the vault.</p>
+        <p>Pick any two fighters from the roster and tell us who should meet. All commissions are paid — email us for a quote.</p>
         <span class="btn btn-gold" onclick="go('commission')">Pick Your Fighters</span>
       </div>
     </div></section>`;
@@ -994,7 +1227,7 @@
 
   function shop(){
     return `<section><div class="wrap">
-      <span class="eyebrow">The Vault</span>
+      <span class="eyebrow">The Shop</span>
       <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">Watch the Fights</h2>
       <p class="lead">Full bouts and highlight reels from the circuit. Buy a single fight or back the whole stable.</p>
       <div class="shop-cards">
@@ -1127,7 +1360,8 @@
     switch(route){
       case 'roster': html=roster(); break;
       case 'fighter': html=fighter(arg); break;
-      case 'matchups': html=matchups(); break;
+      case 'matchups': html=commission(); break;
+      case 'vault': html=vault(arg); break;
       case 'records': html=records(arg); break;
       case 'watch': html=watch(arg); break;
       case 'about': html=about(); break;
@@ -1151,6 +1385,21 @@
     app.innerHTML=html;
     // Update floating back bar
     if(window._updateFloatBar) window._updateFloatBar(route, arg);
+    // Restore roster filter + sort state when coming back from a profile
+    if(route==='roster'){
+      // Restore active pill states
+      document.querySelectorAll('.fpill[data-type="nation"]').forEach(p=>{
+        p.classList.toggle('active', p.dataset.value===rosterFilter.nation);
+      });
+      document.querySelectorAll('.fpill[data-type="discipline"]').forEach(p=>{
+        p.classList.toggle('active', p.dataset.value===rosterFilter.discipline);
+      });
+      document.querySelectorAll('.fsort').forEach(p=>{
+        p.classList.toggle('active', p.dataset.sort===rosterSort);
+      });
+      // Re-apply filter + sort
+      applyRosterFilter();
+    }
     // Restore roster scroll when coming BACK from a profile; otherwise go to top
     if(lastRoute==='fighter' && route==='roster'){
       window.scrollTo(0, savedScroll);

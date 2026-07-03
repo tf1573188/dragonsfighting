@@ -610,7 +610,7 @@ const FIGHTERS = [
     "flag": "🇹🇭",
     "hometown": "Bangkok",
     "baseStyle": "Muay Thai",
-    "ruleset": "MMA",
+    "ruleset": "Muay Thai",
     "division": "Strawweight",
     "color": "#d4a528",
     "record": {
