@@ -455,6 +455,7 @@
   // ===== EDIT THESE LINKS =====
   const SHOP = {
     gumroad: "https://dragonsfighting.gumroad.com/",
+    fight1:  "https://dragonsfighting.gumroad.com/l/bjgyp",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -939,7 +940,7 @@
         <p>She ate char kway teow — East Coast hawker, her specification — and watched two rounds of old footage before turning it off. She does not sleep well before fights. She has stopped pretending otherwise.</p>
         <p>"My mother called at ten," she says. "She said: don't take steps back. I said: Mum, I never learned how." She pauses. "She said: I know. I taught you that."</p>
         <div class="vault-quote">"The crowd knows me as the one who refuses to take a backward step. That's not a style. That's just who I am."</div>
-        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="${SHOP.gumroad}" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
+        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
       `
     },
     {
@@ -1098,8 +1099,9 @@
   //           round: 2, date:'2026-07-12', event:'DRAGONS 1' }
   // Leave empty until real fights are produced.
   const FIGHTS = [
-    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl" },
-    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 1", video:"yingying-vs-jia" },
+    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1 },
+    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 1", video:"yingying-vs-jia", shopUrl: null },
+    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null },
   ];
 
   // Compute each fighter's W-L-KO from the fight log (overrides the 0-0 in data once fights exist)
@@ -1156,7 +1158,7 @@
             <span class="rc-glyph">対</span>
             <span class="rc-method">${b.method}</span>
             <span class="rc-round">${b.round?`Round ${b.round}`:''}</span>
-            ${b.video?`<button class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em" onclick="go('shop')">Watch ↗</button>`:''}
+            ${b.video?`<a class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em;text-decoration:none" href="${b.shopUrl||SHOP.gumroad}" target="_blank" rel="noopener">Watch ↗</a>`:''}
           </div>
           <div class="rc-side loss" onclick="go('fighter/${l.id}')">
             ${fightFace(l)}
