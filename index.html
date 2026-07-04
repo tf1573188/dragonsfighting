@@ -676,7 +676,7 @@
   }
 
   // ── ROSTER FILTER STATE ──
-  let rosterFilter = { nation: null, discipline: null };
+  let rosterFilter = { nation: [], discipline: null };
   let rosterSort = "name";
 
   function applyRosterFilter(){
@@ -696,13 +696,15 @@
     cards.forEach(el => {
       const n = el.dataset.nation;
       const d = el.dataset.discipline;
-      const show = (!rosterFilter.nation || rosterFilter.nation === n) &&
+      const show = (rosterFilter.nation.length === 0 || rosterFilter.nation.includes(n)) &&
                    (!rosterFilter.discipline || rosterFilter.discipline === d);
       el.classList.toggle('hidden', !show);
       if(show) visible++;
     });
     const counter = document.getElementById('roster-count');
-    if(counter) counter.innerHTML = `Showing <b>${visible}</b> of <b>${FIGHTERS.length}</b> fighters`;
+    const activeNations = rosterFilter.nation.length;
+    const filterDesc = activeNations > 1 ? ` · ${activeNations} nations` : '';
+    if(counter) counter.innerHTML = `Showing <b>${visible}</b> of <b>${FIGHTERS.length}</b> fighters${filterDesc}`;
   }
 
   window.rosterSortBy = function(val){
@@ -712,14 +714,25 @@
   };
 
   window.rosterPill = function(type, value, el){
-    if(rosterFilter[type] === value){
-      rosterFilter[type] = null;
+    if(type === 'nation'){
+      // Multi-select: toggle in/out of array
+      const idx = rosterFilter.nation.indexOf(value);
+      if(idx > -1){
+        rosterFilter.nation.splice(idx, 1);
+      } else {
+        rosterFilter.nation.push(value);
+      }
     } else {
-      rosterFilter[type] = value;
+      // Discipline: single select (toggle off if same)
+      rosterFilter[type] = rosterFilter[type] === value ? null : value;
     }
     // Update pill active states
     document.querySelectorAll(`.fpill[data-type="${type}"]`).forEach(p => {
-      p.classList.toggle('active', p.dataset.value === rosterFilter[type]);
+      if(type === 'nation'){
+        p.classList.toggle('active', rosterFilter.nation.includes(p.dataset.value));
+      } else {
+        p.classList.toggle('active', p.dataset.value === rosterFilter[type]);
+      }
     });
     applyRosterFilter();
   };
@@ -1620,12 +1633,12 @@
     if(route==='roster'){
       if(lastRoute !== 'fighter'){
         // Coming from anywhere except a fighter profile — reset filters
-        rosterFilter = { nation: null, discipline: null };
+        rosterFilter = { nation: [], discipline: null };
         rosterSort = 'name';
       }
       // Restore active pill visual states (works for both fresh load and back-from-profile)
       document.querySelectorAll('.fpill[data-type="nation"]').forEach(p=>{
-        p.classList.toggle('active', p.dataset.value===rosterFilter.nation);
+        p.classList.toggle('active', rosterFilter.nation.includes(p.dataset.value));
       });
       document.querySelectorAll('.fpill[data-type="discipline"]').forEach(p=>{
         p.classList.toggle('active', p.dataset.value===rosterFilter.discipline);
