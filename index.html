@@ -85,6 +85,38 @@
   /* ROSTER GRID */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px}
 
+  /* FEATURED FIGHT */
+  .featured-fight{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;width:100%}
+  .ff-fighters{display:grid;grid-template-columns:1fr 80px 1fr;gap:0;height:520px;width:100%}
+  .ff-fighter{position:relative;overflow:hidden;cursor:pointer;display:block}
+  .ff-fighter::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,12,11,.9) 0%,rgba(10,12,11,.2) 50%,transparent 100%);pointer-events:none;z-index:1}
+  [data-theme="light"] .ff-fighter::after{background:linear-gradient(to top,rgba(20,20,14,.85) 0%,rgba(20,20,14,.1) 50%,transparent 100%)}
+  .ff-img{position:absolute;top:0;left:0;width:100%;height:100%}
+  .ff-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease;display:block}
+  .ff-fighter:hover .ff-img img{transform:scale(1.04)}
+  .ff-fighter-accent{position:absolute;bottom:0;left:0;right:0;height:3px;z-index:3}
+  .ff-info{position:absolute;bottom:0;left:0;right:0;padding:20px;text-align:center;z-index:2}
+  .ff-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(16px,2vw,22px);text-transform:uppercase;color:#fff;transition:color .2s;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+  .ff-fighter:hover .ff-name{color:var(--gold)}
+  .ff-alias{font-size:12px;color:var(--gold);margin:3px 0;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+  .ff-nation{font-size:11px;color:rgba(255,255,255,.7);margin-top:3px;letter-spacing:.06em}
+  .ff-vs{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg-2);border-left:1px solid var(--line);border-right:1px solid var(--line);z-index:1;flex-shrink:0}
+  .ff-vs-glyph{font-size:32px;color:var(--gold);font-family:'Noto Serif SC',serif;line-height:1}
+  .ff-vs-label{font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:10px;writing-mode:vertical-rl;text-orientation:mixed}
+  .ff-cta{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;padding:20px 24px;border-top:1px solid var(--line)}
+  .ff-cta .btn,.ff-cta a.btn{flex:0 0 auto;width:auto;font-size:13px;padding:11px 24px}
+  @media(max-width:700px){
+    .ff-fighters{grid-template-columns:1fr 60px 1fr;height:360px}
+    .ff-vs-glyph{font-size:24px}
+    .ff-cta{padding:16px}
+  }
+  @media(max-width:480px){
+    .ff-fighters{grid-template-columns:1fr;height:auto}
+    .ff-fighter{height:280px}
+    .ff-vs{flex-direction:row;height:56px;border-left:none;border-right:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .ff-vs-label{writing-mode:horizontal-tb;margin-top:0;margin-left:10px}
+  }
+
   /* ROSTER FILTER */
   .filter-bar{margin-bottom:32px}
   .filter-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
@@ -190,10 +222,10 @@
   .fr-method{grid-column:2;grid-row:1/3;font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink);text-align:right;align-self:center}
 
   /* LARGE FIGHT IMAGE */
-  .ff-img{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent)}
-  .ff-img img{width:100%;height:100%;object-fit:cover;object-position:top center}
-  .ff-img.noimg{position:relative}
-  .ff-img.noimg::after{content:'No Image';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
+  .rc-face{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent)}
+  .rc-face img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .rc-face.noimg{position:relative}
+  .rc-face.noimg::after{content:'No Image';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
 
   /* RECORDS — large cards (results shown, no shop link) */
   .rec-cards{display:flex;flex-direction:column;gap:20px}
@@ -294,6 +326,26 @@
   .vault-quote{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:var(--gold);padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:36px 0;line-height:1.3}
   .vault-quote span{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:8px;font-family:'Barlow',sans-serif;font-style:italic}
   @media(max-width:768px){.vault-split{grid-template-columns:1fr;gap:32px}.vault-split-img{position:static}}
+  /* VENUES */
+  .venue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+  .venue-card{background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+  .venue-accent{height:4px;width:100%;flex-shrink:0}
+  .venue-body{padding:28px 24px;display:flex;flex-direction:column;gap:16px}
+  .venue-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+  .venue-name{font-family:'Oswald',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;color:var(--ink)}
+  .venue-subtitle{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .venue-type-badge{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--bg-2);color:var(--muted);padding:5px 10px;border-radius:2px;border:1px solid var(--line);white-space:nowrap;flex-shrink:0}
+  .venue-desc{font-size:14px;color:var(--muted);line-height:1.75}
+  .venue-atmosphere{font-size:13px;color:var(--muted);opacity:.8;font-style:italic}
+  .venue-fights{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
+  .venue-fights-label{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .venue-fight-tag{font-size:12px;color:var(--muted)}
+  .venue-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--bg-2)}
+  .venue-thumb-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .venue-card-footer{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .venue-read-more{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .venue-card{cursor:pointer;transition:border-color .2s,transform .2s}
+  .venue-card:hover{border-color:var(--gold);transform:translateY(-2px)}
   .vault-video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;margin:32px 0;background:var(--bg-2)}
   .vault-video-tiktok{padding-bottom:0;height:auto;max-width:340px;margin-left:auto;margin-right:auto}
   .vault-video-tiktok iframe{position:static;width:100%;height:600px;border-radius:8px}
@@ -400,8 +452,8 @@
     </div>
     <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
     <nav class="links" id="links">
-      <a href="#roster" data-route="roster">Roster</a>
-      <a href="#vault" data-route="vault">The Vault</a>
+      <a href="#roster" data-route="roster">Fighters</a>
+      <a href="#vault" data-route="vault">Vault</a>
       <a href="#records" data-route="records">Records</a>
       <a href="#commission" data-route="commission">Commission</a>
       <a href="#about" data-route="about">About</a>
@@ -455,6 +507,7 @@
   // ===== EDIT THESE LINKS =====
   const SHOP = {
     gumroad: "https://dragonsfighting.gumroad.com/",
+    fight1:  "https://dragonsfighting.gumroad.com/l/bjgyp",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -502,7 +555,7 @@
           <div class="wordmark">DRAGONS</div>
           <div class="underbar"><span class="ln"></span><span class="tag">Pan-Asian Fighting Circuit</span><span class="ln r"></span></div>
         </div>
-        <p class="sub">The sharpest strikers in Asia and beyond, matched in brutal one-on-one bouts. Twelve disciplines, one ring, and <b>no easy nights.</b></p>
+        <p class="sub">43 fighters. 14 nations. AI-generated fight videos — a fictional world built one bout at a time.</p>
         <div class="hero-cta">
           <button class="btn btn-gold" onclick="go('roster')">Meet the Roster</button>
           <button class="btn btn-ghost" onclick="go('shop')">Watch the Fights</button>
@@ -517,19 +570,50 @@
 
     <section>
       <div class="wrap">
-        <div class="sec-head"><div><span class="eyebrow">Next on the card</span><h2>Featured Matchup</h2></div>
-        <p>The bout the circuit opens with. Tale of the tape below.</p></div>
-        ${matchupCard(a,b,'Season Opener')}
-        <div style="text-align:center;margin-top:30px"><button class="btn btn-ghost" onclick="go('vault')">The Vault ↗</button></div>
+        <div class="sec-head"><div><span class="eyebrow">Now Available</span><h2>Featured Fight</h2></div>
+        <p>The circuit's inaugural bout. Watch it now on Gumroad.</p></div>
+        <div class="featured-fight">
+          <div class="ff-fighters">
+          <div class="ff-fighter" onclick="go('fighter/cheryl-ong')">
+            <div class="ff-img">
+              <img src="images/cheryl-ong.png" alt="Cheryl Ong" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#d83a2e"></div>
+            <div class="ff-info">
+              <div class="ff-name">Cheryl Ong</div>
+              <div class="ff-alias">"Lionheart"</div>
+              <div class="ff-nation">🇸🇬 Singapore · Kickboxing</div>
+            </div>
+          </div>
+          <div class="ff-vs">
+            <span class="ff-vs-glyph">対</span>
+            <span class="ff-vs-label">Fight 1 · DRAGONS</span>
+          </div>
+          <div class="ff-fighter" onclick="go('fighter/pei-yee')">
+            <div class="ff-img">
+              <img src="images/pei-yee.png" alt="Pei Yee Lim" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#4ac86b"></div>
+            <div class="ff-info">
+              <div class="ff-name">Pei Yee Lim</div>
+              <div class="ff-alias">"Tempest"</div>
+              <div class="ff-nation">🇲🇾 Malaysia · Kickboxing</div>
+            </div>
+          </div>
+          <div class="ff-cta">
+            <a class="btn btn-gold" href="https://dragonsfighting.gumroad.com/l/bjgyp" target="_blank" rel="noopener">Watch Fight 1 ↗</a>
+            <button class="btn btn-ghost" onclick="go('vault')">The Vault</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section style="border-top:1px solid var(--line)">
       <div class="wrap">
-        <div class="sec-head"><div><span class="eyebrow">The Stable</span><h2>The Roster</h2></div>
+        <div class="sec-head"><div><span class="eyebrow">The Stable</span><h2>The Fighters</h2></div>
         <p>Every fighter carries a record and a reason. Click through.</p></div>
         <div class="grid">${shuffleFighters().slice(0,8).map(card).join('')}</div>
-        <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">View full roster</button></div>
+        <div style="text-align:center;margin-top:30px"><button class="btn btn-gold" onclick="go('roster')">All Fighters</button></div>
       </div>
     </section>
 
@@ -538,7 +622,7 @@
         <div class="request">
           <span class="eyebrow">Make the Card</span>
           <h3>Commission a Matchup</h3>
-          <p>Want to see two fighters meet in the ring? Pick your matchup and the most-requested bouts get produced first.</p>
+          <p>Want to see two specific fighters meet? Get in touch for a quote — all commissions are paid productions.</p>
           <span class="btn btn-gold" onclick="go('commission')">Pick Your Fighters</span>
         </div>
       </div>
@@ -624,7 +708,7 @@
 
     return `<section><div class="wrap">
       <span class="eyebrow">${nations.length} Nations · One Division</span>
-      <div class="sec-head"><h2>The Roster</h2><p>Boxers, Muay Thai killers, Sambo grapplers, street fighters. Find your fighter.</p></div>
+      <div class="sec-head"><h2>The Fighters</h2><p>Boxers, Muay Thai killers, Sambo grapplers, street fighters.</p><p style="color:var(--gold);font-family:'Oswald',sans-serif;font-size:18px;font-weight:600;letter-spacing:.08em;margin-top:8px">Pick your Fighter.</p></div>
       <div class="filter-bar">
         <div class="filter-row">
           <span class="filter-label">Nation</span>
@@ -851,6 +935,58 @@
     },{passive:true});
   })();
 
+  // ===== VENUES =====
+  const VENUES = [
+    {
+      id: 'the-ring',
+      name: 'The Ring',
+      subtitle: 'Bangkok · Permanent Venue',
+      type: 'Muay Thai · Kickboxing · MMA',
+      color: '#c86b2e',
+      thumb: null, // add image path e.g. 'images/venue-ring.png'
+      description: 'A traditional Lumpinee-style ring in an unairconditioned hall in the outer districts of Bangkok. The canvas is old. The lights are bright. The crowd is close enough to hear the fighters breathe. The Ring is where the circuit started — it rewards technical strikers, punishes sloppiness, and has a knack for producing finishes in the third round.',
+      atmosphere: 'Loud, humid, partisan. The regulars know every fighter by name.',
+      fights: ['Fight 1: Cheryl Ong vs. Pei Yee Lim']
+    },
+    {
+      id: 'the-warehouse',
+      name: 'The Warehouse',
+      subtitle: 'Location Classified',
+      type: 'All Disciplines',
+      color: '#3a6bc8',
+      thumb: null, // add image path e.g. 'images/venue-warehouse.png'
+      description: 'A decommissioned industrial facility somewhere in Southeast Asia — the circuit does not publish the address. A cage sits in the centre of the floor. The ceiling is forty feet high. The acoustics are brutal. Fighters say the darkness at the edges of the venue changes how they fight — there is no crowd to play to, only the cage and whoever is across from it.',
+      atmosphere: 'Silent until a finish. Then it is very loud.',
+      fights: ['Fight 3: Jhut Chirathivat vs. Kanyarat Srisuk']
+    }
+  ];
+
+  function venueCard(v){
+    const thumb = v.thumb
+      ? `<img src="${v.thumb}" alt="${v.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
+      : `<div class="venue-thumb-placeholder" style="background:linear-gradient(135deg,var(--bg-2),var(--panel))">
+          <span style="font-size:48px;opacity:.12;font-family:'Noto Serif SC',serif">龍</span>
+          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px">Image Coming Soon</span>
+        </div>`;
+    return `<div class="venue-card" onclick="go('venue/${v.id}')" role="button" tabindex="0" aria-label="${v.name}" onkeydown="if(event.key==='Enter')go('venue/${v.id}')">
+      <div class="venue-thumb">${thumb}</div>
+      <div class="venue-accent" style="background:${v.color}"></div>
+      <div class="venue-body">
+        <div class="venue-header">
+          <div>
+            <div class="venue-name">${v.name}</div>
+            <div class="venue-subtitle">${v.subtitle}</div>
+          </div>
+          <div class="venue-type-badge">${v.type}</div>
+        </div>
+        <p class="venue-desc">${v.description.substring(0,120)}…</p>
+        <div class="venue-card-footer">
+          <span class="venue-read-more">Read more ↗</span>
+        </div>
+      </div>
+    </div>`;
+  }
+
   // ===== THE VAULT — editorial & media hub =====
   // VAULT_ITEMS: add entries here as content is produced.
   // type: 'interview' | 'presser' | 'spotlight' | 'video'
@@ -939,7 +1075,7 @@
         <p>She ate char kway teow — East Coast hawker, her specification — and watched two rounds of old footage before turning it off. She does not sleep well before fights. She has stopped pretending otherwise.</p>
         <p>"My mother called at ten," she says. "She said: don't take steps back. I said: Mum, I never learned how." She pauses. "She said: I know. I taught you that."</p>
         <div class="vault-quote">"The crowd knows me as the one who refuses to take a backward step. That's not a style. That's just who I am."</div>
-        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="${SHOP.gumroad}" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
+        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
       `
     },
     {
@@ -984,7 +1120,7 @@
       return `${bg}<div class="vault-play" style="position:absolute">▶</div>`;
     }
     const ft = item.fighter ? f(item.fighter) : null;
-    if(ft && ft.image) return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" style="opacity:.4;filter:grayscale(60%)">`;
+    if(ft && ft.image) return `<img src="images/${ft.image}" alt="${ft.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top">`;
     return `<div class="vault-thumb-placeholder"><span style="font-size:48px;opacity:.15">龍</span></div>`;
   }
 
@@ -1054,14 +1190,45 @@
     return `<section><div class="wrap">${backBar}<div class="vault-split">${textSide}${photoSide}</div></div></section>`;
   }
 
+  function venueDetail(id){
+    const v = VENUES.find(x=>x.id===id);
+    if(!v) return vault();
+    const thumb = v.thumb
+      ? `<div class="vault-hero-img"><img src="${v.thumb}" alt="${v.name}" style="width:100%;height:520px;object-fit:cover"></div>`
+      : `<div class="vault-hero-img vault-hero-placeholder" style="background:linear-gradient(135deg,var(--bg-2) 0%,var(--panel) 100%);display:flex;align-items:center;justify-content:center;height:320px">
+          <span style="font-size:80px;opacity:.1;font-family:'Noto Serif SC',serif">龍</span>
+        </div>`;
+    return `<section>
+      ${thumb}
+      <div class="wrap" style="max-width:780px">
+        <div class="fp-back-bar"><span class="fp-back" onclick="go('vault')">← Vault</span></div>
+        <span class="venue-type-badge" style="display:inline-block;margin-bottom:16px">${v.type}</span>
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(32px,6vw,60px);text-transform:uppercase;line-height:1;margin-bottom:8px">${v.name}</h1>
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--line)">${v.subtitle}</div>
+        <div class="vault-article-body">
+          <p class="vault-lead">${v.description}</p>
+          <div class="vault-quote">"${v.atmosphere}"</div>
+          ${v.fights.length ? `<h3>Fights Held Here</h3>${v.fights.map(f=>`<p>${f}</p>`).join('')}` : ''}
+        </div>
+        <div class="fp-bottom-nav" style="margin-top:48px">
+          <span class="btn btn-ghost" onclick="go('vault')" style="cursor:pointer">← Return to The Vault</span>
+        </div>
+      </div></section>`;
+  }
+
   function vault(arg){
     if(arg){
       return vaultArticle(arg);
     }
     return `<section><div class="wrap">
       <span class="eyebrow">The Vault</span>
-      <div class="sec-head"><h2>Features & Media</h2><p>Fighter spotlights, pre-fight pressers, interviews, and footage from inside the circuit.</p></div>
-      <div class="vault-grid">${VAULT_ITEMS.map(vaultCard).join('')}</div>
+      <div class="sec-head"><h2>Features & Media</h2><p>The world behind the fights — features, venues, and lore from inside the circuit.</p></div>
+      <div class="vault-grid">${VAULT_ITEMS.slice(0,6).map(vaultCard).join('')}</div>
+
+      <div style="margin-top:72px;padding-top:56px;border-top:1px solid var(--line)">
+        <div class="sec-head"><h2>Venues</h2><p>The circuit rotates. The venue changes the fight.</p></div>
+        <div class="venue-grid">${VENUES.map(venueCard).join('')}</div>
+      </div>
     </div></section>`;
   }
 
@@ -1098,8 +1265,9 @@
   //           round: 2, date:'2026-07-12', event:'DRAGONS 1' }
   // Leave empty until real fights are produced.
   const FIGHTS = [
-    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl" },
-    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 1", video:"yingying-vs-jia" },
+    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1 },
+    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 1", video:"yingying-vs-jia", shopUrl: null },
+    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null },
   ];
 
   // Compute each fighter's W-L-KO from the fight log (overrides the 0-0 in data once fights exist)
@@ -1117,7 +1285,7 @@
 
   // Large fighter image block for fight cards
   function fightFace(ft){
-    return `<span class="ff-img" style="--accent:${ft.color}">
+    return `<span class="rc-face" style="--accent:${ft.color}">
       <img src="images/${ft.image}" alt="${ft.name}" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('noimg')">
     </span>`;
   }
@@ -1156,7 +1324,7 @@
             <span class="rc-glyph">対</span>
             <span class="rc-method">${b.method}</span>
             <span class="rc-round">${b.round?`Round ${b.round}`:''}</span>
-            ${b.video?`<button class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em" onclick="go('shop')">Watch ↗</button>`:''}
+            ${b.video?`<a class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em;text-decoration:none" href="${b.shopUrl||SHOP.gumroad}" target="_blank" rel="noopener">Watch ↗</a>`:''}
           </div>
           <div class="rc-side loss" onclick="go('fighter/${l.id}')">
             ${fightFace(l)}
@@ -1171,7 +1339,7 @@
       ? `<span class="eyebrow">Fight Record</span>
          <div class="sec-head"><h2>${fighterObj.name}</h2><p>${getRec(fighterObj.id).w}–${getRec(fighterObj.id).l} · every logged bout, results shown.</p></div>`
       : `<span class="eyebrow">The Books</span>
-         <div class="sec-head"><h2>Fight Records</h2><p>Every official bout and result. To watch unspoiled, visit the Vault.</p></div>`;
+         <div class="sec-head"><h2>Fight Records</h2><p>Every official bout and result. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold);cursor:pointer">Shop</span>.</p></div>`;
 
     return `<section><div class="wrap">
       ${header}
@@ -1234,16 +1402,13 @@
 
   function about(){
     return `<section><div class="wrap">
-      <span class="eyebrow">The Circuit</span>
-      <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">About DRAGONS</h2>
-      <p class="lead">The sharpest strikers in Asia and beyond, all in one division, trading punches, elbows, knees, and kicks in a rotating underground venue built for one thing: finding out who can really fight.</p>
+      <span class="eyebrow">Enter the Dragon</span>
+      <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">DRAGONS</h2>
       <div class="prose">
-        <p>DRAGONS is a fictional underground fighting circuit and a showcase for original, AI-generated fighters. Every name on the roster is invented, every record is written as the season unfolds, and every bout is a work of fiction.</p>
-        <p>The circuit runs on style clashes — a clinch artist against a distance striker, a pressure fighter against a counter specialist. Every bout is built to answer the question that drives the underground: when the venue changes and the lights come up, who actually wins the fight.</p>
-        <p>The stable grows as new fighters are added. Fights drop in the vault as they are produced, and the most-requested matchups move to the front of the line.</p>
+        <p>A fictional pan-Asian female fighting circuit. 43 original fighters across 14 nations — each with a discipline, a record, and a reason to fight.</p>
+        <p>Every bout is AI-generated. Every result is canon. The circuit grows fight by fight.</p>
       </div>
       <div style="margin:40px 0 32px">
-        <p class="eyebrow" style="margin-bottom:16px">Enter the Dragon</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
           <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">Instagram — @dragonsfighting123 ↗</a>
           <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">TikTok — @dragonsfighting ↗</a>
@@ -1258,13 +1423,13 @@
     return `<section><div class="wrap">
       <span class="eyebrow">The Shop</span>
       <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">Watch the Fights</h2>
-      <p class="lead">Full bouts and highlight reels from the circuit. Buy a single fight or back the whole stable.</p>
+      <p class="lead">Full bouts and highlight reels from the circuit. Buy a single fight or support the production.</p>
       <div class="shop-cards">
-        <div class="shop-card"><span class="k">Per Fight</span><h3>Single Bouts</h3>
-          <p>Buy individual fights and highlight clips as they drop. One-time purchase, yours to keep.</p>
+        <div class="shop-card"><span class="k">Per Fight</span><h3>Main Fights</h3>
+          <p>Watch individual fights and highlight clips as they drop.</p>
           <a class="btn btn-gold" href="${SHOP.gumroad}" target="_blank" rel="noopener">Shop on Gumroad ↗</a></div>
-        <div class="shop-card"><span class="k">Support</span><h3>Buy Us a Coffee</h3>
-          <p>No strings attached. If you enjoy the circuit and want to keep it running, any contribution goes directly into production.</p>
+        <div class="shop-card"><span class="k">Support</span><h3>Buy the Fighters a Coffee</h3>
+          <p>No strings. If you want to keep the circuit running and the fights coming, any contribution goes straight to the next bout.</p>
           <a class="btn btn-gold" href="${SHOP.kofi}" target="_blank" rel="noopener">Support on Ko-fi ↗</a></div>
       </div>
     </div></section>`;
@@ -1366,7 +1531,7 @@
       <div class="comm-submit">
         <button class="btn btn-gold" id="comm-btn" disabled onclick="commSubmit()">Commission This Fight</button>
       </div>
-      <div class="comm-note">Your commission request will be sent via email. The most-requested bouts are produced first.</div>
+      <div class="comm-note">Email us to request a quote. All commissions are paid productions — we'll confirm availability and pricing.</div>
       <div id="comm-confirm" style="display:none;margin-top:16px;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px;margin-left:auto;margin-right:auto">
         <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
         <p style="color:var(--muted);font-size:13px;margin-top:6px">If your email client didn't open, send your commission request directly to <a href="mailto:tf1573188@gmail.com" style="color:var(--gold)">tf1573188@gmail.com</a></p>
@@ -1391,6 +1556,7 @@
       case 'fighter': html=fighter(arg); break;
       case 'matchups': html=commission(); break;
       case 'vault': html=vault(arg); break;
+      case 'venue': html=venueDetail(arg); break;
       case 'records': html=records(arg); break;
       case 'watch': html=watch(arg); break;
       case 'about': html=about(); break;
@@ -1510,6 +1676,10 @@
           floatName.textContent=ft.name;
           if(floatBack){ floatBack.textContent='← Back to Roster'; floatBack.onclick=function(){go('roster');}; }
         }
+      } else if(route==='venue' && arg){
+        const venue = typeof VENUES !== 'undefined' ? VENUES.find(x=>x.id===arg) : null;
+        floatName.textContent = venue ? venue.name : '';
+        if(floatBack){ floatBack.textContent='← Vault'; floatBack.onclick=function(){go('vault');}; }
       } else if(route==='vault' && arg){
         const item = typeof VAULT_ITEMS !== 'undefined' ? VAULT_ITEMS.find(x=>x.id===arg) : null;
         floatName.textContent = item ? item.title : '';
