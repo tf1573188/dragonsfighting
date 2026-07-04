@@ -338,7 +338,7 @@ const FIGHTERS = [
       "age": "21",
       "height": "170 cm (5'7\")",
       "weight": "52 kg (115 lb)",
-      "reach": "170 cm (67 in)",
+      "reach": "171 cm (67 in)",
       "stance": "Orthodox",
       "debut": "2026"
     }
