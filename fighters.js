@@ -113,7 +113,9 @@ const FIGHTERS = [
     "gallery": [
       "jasmine-rahma-1.png",
       "jasmine-rahma-2.png",
-      "jasmine-rahma-3.png"
+      "jasmine-rahma-3.png",
+      "jasmine-rahma-4.png",
+      "jasmine-rahma-5.png"
     ],
     "bio": {
       "origin": "Jasmine grew up in Geylang, one of Singapore's grittiest neighbourhoods, the daughter of a Malay hawker family who never imagined a fighter in the house. She walked into a Muay Thai gym at sixteen to lose weight and walked out with a purpose. The only Malay fighter on a Chinese-dominated Singaporean roster, she carries that distinction like armour.",
@@ -155,7 +157,9 @@ const FIGHTERS = [
     "gallery": [
       "mandy-koh-1.png",
       "mandy-koh-2.png",
-      "mandy-koh-3.png"
+      "mandy-koh-3.png",
+      "mandy-koh-4.png",
+      "mandy-koh-5.png"
     ],
     "bio": {
       "origin": "Mandy came out of Jurong, the kid sister in a family of four brothers who learned to scrap before she learned to back down. She followed one of her brothers into a boxing gym at thirteen and discovered she was the only Koh with real timing. The brothers gave up. She didn't.",
@@ -198,7 +202,8 @@ const FIGHTERS = [
       "jessica-goh-1.png",
       "jessica-goh-2.png",
       "jessica-goh-3.png",
-      "jessica-goh-4.png"
+      "jessica-goh-4.png",
+      "jessica-goh-5.png"
     ],
     "bio": {
       "origin": "Jessica grew up in a strict household in Ang Mo Kio, the daughter of a doctor who expected a doctor in return. She took up Muay Thai in secret during junior college, fell in love with the discipline of it, and chose the ring over medical school in a decision her family is still negotiating.",
@@ -241,7 +246,8 @@ const FIGHTERS = [
       "amanda-lee-1.png",
       "amanda-lee-2.png",
       "amanda-lee-3.png",
-      "amanda-lee-4.png"
+      "amanda-lee-4.png",
+      "amanda-lee-5.png"
     ],
     "bio": {
       "origin": "The youngest fighter on the roster, Amanda came up boxing in a no-frills gym in Woodlands after a rough stretch in school left her looking for somewhere to put the anger. A trainer who saw something in her stubbornness kept her coming back. She turned a chip on her shoulder into a left hook.",
@@ -282,7 +288,10 @@ const FIGHTERS = [
     "image": "alina-bek.png",
     "gallery": [
       "alina-bek-1.png",
-      "alina-bek-2.png"
+      "alina-bek-2.png",
+      "alina-bek-3.png",
+      "alina-bek-4.png",
+      "alina-bek-5.png"
     ],
     "bio": {
       "origin": "Alina learned to fight on the open plains outside Almaty, where her grandfather trained eagles and taught her that patience and timing win more than speed. She wrestled boys at the village school until they stopped volunteering, then took the long bus into the city to find a real gym.",
@@ -325,7 +334,8 @@ const FIGHTERS = [
       "ainur-nazar-1.png",
       "ainur-nazar-2.png",
       "ainur-nazar-3.png",
-      "ainur-nazar-4.png"
+      "ainur-nazar-4.png",
+      "ainur-nazar-5.png"
     ],
     "bio": {
       "origin": "Ainur grew up in the markets of Shymkent, the daughter of a man who competed in Kazakh Kuresh at every village festival. She was wrestling before she was ten — belt grabs on concrete, throws with no mat. The instinct was always there; the structure came when a coach formalised what the market had already built and channelled it into MMA.",
@@ -368,7 +378,8 @@ const FIGHTERS = [
       "safiya-aronov-1.png",
       "safiya-aronov-2.png",
       "safiya-aronov-3.png",
-      "safiya-aronov-4.png"
+      "safiya-aronov-4.png",
+      "safiya-aronov-5.png"
     ],
     "bio": {
       "origin": "Safiya came from a mountain village near the Kyrgyz border, the quiet one who learned to fight from older cousins and a stubborn streak. She made the long move to the city alone at seventeen, slept in the gym she trained at, and earned her spot the hardest way there is.",
@@ -539,7 +550,9 @@ const FIGHTERS = [
     "gallery": [
       "nong-pim-1.png",
       "nong-pim-2.png",
-      "nong-pim-3.png"
+      "nong-pim-3.png",
+      "nong-pim-4.png",
+      "nong-pim-5.png"
     ],
     "bio": {
       "origin": "Pim took her first fight at nine, in a ring strung up at a temple fair in Surin, for an envelope of cash that fed her family that week. She trained in the stadium tradition before crossing into mixed rules, carrying a lifetime of rounds in her body before she ever turned twenty.",
@@ -713,7 +726,9 @@ const FIGHTERS = [
     "gallery": [
       "yuna-seo-1.png",
       "yuna-seo-2.png",
-      "yuna-seo-3.png"
+      "yuna-seo-3.png",
+      "yuna-seo-4.png",
+      "yuna-seo-5.png"
     ],
     "bio": {
       "origin": "Yuna came out of a national taekwondo program in Busan, a medal prospect who walked away from the Olympic track when the amateur circuit stopped paying and the structure stopped fitting. She brought a lead leg nobody has quite solved into the harder, looser world of the circuit.",
@@ -756,7 +771,8 @@ const FIGHTERS = [
       "jia-park-1.png",
       "jia-park-2.png",
       "jia-park-3.png",
-      "jia-park-4.png"
+      "jia-park-4.png",
+      "jia-park-5.png"
     ],
     "bio": {
       "origin": "Jia grew up in Incheon splitting time between a kickboxing gym and a dance studio, and never fully chose between them. The footwork that makes her dangerous came from both. She turned to fighting full-time when she realised the cage gave her nerves somewhere to go.",
@@ -798,7 +814,9 @@ const FIGHTERS = [
     "gallery": [
       "hana-jung-1.png",
       "hana-jung-2.png",
-      "hana-jung-3.png"
+      "hana-jung-3.png",
+      "hana-jung-4.png",
+      "hana-jung-5.png"
     ],
     "bio": {
       "origin": "Hana grew up watching her grandfather compete in ssireum tournaments on the Han River banks, a childhood spent learning that the belt grab is not a beginning — it is the whole conversation. She trained through university, twice regional champion in the amateur circuit, before deciding that MMA was the only arena large enough for what ssireum had built in her.",
@@ -841,7 +859,8 @@ const FIGHTERS = [
       "li-wei-1.png",
       "li-wei-2.png",
       "li-wei-3.png",
-      "li-wei-4.png"
+      "li-wei-4.png",
+      "li-wei-5.png"
     ],
     "bio": {
       "origin": "Li Wei rose through the mainland Sanda circuit in Chengdu, a sports-school product drilled in discipline from childhood who blended that foundation with crisp boxing once she went professional. She came up on sharp footwork and a finishing instinct that the rigid amateur system never quite contained.",
@@ -884,7 +903,8 @@ const FIGHTERS = [
       "ying-ying-1.png",
       "ying-ying-2.png",
       "ying-ying-3.png",
-      "ying-ying-4.png"
+      "ying-ying-4.png",
+      "ying-ying-5.png"
     ],
     "bio": {
       "origin": "Ying Ying came up in the Shanghai sport-school system, a disciplined product of state athletics who chose the harder, freer world of the circuit over a safe coaching post. She drilled kickboxing fundamentals until they were reflex, then went looking for opponents who'd actually hit back.",
@@ -927,7 +947,8 @@ const FIGHTERS = [
       "shīhán-chen-1.png",
       "shīhán-chen-2.png",
       "shīhán-chen-3.png",
-      "shīhán-chen-4.png"
+      "shīhán-chen-4.png",
+      "shīhán-chen-5.png"
     ],
     "bio": {
       "origin": "Shīhán grew up in a Chongqing wushu academy, a sanda standout who turned professional young and brought a flashy, aggressive edge the rigid amateur world couldn't hold. She fights with something to prove and rarely hides it.",
@@ -969,7 +990,9 @@ const FIGHTERS = [
     "gallery": [
       "vanessa-chow-1.png",
       "vanessa-chow-2.png",
-      "vanessa-chow-3.png"
+      "vanessa-chow-3.png",
+      "vanessa-chow-4.png",
+      "vanessa-chow-5.png"
     ],
     "bio": {
       "origin": "Vanessa learned to fight in the cramped gyms above Kowloon's markets, a restless kid from a Sham Shui Po housing estate who skipped cram school to spar. She fights bright and fast, all flurries and angles, the most kinetic striker on the roster.",
@@ -1011,7 +1034,9 @@ const FIGHTERS = [
     "gallery": [
       "mei-lin-kuo-1.png",
       "mei-lin-kuo-2.png",
-      "mei-lin-kuo-3.png"
+      "mei-lin-kuo-3.png",
+      "mei-lin-kuo-4.png",
+      "mei-lin-kuo-5.png"
     ],
     "bio": {
       "origin": "Mei-Lin came up scrapping outside the structured gyms of Kaohsiung, a night-market kid who turned raw aggression into something controlled only after a string of bad decisions nearly ended her. She fights in bursts that overwhelm, then resets and does it again — unorthodox, relentless, impossible to prepare for cleanly.",
@@ -1053,7 +1078,9 @@ const FIGHTERS = [
     "gallery": [
       "nadia-hakim-1.png",
       "nadia-hakim-2.png",
-      "nadia-hakim-3.png"
+      "nadia-hakim-3.png",
+      "nadia-hakim-4.png",
+      "nadia-hakim-5.png"
     ],
     "bio": {
       "origin": "Nadia made her name in the Kuala Lumpur gym scene, a quiet engineering graduate who discovered silat as a child and boxing as an adult and fused the patience of one with the precision of the other. She picks apart bigger punchers with footwork and a jab that always arrives on schedule.",
@@ -1139,7 +1166,9 @@ const FIGHTERS = [
     "gallery": [
       "jenny-kwok-1.png",
       "jenny-kwok-2.png",
-      "jenny-kwok-3.png"
+      "jenny-kwok-3.png",
+      "jenny-kwok-4.png",
+      "jenny-kwok-5.png"
     ],
     "bio": {
       "origin": "Jenny grew up in Kuala Lumpur on a diet of K-pop and Muay Thai, training at a gym near her school and idolising the fighters she watched online. She turned a teenage obsession into a profession through sheer refusal to be told she was too small or too soft.",
@@ -1181,7 +1210,9 @@ const FIGHTERS = [
     "gallery": [
       "maya-lin-1.png",
       "maya-lin-2.png",
-      "maya-lin-3.png"
+      "maya-lin-3.png",
+      "maya-lin-4.png",
+      "maya-lin-5.png"
     ],
     "bio": {
       "origin": "Maya grew up in Los Angeles, a Chinese-American kid who found kickboxing at a strip-mall gym after a childhood of being the smallest and the loudest. She fought through the US amateur circuit and crossed the Pacific chasing the deeper talent and bigger stage the circuit offered.",
@@ -1223,7 +1254,9 @@ const FIGHTERS = [
     "gallery": [
       "chayanne-locklear-1.png",
       "chayanne-locklear-2.png",
-      "chayanne-locklear-3.png"
+      "chayanne-locklear-3.png",
+      "chayanne-locklear-4.png",
+      "chayanne-locklear-5.png"
     ],
     "bio": {
       "origin": "Chayanne grew up between Los Angeles and her family's Lumbee community in North Carolina, boxing at a community gym that became her second home. She carries her heritage with pride and a chip on her shoulder about being underestimated twice over.",
@@ -1353,7 +1386,9 @@ const FIGHTERS = [
     "gallery": [
       "rainie-yang-1.png",
       "rainie-yang-2.png",
-      "rainie-yang-3.png"
+      "rainie-yang-3.png",
+      "rainie-yang-4.png",
+      "rainie-yang-5.png"
     ],
     "bio": {
       "origin": "Rainie grew up in Shanghai's international quarter, the daughter of a businessman who sent her to a Judo academy in Tokyo at fifteen. She came back two years later with a black belt, a heavier frame than anyone expected, and a quiet certainty that she could throw anyone in any room.",
@@ -1395,7 +1430,9 @@ const FIGHTERS = [
     "gallery": [
       "emi-sato-wright-1.png",
       "emi-sato-wright-2.png",
-      "emi-sato-wright-3.png"
+      "emi-sato-wright-3.png",
+      "emi-sato-wright-4.png",
+      "emi-sato-wright-5.png"
     ],
     "bio": {
       "origin": "Born in Okinawa to a Japanese father and American mother — the birthplace of Karate — Emi grew up caught between two cultures and found her footing in the dojo. She trained traditional Okinawan Karate from childhood, the only half-American kid in a school that wasn't sure she belonged. She's been proving them wrong since.",
@@ -1437,7 +1474,9 @@ const FIGHTERS = [
     "gallery": [
       "sam-kessler-1.png",
       "sam-kessler-2.png",
-      "sam-kessler-3.png"
+      "sam-kessler-3.png",
+      "sam-kessler-4.png",
+      "sam-kessler-5.png"
     ],
     "bio": {
       "origin": "Sam came up in a Philadelphia boxing gym, red hair and a redder temper, the kind of kid who picked fights in the schoolyard and graduated to the ring when a coach told her she'd end up in jail if she didn't. She crossed the Pacific chasing harder competition and a circuit that wouldn't bore her.",
@@ -1479,7 +1518,9 @@ const FIGHTERS = [
     "gallery": [
       "lily-tang-1.png",
       "lily-tang-2.png",
-      "lily-tang-3.png"
+      "lily-tang-3.png",
+      "lily-tang-4.png",
+      "lily-tang-5.png"
     ],
     "bio": {
       "origin": "Lily grew up in the back alleys of Ho Chi Minh City's District 4, the roughest stretch in a rough city. No gym, no coach — she learned to fight the way the neighbourhood taught everyone, and she was better at it than most of the boys. She found the circuit through word of mouth and showed up with nothing but nerve.",
@@ -1521,7 +1562,9 @@ const FIGHTERS = [
     "gallery": [
       "rin-takahashi-1.png",
       "rin-takahashi-2.png",
-      "rin-takahashi-3.png"
+      "rin-takahashi-3.png",
+      "rin-takahashi-4.png",
+      "rin-takahashi-5.png"
     ],
     "bio": {
       "origin": "Rin trained at a traditional Shotokan dojo in Okinawa from the age of six, the youngest student her sensei ever accepted. She grew up on kata and kumite, won national junior championships, and turned to full-contact competition when point fighting stopped feeling real.",
@@ -1563,7 +1606,9 @@ const FIGHTERS = [
     "gallery": [
       "mio-hayashi-1.png",
       "mio-hayashi-2.png",
-      "mio-hayashi-3.png"
+      "mio-hayashi-3.png",
+      "mio-hayashi-4.png",
+      "mio-hayashi-5.png"
     ],
     "bio": {
       "origin": "Mio came up boxing in Osaka's Namba district, a left-hander who turned her natural southpaw stance into a career. She fought amateur in Japan's women's boxing circuit before the DRAGONS roster caught her eye — the chance to test her hands against strikers from every discipline, not just other boxers.",
@@ -1605,7 +1650,9 @@ const FIGHTERS = [
     "gallery": [
       "alex-moran-1.png",
       "alex-moran-2.png",
-      "alex-moran-3.png"
+      "alex-moran-3.png",
+      "alex-moran-4.png",
+      "alex-moran-5.png"
     ],
     "bio": {
       "origin": "Alex grew up on Detroit's east side, fighting since middle school, never in a gym. She found underground fight circuits in Michigan basements before the DRAGONS roster found her — someone filmed one of her wins, it went viral, and the invitation came the same week. No training camp, no system, just a phone call and a plane ticket.",
@@ -1647,7 +1694,9 @@ const FIGHTERS = [
     "gallery": [
       "isla-kamolwan-1.png",
       "isla-kamolwan-2.png",
-      "isla-kamolwan-3.png"
+      "isla-kamolwan-3.png",
+      "isla-kamolwan-4.png",
+      "isla-kamolwan-5.png"
     ],
     "bio": {
       "origin": "Born in London to a British father and Thai mother, Isla spent school holidays at her uncle's Muay Thai camp in Phuket and full terms at a comprehensive school in South London. She fought her first amateur bout at sixteen in a Thai stadium, and her first professional bout at nineteen in a London warehouse. Two countries made her; neither one fully claims her.",
@@ -1689,7 +1738,9 @@ const FIGHTERS = [
     "gallery": [
       "amihan-reyes-1.png",
       "amihan-reyes-2.png",
-      "amihan-reyes-3.png"
+      "amihan-reyes-3.png",
+      "amihan-reyes-4.png",
+      "amihan-reyes-5.png"
     ],
     "bio": {
       "origin": "Amihan trained at a respected Panantukan academy in Quezon City, the daughter of a former national team coach who drilled Filipino martial arts into her before she could read. She carries her father's technical legacy with pride and fights with the precision of someone who was never allowed to be sloppy.",
@@ -1819,7 +1870,9 @@ const FIGHTERS = [
     "gallery": [
       "ayu-prasetya-1.png",
       "ayu-prasetya-2.png",
-      "ayu-prasetya-3.png"
+      "ayu-prasetya-3.png",
+      "ayu-prasetya-4.png",
+      "ayu-prasetya-5.png"
     ],
     "bio": {
       "origin": "Ayu came up through Jakarta's Pencak Silat competition circuit, the national martial art of Indonesia, earning gold at the Southeast Asian Games before crossing into full-contact fighting. She carries the fluid, devastating striking and grappling of Silat with the composure of someone who has represented her country since she was fourteen.",
