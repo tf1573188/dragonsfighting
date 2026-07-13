@@ -25,7 +25,9 @@ const FIGHTERS = [
     "gallery": [
       "ruby-tan-1.png",
       "ruby-tan-2.png",
-      "ruby-tan-3.png"
+      "ruby-tan-3.png",
+"ruby-tan-4.png",
+"ruby-tan-5.png"
     ],
     "bio": {
       "origin": "Ruby grew up above her family's coffeeshop in Toa Payoh, doing her homework to the hiss of the kopi machine. She found the gym at fourteen, mostly to escape the heat and the noise, and stayed because hitting pads was the only thing that made the world go quiet. She came up through Singapore's late-night gym circuit, drilling combinations long after the lights cut out.",
@@ -67,7 +69,9 @@ const FIGHTERS = [
     "gallery": [
       "cheryl-ong-1.png",
       "cheryl-ong-2.png",
-      "cheryl-ong-3.png"
+      "cheryl-ong-3.png",
+"cheryl-ong-4.png",
+"cheryl-ong-5.png"
     ],
     "bio": {
       "origin": "Raised in a Bedok rental flat by a hawker mother who worked doubles, Cheryl learned early that nothing arrives unless you take it. She started in a void-deck wrestling club, then walked into a proper MMA gym at sixteen and refused to leave. Built her game on pure forward pressure because she never had the luxury of waiting.",
