@@ -389,7 +389,7 @@ const FIGHTERS = [
   {
     "id": "saki-mori",
     "name": "Saki Mori",
-    "alias": "Divine Wind",
+    "alias": "Yakuza",
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Osaka",
@@ -397,36 +397,35 @@ const FIGHTERS = [
     "ruleset": "Kickboxing",
     "division": "Strawweight",
     "color": "#c0263a",
-    "record": {
-      "w": 0,
-      "l": 0,
-      "ko": 0
-    },
+    "record": { "w": 0, "l": 0, "ko": 0 },
     "image": "saki-mori.png",
     "gallery": [
       "saki-mori-1.png",
       "saki-mori-2.png",
-      "saki-mori-3.png"
+      "saki-mori-3.png",
+      "saki-mori-4.png",
+      "saki-mori-5.png"
     ],
     "bio": {
-      "origin": "Saki grew up in a working-class corner of Osaka, the youngest of four and the only one who fought back when the neighbourhood kids picked on the family. A retired kickboxer who ran the local gym saw her temper and taught her to aim it. She kept her bob blunt so nothing gets in her eyes, and never looked back.",
-      "style": "A relentless pressure fighter who lives on volume and head movement, walking opponents toward the ropes round after round. She treats every exchange like a puzzle to solve.",
-      "personal": "Polite to the point of formality outside the ring, ferocious inside it. Lives on convenience-store onigiri and a vending-machine coffee superstition she refuses to explain. Studies tape obsessively and bows to opponents she's just dismantled.",
-      "rival": "Holds quiet professional respect for Yuna Seo and treats their potential bout as the one that actually matters — a Japan–Korea striking duel both fighters pretend they aren't thinking about.",
-      "goal": "Wants to honour the coach who gave her a direction, and to be remembered as the most technical striker the circuit ever produced."
+      "origin": "Saki grew up in Namba, Osaka — the working-class warren behind the bright signs, where the Yamaguchi-gumi's shadow was as normal as the vending machines. Her father ran a small pachinko parlour that paid tribute to the local kumicho. She was seventeen when a retired fighter associated with the organisation pulled her out of a street altercation and put her in a gym instead, recognising something in the way she fought back. She trained under his instruction for four years, paid off the debt with wins, and arrived at the circuit owing nobody anything. She does not discuss where she came from. The people who know her from those years don't discuss it either.",
+      "style": "A relentless pressure fighter who advances in straight lines and makes every exchange feel personal. She treats combinations like debts being collected — methodical, accumulative, and not finished until the account is settled. Her Karate base gives her the timing to close distance through hands, and she uses it to walk opponents backward until they run out of ring.",
+      "personal": "Polite to the point of formality outside the ring — she bows, she uses correct honorifics, she thanks coaches and corners. Inside the ring, the formality is replaced by something else entirely. Has a vending-machine coffee superstition she refuses to explain. Studies tape obsessively, keeps her hair blunt so nothing gets in her eyes, and has not been back to Namba since the night she left it.",
+      "rival": "Holds quiet professional respect for Yuna Seo and treats their potential bout as the one that actually matters — a Japan–Korea striking duel that both fighters pretend they aren't thinking about. Inside the organisation she trained with, they called her the best fighter they'd ever produced. She has never repeated this.",
+      "goal": "Fights to honour the coach who pulled her out of the street and gave her a direction, and to be the last person standing in a room full of people who had every advantage she didn't."
     },
     "quotes": [
       "\"礼を尽くして、そして倒す。\" (Show full respect — then defeat them.)",
-      "\"My coach gave me a direction. I owe him a masterpiece.\""
+      "\"Osaka doesn't make gentle people. It makes people who know how to be gentle.\""
     ],
     "stats": {
       "age": "21",
-      "height": "165 cm (5'5\")",
-      "weight": "52 kg (115 lb)",
-      "reach": "165 cm (65 in)",
+      "height": "168 cm (5'6\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "168 cm (66 in)",
       "stance": "Orthodox",
       "debut": "2026"
     }
+
   },
   {
     "id": "kaeda-mizuno",
@@ -1457,8 +1456,8 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "mai-hoang",
-    "name": "Mai Hoàng",
+    "id": "lily-tang",
+    "name": "Lily Tang",
     "alias": "Saigon Rose",
     "nationality": "Vietnam",
     "flag": "🇻🇳",
@@ -1472,11 +1471,11 @@ const FIGHTERS = [
       "l": 0,
       "ko": 0
     },
-    "image": "mai-hoang.png",
+    "image": "lily-tang.png",
     "gallery": [
-      "mai-hoang-1.png",
-      "mai-hoang-2.png",
-      "mai-hoang-3.png"
+      "lily-tang-1.png",
+      "lily-tang-2.png",
+      "lily-tang-3.png"
     ],
     "bio": {
       "origin": "Lily grew up in the back alleys of Ho Chi Minh City's District 4, the roughest stretch in a rough city. No gym, no coach — she learned to fight the way the neighbourhood taught everyone, and she was better at it than most of the boys. She found the circuit through word of mouth and showed up with nothing but nerve.",
@@ -1835,6 +1834,486 @@ const FIGHTERS = [
       "weight": "53 kg (117 lb)",
       "reach": "172 cm (68 in)",
       "stance": "Orthodox",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "soleil-aguilar",
+    "name": "Soleil Aguilar",
+    "alias": "Agila",
+    "nationality": "Philippines",
+    "flag": "🇵🇭",
+    "hometown": "Seoul",
+    "baseStyle": "Boxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#7B2D8E",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "soleil-aguilar.png",
+    "gallery": [
+      "soleil-aguilar-1.png",
+      "soleil-aguilar-2.png",
+      "soleil-aguilar-3.png",
+      "soleil-aguilar-4.png",
+      "soleil-aguilar-5.png"
+    ],
+    "bio": {
+      "origin": "Soleil was born in Quezon City to a Filipino mother and a Korean father who had studied in Paris before settling in Seoul — which explains the name, and the three passports, and the fact that she competed in the Korean amateur boxing circuit under a name nobody expected from a Korean flag. She crossed back to Manila at nineteen with a record and a plan, and arrived at the circuit carrying the Philippine eagle as her alias because it was the only symbol that needed no translation.",
+      "style": "A composed southpaw boxer with range intelligence beyond her age. She sets up the left cross with a right jab that lands from an angle orthodox fighters aren't trained to respect, and she knows exactly when to sit down on a shot versus when to stay light. Controlled, efficient, calculating — she fights like she's already three rounds ahead.",
+      "personal": "Deliberate and polished, she is the one on the roster who already thinks about legacy. Keeps a training journal, studies fight tape of everyone above her, and speaks Tagalog, Korean, and French in whichever register the room requires. Lives on Seoul's 24-hour ox bone soup and refuses to eat the night before a fight. Warm when she decides to be, which is rarer than it looks.",
+      "rival": "Amihan Reyes wears the same flag with more tradition and more faith behind it — Soleil respects that and wants to surpass it. She also tracks Yuna Seo and Jia Park from across the Korea divide, fighters she competed alongside as an amateur in Seoul and intends to overtake on a bigger stage.",
+      "goal": "Fights to build a name big enough that neither country can ignore it, and to prove the eagle flies higher than any flag it carries."
+    },
+    "quotes": [
+      "\"Dalawang bansa, isang pangalan.\" (Two countries, one name.)",
+      "\"The eagle doesn't explain where it came from. It's already above you.\""
+    ],
+    "stats": {
+      "age": "22",
+      "height": "168 cm (5'6\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "168 cm (66 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "celeste-de-souza",
+    "name": "Celeste De Souza",
+    "alias": "Rosario",
+    "nationality": "Singapore",
+    "flag": "🇸🇬",
+    "hometown": "Katong",
+    "baseStyle": "Karate",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#d83a2e",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "celeste-de-souza.png",
+    "gallery": [
+      "celeste-de-souza-1.png",
+      "celeste-de-souza-2.png",
+      "celeste-de-souza-3.png",
+      "celeste-de-souza-4.png",
+      "celeste-de-souza-5.png"
+    ],
+    "bio": {
+      "origin": "Celeste grew up in Katong in a Eurasian family four generations deep on the island — the kind of family that knew which kopitiam was triad-affiliated before it was torn down, and whose uncles never explained what they did on weekends. She came up in the orbit of one of Katong's old secret society chapters without ever joining: running errands at twelve, watching disputes settled at fourteen, deciding at sixteen that the gym was the only part of that world she wanted to keep. She found Kyokushin Karate through a coach connected to the same circles who saw something worth redirecting. He was right. The Rosario name is what the old Katong network called her — a Catholic girl who could handle herself, which in that world was both a compliment and a warning.",
+      "style": "A full-contact Karate striker who fights from a switch stance, changing her lead hand to disrupt timing and disguising the angle of her power shots. She punches with Kyokushin compactness and kicks with decade-drilled precision. The street instincts from Katong's backchannels show up in her ring generalship — she controls space like someone who has always needed to know where the exits are.",
+      "personal": "Self-possessed and socially fluent, she moves through every room in the circuit without effort — the locker room, the sponsor dinner, the weigh-in crowd. Speaks three languages without marking the switch. Eats at hawker centres by choice and knows every old-school Katong laksa spot. The composure is genuine. So is the part underneath it that came from somewhere most fighters on the roster have never been.",
+      "rival": "Drawn into orbit around Jessica Wong — two Singaporeans who fight clean for opposite reasons, Jessica from precision and Celeste from something older. Also tracking Amanda Lee as the Singapore boxing measuring stick.",
+      "goal": "Fights because the gym took her out of something she was heading toward and she has never found a better reason to stay. And to prove that Katong produces more than shophouses and Peranakan museums."
+    },
+    "quotes": [
+      "\"They called me Rosario. Catholic girl, Katong network, can handle herself. I kept all three.\"",
+      "\"I switch stances because one angle is never the whole picture. Katong taught me that.\""
+    ],
+    "stats": {
+      "age": "23",
+      "height": "170 cm (5'7\")",
+      "weight": "54 kg (119 lb)",
+      "reach": "170 cm (67 in)",
+      "stance": "Switch",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "chae-rin-oh",
+    "name": "Chae-Rin Oh",
+    "alias": "Dokkaebi",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Seoul (Mapo-gu)",
+    "baseStyle": "Muay Thai",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "chae-rin-oh.png",
+    "gallery": [
+      "chae-rin-oh-1.png",
+      "chae-rin-oh-2.png",
+      "chae-rin-oh-3.png",
+      "chae-rin-oh-4.png",
+      "chae-rin-oh-5.png"
+    ],
+    "bio": {
+      "origin": "Chae-Rin grew up in Mapo-gu, the Hongdae side of Seoul — university bars, street food carts, the Line 2 subway at midnight. Her mother ran a tteokbokki stall in Mangwon Market and Chae-Rin worked it after school until a Muay Thai gym opened three blocks away when she was fifteen and gave her somewhere better to put the energy. She trained on a sliding-scale membership her mother negotiated with the coach personally. She has been paying it back ever since.",
+      "style": "A southpaw Muay Thai striker with forward pressure and a left kick that arrives before opponents have finished calculating the range. She fights close and stays close, using the clinch not to slow the fight down but to accelerate it — short elbows, quick knees, constant forward weight. The Dokkaebi name is for the chaos she generates in the pocket: unpredictable, relentless, impossible to contain once she gets in.",
+      "personal": "Genuinely fierce in a way that has nothing to do with performance — she does not have a ring persona because she does not need one. Off the clock she is easy-going to the point of appearing disengaged, rides the subway in sweats with tteokbokki from her mother's stall, and has no particular opinion about the circuit's politics. In the ring, the switch flips completely. The people who know her outside the gym find it startling every time.",
+      "rival": "Has no manufactured grudges but has quietly noted that Ara Vandenberg and she both fight Muay Thai under the Korean flag — and only one of them grew up eating street food in Mapo. The comparison annoys her in the specific way that only true things can.",
+      "goal": "Fights to pay her mother back for the membership negotiation and for everything else, and because stopping has never once occurred to her as an option."
+    },
+    "quotes": [
+      "\"마포에서 자라면 싸우는 법을 따로 배울 필요가 없어.\" (Growing up in Mapo, you don't need to be taught how to fight.)",
+      "\"I don't have a face for the ring. This is just my face.\""
+    ],
+    "stats": {
+      "age": "20",
+      "height": "164 cm (5'5\")",
+      "weight": "51 kg (112 lb)",
+      "reach": "164 cm (65 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "lena-fong",
+    "name": "Lena Fong",
+    "alias": "Northern Lights",
+    "nationality": "Canada",
+    "flag": "🇨🇦",
+    "hometown": "Vancouver",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#c41e3a",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "lena-fong.png",
+    "gallery": [
+      "lena-fong-1.png",
+      "lena-fong-2.png",
+      "lena-fong-3.png",
+      "lena-fong-4.png",
+      "lena-fong-5.png"
+    ],
+    "bio": {
+      "origin": "Lena grew up in Richmond, BC — Vancouver's most Chinese suburb — the daughter of Cantonese parents who came over in the nineties and built something sensible: a restaurant, a mortgage, two kids with clear futures. Lena's future was less clear. She found kickboxing at nineteen through a gym above a bubble tea shop on No. 3 Road, competed in the Canadian amateur circuit for two years, then followed a coach's recommendation to Singapore for a six-month training stint that has now lasted three years. She has not fully explained this to her parents.",
+      "style": "A fluid switch-stance kickboxer who uses the stance change as her primary weapon rather than a stylistic habit — she reads the opponent's adjustment lag and attacks the moment they're recalibrating. Sharp right teep, heavy left kick, and combinations that arrive from angles that only make sense once you track the footwork. She fights like someone who has thought about it more than is strictly necessary.",
+      "personal": "Thoughtful and a little restless, she has the particular quality of someone who is interesting to talk to and difficult to fully know. Reads on rest days, eats kaya toast at the same hawker centre in Tanjong Pagar every morning, and has developed genuine opinions about the differences between Singapore and Vancouver that she will share unprompted. Misses the cold in a way she cannot explain to anyone who has not lived in it. The gym is the one place where the restlessness stops.",
+      "rival": "Drawn toward Celeste De Souza by the obvious parallel — two fighters more Singaporean than their passports suggest. The comparison is friendly on the surface and quietly competitive underneath.",
+      "goal": "Fights to find out whether this is who she is or just something she is doing, and has not yet reached a conclusion. The wins feel like evidence. The losses feel like the same."
+    },
+    "quotes": [
+      "\"Vancouver has everything. I came here anyway. Make of that what you will.\"",
+      "\"I switch because one angle is never the whole answer.\""
+    ],
+    "stats": {
+      "age": "21",
+      "height": "169 cm (5'7\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "169 cm (67 in)",
+      "stance": "Switch",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "linh-nguyen",
+    "name": "Linh Nguyễn",
+    "alias": "Monsoon",
+    "nationality": "Vietnam",
+    "flag": "🇻🇳",
+    "hometown": "Đà Nẵng",
+    "baseStyle": "Muay Thai",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#DA251D",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "linh-nguyen.png",
+    "gallery": [
+      "linh-nguyen-1.png",
+      "linh-nguyen-2.png",
+      "linh-nguyen-3.png",
+      "linh-nguyen-4.png",
+      "linh-nguyen-5.png"
+    ],
+    "bio": {
+      "origin": "Linh grew up in Đà Nẵng, Vietnam's central coast city, the daughter of a fisherman who took her to a Muay Thai gym at eight because he said she fought like she already knew how. She trained through school on a coast that floods every October and clears by December — the rhythm of patience and release that the Monsoon name came from. She competed in the Vietnamese national kickboxing circuit before a coach in Bangkok arranged a year of stadium training that turned competence into something else.",
+      "style": "A southpaw Muay Thai fighter who builds pressure in layers — she starts at range with a long left teep that controls distance, adds body kicks that compound across rounds, then turns the clinch on in the third when the damage is already done. She doesn't finish early because she doesn't need to. The Monsoon name is accurate: the damage builds before you register it, and by the time it arrives in full, the decision has already been made.",
+      "personal": "Self-contained and deliberate, she trains without music and rarely speaks during sessions. Off the clock she is warmer than she appears, loyal to the people from the coast who still watch every fight from a livestream with bad buffering. Eats her father's mắm tôm on everything and considers it non-negotiable. Has no social media and no particular interest in acquiring any.",
+      "rival": "Respects Trần Minh Anh's dedication to Vietnamese martial art but fights Muay Thai without apology. Mai Hoàng's chaos is the flag's loudest voice; Linh is the quietest. Three Vietnamese fighters, three frequencies.",
+      "goal": "Fights to prove the central coast produces something the north and south haven't seen yet, and to give her father a reason to show up on the dock the next morning talking."
+    },
+    "quotes": [
+      "\"Mưa miền Trung không hỏi trước khi đến.\" (The central rain doesn't ask before it comes.)",
+      "\"I don't finish early. I finish when it's done.\""
+    ],
+    "stats": {
+      "age": "22",
+      "height": "167 cm (5'6\")",
+      "weight": "52 kg (115 lb)",
+      "reach": "167 cm (66 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "mei-xiu-fang",
+    "name": "Mei Xiu Fang",
+    "alias": "Jiu Long",
+    "nationality": "China",
+    "flag": "🇨🇳",
+    "hometown": "Guangzhou",
+    "baseStyle": "Wushu",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1f9e6b",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "mei-xiu-fang.png",
+    "gallery": [
+      "mei-xiu-fang-1.png",
+      "mei-xiu-fang-2.png",
+      "mei-xiu-fang-3.png",
+      "mei-xiu-fang-4.png",
+      "mei-xiu-fang-5.png"
+    ],
+    "bio": {
+      "origin": "Mei Xiu trained in competitive Wushu at a Guangzhou provincial academy from age eight — the performance pipeline that produces athletes who can do things with their bodies that other fighters simply cannot. She won regional titles in changquan and nanquan before a coach redirected her toward full-contact competition, where the acrobatics became weapons and the weapons became something the circuit hadn't seen before. She arrived with no amateur kickboxing record and no reputation. She didn't need either.",
+      "style": "A Wushu southpaw whose movement vocabulary is wider than anyone she has faced. She closes distance in ways that look wrong — spinning entries, low-line feints, sudden level changes that come from a decade of forms training — and punishes the confusion with a left cross that arrives faster than the footwork suggested it would.",
+      "personal": "Spare and self-contained, she does not give interviews and does not explain herself. Trains alone in the early morning, runs the Pearl River waterfront at dusk, and eats at the same dim sum place in Yuexiu every evening without variation. Speaks when she has something to say, which is rarely.",
+      "rival": "Watches the internal China argument between Li Wei, Ying Ying, and Shīhán with detachment — three fighters from the north and east, squabbling over a flag she considers hers by default.",
+      "goal": "Fights because the academy built her for competition and competition is what she does. Has not yet needed a reason beyond that."
+    },
+    "quotes": [
+      "\"广州出来的，不需要解释。\" (From Guangzhou, no explanation needed.)",
+      "\"You watched me warm up and thought you were ready. That's on you.\""
+    ],
+    "stats": {
+      "age": "21",
+      "height": "169 cm (5'7\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "169 cm (67 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "nari-rattana",
+    "name": "Nari Rattana",
+    "alias": "Hornbill",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Gwangju",
+    "baseStyle": "Boxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "nari-rattana.png",
+    "gallery": [
+      "nari-rattana-1.png",
+      "nari-rattana-2.png",
+      "nari-rattana-3.png",
+      "nari-rattana-4.png",
+      "nari-rattana-5.png"
+    ],
+    "bio": {
+      "origin": "Nari was born in Gwangju to a Korean father and a Thai mother who met in Bangkok and followed him home. She grew up bilingual in a city that had no boxing gym worth mentioning until her father built one — a converted storage unit in Buk-gu that became a real gym the slow way, by producing fighters who won. Nari was the first one. She has been the best one ever since.",
+      "style": "A sharp, high-output boxer who works behind a fast jab and throws combinations in short, precise bursts that land cleaner than they look. She cuts angles instinctively and finds the body early, wearing opponents down before the head shots arrive. The Hornbill name is for the way she strikes: with the beak, targeted and structural, picking the body apart with intent rather than volume.",
+      "personal": "Openly warm — the fighter most likely to hug her opponent's corner after the final bell and mean it — with a competitive streak she barely bothers to conceal. Runs on her mother's pad kra pao and her father's doenjang jjigae and has opinions about both that she will share at length. Laughs easily, trains obsessively, last person in the gym every night without exception.",
+      "rival": "Feels a quiet kinship with Ara Vandenberg — another Korean fighter carrying a different face — but their styles are opposite enough that the kinship has an edge. Also on a slow-burn collision course with Soleil Aguilar, whose Filipino-Korean boxing draws the same comparisons Nari gets tired of explaining.",
+      "goal": "Fights to validate her father's gym and everything he bet on it, and to give her mother a reason to make the trip from Bangkok to watch."
+    },
+    "quotes": [
+      "\"아버지가 체육관을 지었어. 나는 이유를 만들어.\" (My father built the gym. I make the reason for it.)",
+      "\"I hug you after. Before, I'm trying to take your head off. Both are sincere.\""
+    ],
+    "stats": {
+      "age": "21",
+      "height": "166 cm (5'5\")",
+      "weight": "52 kg (115 lb)",
+      "reach": "166 cm (65 in)",
+      "stance": "Orthodox",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "ara-vandenberg",
+    "name": "Ara Vandenberg",
+    "alias": "Ghost",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Jeju",
+    "baseStyle": "Muay Thai",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "ara-vandenberg.png",
+    "gallery": [
+      "ara-vandenberg-1.png",
+      "ara-vandenberg-2.png",
+      "ara-vandenberg-3.png",
+      "ara-vandenberg-4.png",
+      "ara-vandenberg-5.png"
+    ],
+    "bio": {
+      "origin": "Ara was born in Jeju to a Korean mother and a Dutch father who left when she was four — which is how she explains the hair when people ask, which they always do. She grew up on the island's windward coast, moved to Seoul at sixteen, and found Muay Thai at a gym in Mapo that didn't look twice at her. She trained four years in Seoul before spending a year in Chiang Mai refining what she had. The circuit found her on the way back.",
+      "style": "A Muay Thai southpaw with a long, deceptive teep and a left cross that arrives from angles orthodox fighters consistently miscalculate. She fights at an unhurried pace that lulls opponents into thinking she's passive, then closes with elbows and knees in the clinch before they've registered the distance change. The Ghost name is for how she moves through a guard — present, then suddenly past it.",
+      "personal": "Unbothered and self-contained, she has spent her entire life being the person who doesn't fit the picture, and has stopped explaining it. Speaks Korean natively and Dutch badly and finds both equally funny to admit. Lives on Jeju black pork and cold instant coffee. Impossible to rattle. Occasionally difficult to find.",
+      "rival": "Draws quiet interest from Emma Zandberg — another half-Dutch fighter who chose an Asian flag, a parallel both are aware of and neither mentions. Also tracked by Yuna Seo, who finds a Korean Muay Thai southpaw more interesting than she's willing to say.",
+      "goal": "Fights to see how far the girl who didn't fit goes when the room finally has to reckon with her. Hasn't decided what comes after that."
+    },
+    "quotes": [
+      "\"나는 여기 속해. 그냥 네가 기대하던 모습이 아닐 뿐이야.\" (I belong here. Just not in the shape you expected.)",
+      "\"Yes, it's natural. No, I won't explain it. Can we fight now?\""
+    ],
+    "stats": {
+      "age": "22",
+      "height": "171 cm (5'7\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "171 cm (67 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "seo-yeon-kim",
+    "name": "Seo-Yeon Kim",
+    "alias": "Lacquer",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Daegu",
+    "baseStyle": "Tang Soo Do",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "seo-yeon-kim.png",
+    "gallery": [
+      "seo-yeon-kim-1.png",
+      "seo-yeon-kim-2.png",
+      "seo-yeon-kim-3.png",
+      "seo-yeon-kim-4.png",
+      "seo-yeon-kim-5.png"
+    ],
+    "bio": {
+      "origin": "Seo-Yeon grew up in Daegu in a family that treated Tang Soo Do as heritage rather than hobby — her grandfather practised it, her father taught it, and she resented all of it until she was good enough to appreciate what she'd been given. She competed through the Korean Tang Soo Do federation from age ten, won more than she mentions, and arrived at the circuit having quietly outgrown every amateur room she'd ever been in.",
+      "style": "A Tang Soo Do striker with long, whipping kicks that land before opponents have calculated the range, and sharp closed-fist techniques that her opponents consistently underestimate until they feel them. Her combinations are beautiful in the way a trap is beautiful — elegant up close, damaging on contact. She fights without urgency and without wasted motion.",
+      "personal": "Dry-witted and composed, she is the fighter on the roster most likely to compliment your technique while dismantling it. Dresses well, speaks carefully, and finds most pre-fight theatrics mildly embarrassing. Lives on Daegu's spicy braised short ribs and excellent coffee. Knows exactly how good she is. Finds it gauche to say so.",
+      "rival": "Watches Yuna Seo with the particular interest of someone who understands the Tang Soo Do versus Taekwondo lineage argument intimately — the older art versus the Olympic descendant, sixty years of Korean martial politics. Privately finds Jia Park's theatrics unnecessary.",
+      "goal": "Fights to make Tang Soo Do visible again on a stage that forgot it existed, and to prove the art that came before Taekwondo still produces sharper fighters than the one that replaced it."
+    },
+    "quotes": [
+      "\"당수도는 사라지지 않았다. 그저 조용해졌을 뿐.\" (Tang Soo Do didn't disappear. It just got quiet.)",
+      "\"I don't need you to know my name before the fight. You'll know it after.\""
+    ],
+    "stats": {
+      "age": "23",
+      "height": "172 cm (5'8\")",
+      "weight": "54 kg (119 lb)",
+      "reach": "172 cm (68 in)",
+      "stance": "Orthodox",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "yeon-ji-moon",
+    "name": "Yeon-Ji Moon",
+    "alias": "Still Water",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Seoul (Hongdae)",
+    "baseStyle": "Muay Thai",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "yeon-ji-moon.png",
+    "gallery": [
+      "yeon-ji-moon-1.png",
+      "yeon-ji-moon-2.png",
+      "yeon-ji-moon-3.png",
+      "yeon-ji-moon-4.png",
+      "yeon-ji-moon-5.png"
+    ],
+    "bio": {
+      "origin": "Yeon-Ji grew up in the Hongdae district of Seoul — Line 2, tteokbokki stalls, 24-hour convenience stores. Her mother's store sat three blocks from a Muay Thai gym that opened when she was sixteen, and she walked through the door mostly because she had nowhere else to be. She had talent nobody expected, including her. She competed in domestic circuits for three years before the invitation found her on a Tuesday night shift.",
+      "style": "A Muay Thai southpaw who fights in short, deliberate bursts and relies on timing rather than volume. She sits in mid-range, draws the extension, and punishes the return with body kicks that compound over rounds. Direct, unpretentious, efficient — she has no signature technique because every technique is equally dangerous when the moment is right.",
+      "personal": "Low-key and direct, she treats the circuit as something she showed up to and intends to do properly. Works shifts at her mother's convenience store between camps and doesn't consider this unusual. Eats whatever is in the store. Sleeps well. No social media. No strong opinion about that.",
+      "rival": "Exists in quiet parallel with Chae-Rin Oh — two young Korean Muay Thai southpaws from the same side of Seoul. The comparison is inevitable. Neither has said anything about it yet.",
+      "goal": "Fights because the invitation came and she said yes, and because the gym is the first room she has been in where the size of the effort matches the size of the result."
+    },
+    "quotes": [
+      "\"초대장이 왔고 나는 그냥 왔어.\" (The invitation came and I just came.)",
+      "\"I work the store Tuesday nights. The circuit fills in the rest.\""
+    ],
+    "stats": {
+      "age": "20",
+      "height": "165 cm (5'5\")",
+      "weight": "52 kg (115 lb)",
+      "reach": "165 cm (65 in)",
+      "stance": "Southpaw",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "sora-kim",
+    "name": "Sora Kim",
+    "alias": "Hafu",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Seoul (Itaewon)",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "sora-kim.png",
+    "gallery": [
+      "sora-kim-1.png",
+      "sora-kim-2.png",
+      "sora-kim-3.png",
+      "sora-kim-4.png",
+      "sora-kim-5.png"
+    ],
+    "bio": {
+      "origin": "Sora was born in Itaewon to a Korean father and a Japanese mother who had met at a language school in Osaka and followed the marriage to Seoul. She grew up in the district where nobody looks twice at mixed families, which meant she spent her first eighteen years in the one Korean neighbourhood that made sense to her and the rest of her time explaining herself to everywhere else. She found kickboxing through a gym her father frequented and stayed because it was the first room where her background was irrelevant. What mattered was whether she could move.",
+      "style": "A compact, high-output Orthodox kickboxer who combines tight Korean footwork with a punching economy absorbed from a Japanese striking coach at seventeen. She works in volume bursts and resets fast, never staying in the pocket long enough to get comfortable. The dragon on her shorts is a deliberate choice: both cultures claim the animal and so does she.",
+      "personal": "Privately guarded and publicly self-possessed. Speaks Korean and Japanese without accent, switches between them in the same sentence, and will correct assumptions about either side. Runs on Itaewon street food and Han River sunset walks. The gym is the one place where no one asks.",
+      "rival": "Watches Emi Sato-Wright from the opposite angle — a Japanese-American navigating Japan, while Sora is Korean-Japanese navigating Korea. Two fighters of divided heritage, different flags, a comparison neither has started but both are aware is coming. Also circling Seo-Yeon Kim, whose Tang Soo Do traditionalism represents exactly the kind of Korean identity that has never fully claimed Sora.",
+      "goal": "Fights to prove the hafu belongs in the ring and on the card and in the record books, under whatever flag the crowd is surprised to see her carry."
+    },
+    "quotes": [
+      "\"하프라고 불렸어. 지금은 내 이름이야.\" (They called me hafu. Now it's my name.)",
+      "\"Both flags. Neither apology.\""
+    ],
+    "stats": {
+      "age": "22",
+      "height": "170 cm (5'7\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "170 cm (67 in)",
+      "stance": "Orthodox",
+      "debut": "2026"
+    }
+  },
+  {
+    "id": "dewi-sukarno",
+    "name": "Dewi Sukarno",
+    "alias": "Kintamani",
+    "nationality": "Indonesia",
+    "flag": "🇮🇩",
+    "hometown": "Denpasar",
+    "baseStyle": "Muay Thai",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#c75a3a",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "dewi-sukarno.png",
+    "gallery": [
+      "dewi-sukarno-1.png",
+      "dewi-sukarno-2.png",
+      "dewi-sukarno-3.png",
+      "dewi-sukarno-4.png",
+      "dewi-sukarno-5.png"
+    ],
+    "bio": {
+      "origin": "Dewi grew up in Denpasar in a family of temple dancers — her mother performed legong, her grandmother before her. She found Muay Thai at sixteen through a gym run by a Thai coach who had retired to Bali, and trained in the compound of a pura in Ubud where the owner let fighters use the courtyard at dawn. The spiritual discipline of the dance and the physical discipline of the gym were not, in her understanding, separate things.",
+      "style": "A southpaw Muay Thai striker with unhurried, deliberate rhythm — she sets the pace and refuses to be pulled from it. Long teep, patient range work, and a left kick that builds in power across rounds rather than arriving all at once. She fights the way Bali moves: in cycles, with ceremony, toward an ending that was decided before it began.",
+      "personal": "Grounded and interior, she performs a brief offering ritual before every training session — a small canang sari left at the gym entrance, flowers and incense, a minute of stillness. Nobody in her gym questions it anymore. Speaks Balinese, Indonesian, and enough Thai to train in both languages. Lives on lawar and jaja bali and considers eating badly a form of disrespect to the body she is asking to fight.",
+      "rival": "Ayu Prasetya is the other Indonesian flag — Jakarta's Pencak Silat precision versus Bali's Muay Thai. Two islands, two martial philosophies, one nation. Neither has been publicly hostile. The tension is structural and neither needs to name it.",
+      "goal": "Fights to prove that what Bali built — a culture of discipline, of offering, of doing the hard thing with grace — produces fighters as well as it produces dancers. And to make the offering worthwhile."
+    },
+    "quotes": [
+      "\"Bali mengajarkan saya bahwa segala sesuatu dilakukan dengan tujuan atau tidak sama sekali.\" (Bali taught me that everything is done with intention or not at all.)",
+      "\"I leave flowers at the door. Then I go to work.\""
+    ],
+    "stats": {
+      "age": "21",
+      "height": "168 cm (5'6\")",
+      "weight": "53 kg (117 lb)",
+      "reach": "168 cm (66 in)",
+      "stance": "Southpaw",
       "debut": "2026"
     }
   }
