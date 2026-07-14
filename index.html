@@ -1345,8 +1345,8 @@
         </div></section>`;
     }
 
-    const photoSide = imgSrc
-      ? `<div class="vault-split-img"><img src="${imgSrc}" alt="${ft ? ft.name : item.title}"></div>`
+    const photoSide = (item.heroThumb || imgSrc)
+      ? `<div class="vault-split-img"><img src="${item.heroThumb || imgSrc}" alt="${ft ? ft.name : item.title}"></div>`
       : `<div class="vault-split-img vault-split-placeholder"><span class="glyph" style="font-size:64px;opacity:.15">龍</span></div>`;
     const textSide = `<div class="vault-split-text">${typeBadge}${fighterLine}${headline}${dateLine}${body}</div>`;
 
