@@ -239,7 +239,7 @@
   .fr-method{grid-column:2;grid-row:1/3;font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink);text-align:right;align-self:center}
 
   /* LARGE FIGHT IMAGE */
-  .rc-face{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent)}
+  .rc-face{display:block;width:100%;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:linear-gradient(160deg,#1a1c16,#0e110d);border:2px solid var(--accent);transition:border-color .2s}
   .rc-face img{width:100%;height:100%;object-fit:cover;object-position:top center}
   .rc-face.noimg{position:relative}
   .rc-face.noimg::after{content:'No Image';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.5}
@@ -260,6 +260,24 @@
   .rc-glyph{font-family:'Noto Serif SC',serif;color:var(--gold);font-size:26px}
   .rc-method{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
   .rc-round{font-size:12px;color:var(--muted)}
+  /* SPOILER REVEAL — result hidden until user opts in */
+  .rec-card .rc-tag,
+  .rec-card .rc-method,
+  .rec-card .rc-round{display:none}
+  .rec-card.revealed .rc-tag,
+  .rec-card.revealed .rc-method,
+  .rec-card.revealed .rc-round{display:inline-block}
+  .rc-reveal-btn{font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--gold);border-radius:3px;padding:8px 16px;cursor:pointer;transition:all .15s;margin-top:6px}
+  .rc-reveal-btn:hover{background:var(--gold);color:#0a0b08}
+  .rc-shop-btn{display:inline-block;font-family:'Oswald',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0a0b08;background:var(--gold);border:1px solid var(--gold);border-radius:3px;padding:8px 16px;cursor:pointer;text-decoration:none;margin-top:8px;transition:all .15s}
+  .rc-shop-btn:hover{opacity:.85}
+  .rec-card .rc-side .rc-name{transition:color .15s}
+  .rec-card:not(.revealed) .rc-tag-placeholder{display:inline-block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.16em;padding:3px 12px;border-radius:3px;margin-top:8px;background:rgba(255,255,255,.04);color:var(--muted)}
+  .rec-card.revealed .rc-tag-placeholder{display:none}
+  /* Face borders: neutral until revealed, then green (win) / red (loss) */
+  .rec-card:not(.revealed) .rc-face{border-color:var(--line)!important}
+  .rec-card.revealed .rc-side.win .rc-face{border-color:#1f9e6b!important}
+  .rec-card.revealed .rc-side.loss .rc-face{border-color:#c0263a!important}
 
   /* WATCH — large cards (no result, links to shop) */
   .watch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px}
@@ -525,6 +543,7 @@
   const SHOP = {
     gumroad: "https://dragonsfighting.gumroad.com/",
     fight1:  "https://dragonsfighting.gumroad.com/l/bjgyp",
+    fight2:  "https://dragonsfighting.gumroad.com/l/yhais",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -572,7 +591,7 @@
           <div class="wordmark">DRAGONS</div>
           <div class="underbar"><span class="ln"></span><span class="tag">Pan-Asian Fighting Circuit</span><span class="ln r"></span></div>
         </div>
-        <p class="sub">55 fighters. 15 nations. One circuit. A fictional world built one bout at a time.</p>
+        <p class="sub">55 fighters. 15 nations. AI-generated fight videos — a fictional world built one bout at a time.</p>
         <div class="hero-cta">
           <button class="btn btn-gold" onclick="go('roster')">Meet the Roster</button>
           <button class="btn btn-ghost" onclick="go('shop')">Watch the Fights</button>
@@ -1413,23 +1432,26 @@
   //           round: 2, date:'2026-07-12', event:'DRAGONS 1' }
   // Leave empty until real fights are produced.
   const FIGHTS = [
-    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1 },
-    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 1", video:"yingying-vs-jia", shopUrl: null },
-    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null },
+    { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1, released:true },
+    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 2", video:"yingying-vs-jia", shopUrl: SHOP.fight2, released:false },
+    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null, released:false },
   ];
+  // Only released fights count toward records and appear on the Spoilers page.
+  // Flip released:true when a fight goes live.
+  const RELEASED_FIGHTS = FIGHTS.filter(b => b.released);
 
   // Compute each fighter's W-L-KO from the fight log (overrides the 0-0 in data once fights exist)
   function computeRecords(){
     const rec = {};
     FIGHTERS.forEach(ft=>{ rec[ft.id] = {w:0,l:0,ko:0}; });
-    FIGHTS.forEach(b=>{
+    RELEASED_FIGHTS.forEach(b=>{
       if(rec[b.winner]){ rec[b.winner].w++; if(b.method==='KO'||b.method==='TKO') rec[b.winner].ko++; }
       if(rec[b.loser]){ rec[b.loser].l++; }
     });
     return rec;
   }
   const LIVE_REC = computeRecords();
-  function getRec(id){ return FIGHTS.length ? LIVE_REC[id] : f(id).record; }
+  function getRec(id){ return RELEASED_FIGHTS.length ? LIVE_REC[id] : f(id).record; }
 
   // Large fighter image block for fight cards
   function fightFace(ft){
@@ -1442,10 +1464,10 @@
   function records(arg){
     const filterId = arg || null;
     const fighterObj = filterId ? f(filterId) : null;
-    let fights = [...FIGHTS].reverse();
+    let fights = [...RELEASED_FIGHTS].reverse();
     if(filterId) fights = fights.filter(b=>b.winner===filterId||b.loser===filterId);
 
-    if(!FIGHTS.length){
+    if(!RELEASED_FIGHTS.length){
       return `<section><div class="wrap">
         <span class="eyebrow">The Books</span>
         <div class="sec-head"><h2>Spoilers</h2><p>Every official bout and result, logged as it happens.</p></div>
@@ -1458,25 +1480,29 @@
       </div></section>`;
     }
 
-    const cards = fights.map(b=>{
+    const cards = fights.map((b,i)=>{
       const w=f(b.winner), l=f(b.loser);
-      return `<div class="rec-card">
+      const cardId = 'reccard-'+i;
+      return `<div class="rec-card" id="${cardId}">
         <div class="rc-event">${b.event||''} · <span class="rc-date">${b.date||''}</span></div>
         <div class="rc-body">
           <div class="rc-side win" onclick="go('fighter/${w.id}')">
             ${fightFace(w)}
             <div class="rc-name">${w.name}</div>
+            <span class="rc-tag-placeholder">◆</span>
             <div class="rc-tag win">WIN</div>
           </div>
           <div class="rc-mid">
             <span class="rc-glyph">対</span>
+            <button class="rc-reveal-btn" onclick="revealResult('${cardId}')">Reveal result</button>
+            <a class="rc-shop-btn" href="${b.shopUrl||SHOP.gumroad}" target="_blank" rel="noopener">Watch on Gumroad ↗</a>
             <span class="rc-method">${b.method}</span>
             <span class="rc-round">${b.round?`Round ${b.round}`:''}</span>
-            ${b.video?`<a class="btn btn-gold" style="margin-top:12px;padding:8px 14px;font-size:11px;letter-spacing:.1em;text-decoration:none" href="${b.shopUrl||SHOP.gumroad}" target="_blank" rel="noopener">Watch ↗</a>`:''}
           </div>
           <div class="rc-side loss" onclick="go('fighter/${l.id}')">
             ${fightFace(l)}
             <div class="rc-name">${l.name}</div>
+            <span class="rc-tag-placeholder">◆</span>
             <div class="rc-tag loss">LOSS</div>
           </div>
         </div>
@@ -1485,15 +1511,16 @@
 
     const header = fighterObj
       ? `<span class="eyebrow">Fight Record</span>
-         <div class="sec-head"><h2>${fighterObj.name}</h2><p>${getRec(fighterObj.id).w}–${getRec(fighterObj.id).l} · every logged bout, results shown.</p></div>`
+         <div class="sec-head"><h2>${fighterObj.name}</h2><p>Every logged bout. Reveal each result when you're ready.</p></div>`
       : `<span class="eyebrow">The Books</span>
          <div class="sec-head"><h2>Spoilers</h2><p>Full results — every official bout, logged as it happens. To watch unspoiled, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold);cursor:pointer">Shop</span>.</p></div>`;
 
     return `<section><div class="wrap">
       ${header}
-      <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px">
-        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ You are in Spoiler territory</span>
-        <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Vault</span>.</span>
+      <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ SPOILERS</span>
+        <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Shop</span>.</span>
+        ${fights.length>1?`<button id="reveal-all-btn" class="rc-reveal-btn" style="margin:0 0 0 auto" onclick="revealAll()">Reveal all</button>`:''}
       </div>
       <div class="rec-cards">${cards}</div>
       ${filterId?`<div style="margin-top:28px"><span class="btn btn-ghost" onclick="go('records')">← All results</span></div>`:''}
@@ -1504,10 +1531,10 @@
   function watch(arg){
     const filterId = arg || null;
     const fighterObj = filterId ? f(filterId) : null;
-    let fights = [...FIGHTS].reverse();
+    let fights = [...RELEASED_FIGHTS].reverse();
     if(filterId) fights = fights.filter(b=>b.winner===filterId||b.loser===filterId);
 
-    if(!FIGHTS.length){
+    if(!RELEASED_FIGHTS.length){
       return `<section><div class="wrap">
         <span class="eyebrow">The Vault</span>
         <div class="sec-head"><h2>${fighterObj?fighterObj.name+' — Fights':'Watch the Fights'}</h2><p>Bouts will appear here to watch as the season begins.</p></div>
@@ -1841,6 +1868,25 @@
   function toggleMenu(){document.getElementById('links').classList.toggle('open');document.getElementById('navshop').classList.toggle('open');}
   function closeMenu(){document.getElementById('links').classList.remove('open');document.getElementById('navshop').classList.remove('open');}
   window.toggleMenu=toggleMenu;
+  /* SPOILER REVEAL — reveal a single fight result, or all at once */
+  function revealResult(cardId){
+    const card=document.getElementById(cardId);
+    if(!card) return;
+    card.classList.toggle('revealed');
+    const btn=card.querySelector('.rc-reveal-btn');
+    if(btn) btn.textContent = card.classList.contains('revealed') ? 'Hide result' : 'Reveal result';
+  }
+  window.revealResult=revealResult;
+  function revealAll(){
+    document.querySelectorAll('.rec-card').forEach(c=>{
+      c.classList.add('revealed');
+      const b=c.querySelector('.rc-reveal-btn');
+      if(b) b.textContent='Hide result';
+    });
+    const btn=document.getElementById('reveal-all-btn');
+    if(btn) btn.style.display='none';
+  }
+  window.revealAll=revealAll;
   /* FIGHT PREDICTION POLL */
   const POLL_CONFIG = {
     1: { left: 'Cheryl Ong', right: 'Pei Yee Lim', seedLeft: 43, seedRight: 57, closed: false, result: null }
@@ -1905,13 +1951,6 @@
   window.toggleMenu=toggleMenu;
   window.addEventListener('hashchange', function(){ render(); setTimeout(initPolls, 50); });
   render();
-</script>
-</body>
-</html>
-
-  window.addEventListener('hashchange',render);
-  render();
-  initPolls();
 </script>
 </body>
 </html>
