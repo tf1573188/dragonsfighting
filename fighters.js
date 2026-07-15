@@ -393,8 +393,8 @@ const FIGHTERS = [
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Osaka",
-    "baseStyle": "Karate",
-    "ruleset": "Kickboxing",
+    "baseStyle": "Kudo",
+    "ruleset": "MMA",
     "division": "Strawweight",
     "color": "#c0263a",
     "record": { "w": 0, "l": 0, "ko": 0 },
@@ -407,8 +407,8 @@ const FIGHTERS = [
       "saki-mori-5.png"
     ],
     "bio": {
-      "origin": "Saki grew up in Namba, Osaka — the working-class warren behind the bright signs, where the Yamaguchi-gumi's shadow was as normal as the vending machines. Her father ran a small pachinko parlour that paid tribute to the local kumicho. She was seventeen when a retired fighter associated with the organisation pulled her out of a street altercation and put her in a gym instead, recognising something in the way she fought back. She trained under his instruction for four years, paid off the debt with wins, and arrived at the circuit owing nobody anything. She does not discuss where she came from. The people who know her from those years don't discuss it either.",
-      "style": "A relentless pressure fighter who advances in straight lines and makes every exchange feel personal. She treats combinations like debts being collected — methodical, accumulative, and not finished until the account is settled. Her Karate base gives her the timing to close distance through hands, and she uses it to walk opponents backward until they run out of ring.",
+      "origin": "Saki grew up in Namba, Osaka — the working-class warren behind the bright signs, where the Yamaguchi-gumi's shadow was as normal as the vending machines. Her father ran a small pachinko parlour that paid tribute to the local kumicho. She was seventeen when a retired fighter associated with the organisation pulled her out of a street altercation and put her in a Kudo dojo instead, recognising something in the way she fought back. She trained under his instruction for four years, paid off the debt with wins, and arrived at the circuit owing nobody anything. She does not discuss where she came from. The people who know her from those years don't discuss it either.",
+      "style": "A Kudo fighter — the Japanese hybrid art built for real fights, where headbutts are legal and nothing about it is polite. Saki fights like the street altercation she was pulled out of never ended: swarming forward pressure, short elbows and headbutts in close, combinations that land like debts being collected — methodical, accumulative, and not finished until the account is settled. Four years of formal training never sanded the Namba off her. It just taught the chaos where to aim.",
       "personal": "Polite to the point of formality outside the ring — she bows, she uses correct honorifics, she thanks coaches and corners. Inside the ring, the formality is replaced by something else entirely. Has a vending-machine coffee superstition she refuses to explain. Studies tape obsessively, keeps her hair blunt so nothing gets in her eyes, and has not been back to Namba since the night she left it.",
       "rival": "Holds quiet professional respect for Yuna Seo and treats their potential bout as the one that actually matters — a Japan–Korea striking duel that both fighters pretend they aren't thinking about. Inside the organisation she trained with, they called her the best fighter they'd ever produced. She has never repeated this.",
       "goal": "Fights to honour the coach who pulled her out of the street and gave her a direction, and to be the last person standing in a room full of people who had every advantage she didn't."
@@ -418,7 +418,7 @@ const FIGHTERS = [
       "\"Osaka doesn't make gentle people. It makes people who know how to be gentle.\""
     ],
     "stats": {
-      "age": "21",
+      "age": "20",
       "height": "168 cm (5'6\")",
       "weight": "53 kg (117 lb)",
       "reach": "168 cm (66 in)",
@@ -1905,7 +1905,7 @@ const FIGHTERS = [
       "\"I switch stances because one angle is never the whole picture. Katong taught me that.\""
     ],
     "stats": {
-      "age": "23",
+      "age": "20",
       "height": "170 cm (5'7\")",
       "weight": "54 kg (119 lb)",
       "reach": "170 cm (67 in)",
