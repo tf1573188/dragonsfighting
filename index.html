@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DRAGONS — Pan-Asian Fighting Circuit</title>
-<meta name="description" content="DRAGONS is a fictional pan-Asian female fighting circuit. 59 original fighters across 18 nations — AI-generated fight videos sold on Gumroad.">
+<meta name="description" content="DRAGONS is a fictional pan-Asian female fighting circuit. 62 original fighters across 19 nations — AI-generated fight videos sold on Gumroad.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dragonsfighting.com/">
 <meta property="og:title" content="DRAGONS — Pan-Asian Fighting Circuit">
-<meta property="og:description" content="59 original fighters. 18 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta property="og:description" content="62 original fighters. 19 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
 <meta property="og:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
 <meta property="og:image:width" content="630">
 <meta property="og:image:height" content="840">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DRAGONS — Pan-Asian Fighting Circuit">
-<meta name="twitter:description" content="59 original fighters. 18 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta name="twitter:description" content="62 original fighters. 19 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
 <meta name="twitter:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -557,7 +557,7 @@
   const FLAG_CC = {
     'Singapore':'sg','Kazakhstan':'kz','Japan':'jp','Thailand':'th','South Korea':'kr',
     'China':'cn','Hong Kong':'hk','Taiwan':'tw','Malaysia':'my','USA':'us','Vietnam':'vn',
-    'Philippines':'ph','Mongolia':'mn','Indonesia':'id','Cambodia':'kh','Myanmar':'mm','Canada':'ca','Bhutan':'bt','Nepal':'np','Iran':'ir'
+    'Philippines':'ph','Mongolia':'mn','Indonesia':'id','Cambodia':'kh','Myanmar':'mm','Canada':'ca','Bhutan':'bt','Nepal':'np','Iran':'ir','Australia':'au'
   };
   function flagHTML(nat){
     const cc = FLAG_CC[nat];
@@ -591,7 +591,7 @@
           <div class="wordmark">DRAGONS</div>
           <div class="underbar"><span class="ln"></span><span class="tag">Pan-Asian Fighting Circuit</span><span class="ln r"></span></div>
         </div>
-        <p class="sub">59 fighters. 18 nations. One circuit. A fictional world built one bout at a time.</p>
+        <p class="sub">62 fighters. 19 nations. One circuit. A fictional world built one bout at a time.</p>
         <div class="hero-cta">
           <button class="btn btn-gold" onclick="go('roster')">Meet the Roster</button>
           <button class="btn btn-ghost" onclick="go('shop')">Watch the Fights</button>
@@ -1518,7 +1518,7 @@
     return `<section><div class="wrap">
       ${header}
       <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ SPOILERS</span>
+        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ You are in Spoiler territory</span>
         <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Shop</span>.</span>
         ${fights.length>1?`<button id="reveal-all-btn" class="rc-reveal-btn" style="margin:0 0 0 auto" onclick="revealAll()">Reveal all</button>`:''}
       </div>
@@ -1580,7 +1580,7 @@
       <span class="eyebrow">Enter the Dragon</span>
       <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">DRAGONS</h2>
       <div class="prose">
-        <p>A fictional pan-Asian female fighting circuit. 59 original fighters across 18 nations — each with a discipline, a record, and a reason to fight.</p>
+        <p>A fictional pan-Asian female fighting circuit. 62 original fighters across 19 nations — each with a discipline, a record, and a reason to fight.</p>
         <p>Every bout is AI-generated. Every result is canon. The circuit grows fight by fight.</p>
       </div>
       <div style="margin:40px 0 32px">

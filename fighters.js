@@ -2465,13 +2465,94 @@ const FIGHTERS = [
       "\"I will help you up after. On the ground, I give you nothing.\""
     ],
     "stats": {
-      "age": "22",
+      "age": "21",
       "height": "168 cm (5'6\")",
       "weight": "54 kg (119 lb)",
       "reach": "167 cm (66 in)",
       "stance": "Orthodox",
       "debut": "2026"
     }
+  },
+  {
+    "id": "daeun-choi",
+    "name": "Daeun Choi",
+    "alias": "Sanbok",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Busan (Gamcheon)",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "daeun-choi.png",
+    "gallery": ["daeun-choi-1.png","daeun-choi-2.png","daeun-choi-3.png","daeun-choi-4.png","daeun-choi-5.png"],
+    "bio": {
+      "origin": "Daeun grew up on the sanbok-doro — the hillside roads above Gamcheon, where the houses were built by refugees who had nowhere else to go and the stairs are the only way up. She was a Taekwondo prospect at fourteen, good enough that the Busan federation noticed her, and gone by seventeen after an incident nobody involved will describe on record. No academy would take her after that. She found an unsanctioned ring in a Nampo-dong basement instead, fought there for money, and kept the Taekwondo she'd been taught while abandoning everything the federation had wrapped around it.",
+      "style": "A Taekwondo-rooted kickboxer who kept the kicks and discarded the rulebook. Her head kick is genuinely elite — federation-grade, the thing they wanted to build a career on — but she throws it behind heavy hands and closes distance the way you learn in a basement, not a dojang. Orthodox, direct, and completely uninterested in scoring points. She fights to end it.",
+      "personal": "Blunt to the point of rudeness, with no interest in the parts of the sport that happen outside the ring. Runs the Gamcheon stairs for conditioning because it's free and it works. Eats at the same Nampo-dong stall her mother worked at for twenty years. Doesn't do interviews well, doesn't pretend to, and finds the circuit's polish faintly ridiculous. Loyal to about four people and indifferent to everyone else.",
+      "rival": "Yuna Seo is the same city and the opposite life — the Busan the tourism board photographs versus the Busan on the hill. They came through the same Taekwondo system; one of them was promoted and one was discarded. Daeun has never publicly commented on Yuna. Everyone who knows both of them understands that means something.",
+      "goal": "Fights to make the federation that erased her at seventeen watch her on a stage they don't control, and to put Gamcheon on a card that has only ever seen the postcard version of her city."
+    },
+    "quotes": [
+      "\"산복도로에서 자랐어. 계단 말고는 올라갈 방법이 없었어.\" (I grew up on the sanbok roads. There was no way up but the stairs.)",
+      "\"They taught me the kick. They didn't teach me to stop.\""
+    ],
+    "stats": { "age": "21", "height": "169 cm (5'7\")", "weight": "53 kg (117 lb)", "reach": "169 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "sarah-yoon",
+    "name": "Sarah Yoon",
+    "alias": "Magpie",
+    "nationality": "Australia",
+    "flag": "🇦🇺",
+    "hometown": "Sydney",
+    "baseStyle": "Boxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#00843d",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "sarah-yoon.png",
+    "gallery": ["sarah-yoon-1.png","sarah-yoon-2.png","sarah-yoon-3.png","sarah-yoon-4.png","sarah-yoon-5.png"],
+    "bio": {
+      "origin": "Sarah was born in Gangneung, on South Korea's east coast, and left at six when her parents took a business visa to Sydney and never went back. She grew up in Strathfield among the largest Korean community in Australia, spent her adolescence between Korean school on Saturdays and Bondi on Sundays, and found boxing at a gym in Marrickville that took her seriously before anyone else did. She has been back to Gangneung twice. She still calls it home in a way she cannot fully justify.",
+      "style": "A relaxed southpaw boxer with a deceptive economy — she stays loose, hands low, chatting with her corner between rounds, and then lands a left hand that arrives from nowhere and changes the fight. Opponents consistently read her calm as passivity and pay for it. Sharp counters, excellent distance, and a punch selection that comes from a coach who taught her to hit once and hit properly.",
+      "personal": "Easygoing to a degree the rest of the roster finds slightly suspicious — genuinely relaxed, genuinely funny, and genuinely uninterested in the psychological warfare most fighters run. Speaks Korean with a Gangneung accent that Seoul fighters find hilarious and Australian English with the vowels fully committed. Lives on her mother's kimchi jjigae and a flat white she is annoyingly particular about. The warmth is real. So is the left hand.",
+      "rival": "Draws the obvious comparison to Lena Fong — two Western-passport fighters of Asian descent circling Asian rings, both perfectly comfortable and both quietly aware the other exists. Also finds herself measured against the Korean bloc, who cannot decide whether she counts as one of theirs. She has no strong opinion on the matter, which they find more irritating than an answer.",
+      "goal": "Fights because it turned out she was very good at it and nothing else has ever felt that clear. Would like Gangneung to know her name, and Sydney to keep pronouncing it right."
+    },
+    "quotes": [
+      "\"강릉에서 태어났고, 시드니에서 자랐어. 둘 다 진짜야.\" (Born in Gangneung, raised in Sydney. Both are real.)",
+      "\"Everyone reads the smile wrong. That's fine. That's the point.\""
+    ],
+    "stats": { "age": "21", "height": "170 cm (5'7\")", "weight": "53 kg (117 lb)", "reach": "171 cm (67 in)", "stance": "Southpaw", "debut": "2026" }
+  },
+  {
+    "id": "talia-faleolo",
+    "name": "Talia Faleolo",
+    "alias": "Westie",
+    "nationality": "Australia",
+    "flag": "🇦🇺",
+    "hometown": "Mount Druitt, Sydney",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#00843d",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "talia-faleolo.png",
+    "gallery": ["talia-faleolo-1.png","talia-faleolo-2.png","talia-faleolo-3.png","talia-faleolo-4.png","talia-faleolo-5.png"],
+    "bio": {
+      "origin": "Talia is Mount Druitt — Samoan father, Lebanese-Australian mother, five siblings, and a house where three languages were shouted across the same kitchen. Her father's family came from Savai'i in the seventies and put down roots in the west when the west was where you could afford to. She got into a PCYC gym at thirteen because her mother wanted her tired, and stayed because it turned out she was the best one there by a distance nobody could ignore. She has never trained east of Parramatta and does not intend to start.",
+      "style": "An aggressive, high-volume orthodox kickboxer who fights on the front foot and talks the entire time. She throws in long combinations that start with the hands and finish with a kick nobody saw coming, and her pace never drops because her conditioning was built running Blacktown streets in the summer. Chaotic to face and genuinely fun to watch — she is the fighter the crowd picks up whether they meant to or not.",
+      "personal": "Loud, funny, and completely unfiltered — she has no interest in the composed-professional act and finds fighters who perform humility mildly hilarious. Talks in the ring, talks at the weigh-in, talks after. Deeply family-run: her siblings travel to fights, her mother has opinions about her corner, her father says almost nothing and she checks for him anyway. Eats her grandmother's palusami and her mother's kibbeh and will fight you about which is better.",
+      "rival": "The obvious one is Sarah Yoon — two Australians, opposite coasts of the same city, opposite everything. Sarah is calm and eastern-suburbs polished; Talia is western Sydney with the volume up. Talia thinks it would be the easiest sell on the card. Sarah has not responded, which Talia interprets as agreement.",
+      "goal": "Fights to put Mount Druitt on a card that has never once mentioned it, and because her father drove her to a gym in Blacktown four nights a week for six years without ever asking her to explain why."
+    },
+    "quotes": [
+      "\"They call us westies like it's an insult. Mate, it's on my shorts.\"",
+      "\"O le tele o sua, o le tele lea o le taumafa.\" (The more the soup, the more the feast.)"
+    ],
+    "stats": { "age": "20", "height": "168 cm (5'6\")", "weight": "53 kg (117 lb)", "reach": "169 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
   }
 ];
 
