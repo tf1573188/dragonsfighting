@@ -82,6 +82,10 @@
   .sec-head h2{font-size:clamp(30px,5vw,52px)}
   .sec-head p{color:var(--muted);max-width:440px}
 
+  .sub-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--line)}
+  .sub-head h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,28px);text-transform:uppercase;letter-spacing:.03em;color:var(--ink)}
+  .sub-head p{color:var(--muted);max-width:420px;font-size:14px}
+
   /* ROSTER GRID */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px}
 
@@ -314,7 +318,9 @@
   .comm-submit .btn{padding:14px 36px;font-size:15px}
   .comm-submit .btn[disabled]{opacity:.3;pointer-events:none}
   .comm-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px;max-width:500px;margin-left:auto;margin-right:auto}
-
+.comm-fighter-callout{margin:0 0 56px;text-align:center}
+  .comm-fighter-callout .btn{white-space:nowrap}
+  .comm-terms{max-width:760px;margin:14px auto 0;text-align:center;color:var(--muted);opacity:.75;font-size:11.5px;line-height:1.7}
   /* SHOP / ABOUT */
   .lead{font-size:clamp(20px,3vw,30px);font-family:'Oswald',sans-serif;font-weight:400;line-height:1.4;max-width:780px;color:var(--ink);letter-spacing:.005em}
   .sec-head p, .hero .sub{font-family:'Barlow',sans-serif}
@@ -674,9 +680,9 @@
       <div class="wrap">
         <div class="request">
           <span class="eyebrow">Make the Card</span>
-          <h3>Commission a Matchup</h3>
-          <p>Want to see two specific fighters meet? Get in touch for a quote — all commissions are paid productions.</p>
-          <span class="btn btn-gold" onclick="go('commission')">Pick Your Fighters</span>
+          <h3>Commissions</h3>
+          <p>Book a custom fight between any two fighters, or commission a brand-new fighter into the circuit — email us for a quote.</p>
+          <span class="btn btn-gold" onclick="go('commission')">Make Your Card</span>
         </div>
       </div>
     </section>`;
@@ -1475,7 +1481,7 @@
           <div class="badge">Inaugural Season · 2026</div>
           <h3>The Books Open Soon</h3>
           <p>The roster is set and the first cards are in production. Official bouts and results will appear here as the season begins.</p>
-          <div style="margin-top:24px"><button class="btn btn-ghost" onclick="go('matchups')">Request a matchup</button>div>
+          <div style="margin-top:24px"><button class="btn btn-ghost" onclick="go('matchups')">See upcoming matchups</button></div>
         </div></div>
       </div></section>`;
     }
@@ -1518,7 +1524,7 @@
     return `<section><div class="wrap">
       ${header}
       <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ SPOILERS</span>
+        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ You are in Spoiler territory</span>
         <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Shop</span>.</span>
         ${fights.length>1?`<button id="reveal-all-btn" class="rc-reveal-btn" style="margin:0 0 0 auto" onclick="revealAll()">Reveal all</button>`:''}
       </div>
@@ -1588,6 +1594,15 @@
           <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">Instagram — @dragonsfighting123 ↗</a>
           <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" class="btn" style="border-color:var(--line);color:var(--ink);font-size:13px;padding:12px 24px">TikTok — @dragonsfighting ↗</a>
           <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:13px;padding:12px 24px">Shop on Gumroad ↗</a>
+        </div>
+      </div>
+      <div style="margin-top:56px">
+        <span class="eyebrow">Commissions</span>
+        <h3 style="font-family:'Oswald',sans-serif;font-size:clamp(22px,3.5vw,32px);text-transform:uppercase;margin:10px 0 20px">How Commissions Work</h3>
+        <div class="prose">
+          <p>Anyone can shape the circuit. Book a custom fight between any two fighters on the roster, or commission a brand-new fighter of your own. Head to the <a href="#commission" onclick="go('commission')" style="color:var(--gold)">Commissions</a> page and your email will open with a short request template. Fill in what matters to you and leave the rest to us — we reply with a quote and a delivery timeline. Production begins once the quote is agreed and a deposit is in; the balance is due on delivery.</p>
+          <p>Commissioned fights and fighters become part of the DRAGONS universe. DRAGONS retains all rights to every fighter and every fight produced, including the right to sell them on this site and our storefronts. Whether a commissioned result enters the official record is at DRAGONS' discretion, and fighter details may be adjusted to keep the roster balanced. Exclusive arrangements are available — ask when you request your quote.</p>
+          <p>For fighter commissions, reference images must be AI-generated or original artwork you hold the rights to; photographs of real people are declined. All fighters are canonically adults, eighteen or older. We reserve the right to decline any request.</p>
         </div>
       </div>
       <div class="note">All imagery and video on this site is AI-generated and depicts fictional characters. DRAGONS is a work of fiction: the fighters, records, and events are invented, and any resemblance to real persons is coincidental. All video content is AI-generated.</div>
@@ -1664,7 +1679,7 @@
     if(btn) btn.disabled = !(a && b);
   }
 
-  window.commSubmit = function(){
+   window.commFighterSubmit = function(){
     const a = f(commPicks[0]), b = f(commPicks[1]);
     if(!a || !b) return;
     const subj = encodeURIComponent('DRAGONS Matchup Commission: '+a.name+' vs '+b.name);
@@ -1684,12 +1699,23 @@
     }, 600);
   };
 
-  function commission(){
+function commission(){
     commPicks = [null, null];
     const sorted = [...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
     return `<section><div class="wrap">
-      <span class="eyebrow">Make the Card</span>
-      <div class="sec-head"><h2>Commission a Matchup</h2><p>Pick any two fighters and email us for a quote. All commissions are paid — get in touch for a quote and we'll confirm availability and pricing.</p></div>
+      <span class="eyebrow">Commissions</span>
+
+      <div class="sub-head"><h3>Commission a Fighter</h3><p>Bring your own fighter into the circuit. Supply a reference image and as much direction as you like — we build her into a full DRAGONS fighter with a profile, gallery, bio, and an official place on the roster.</p></div>
+
+      <div class="comm-fighter-callout">
+        <button class="btn btn-gold" onclick="commFighterSubmit()">Commission a Fighter</button>
+      </div>
+      <div id="cf-confirm" style="display:none;margin:16px 0 0;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px">
+        <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
+        <p style="color:var(--muted);font-size:13px;margin-top:6px">Attach your reference image(s) before sending. If your email client didn't open, send your request directly to <a href="mailto:tf1573188@gmail.com" style="color:var(--gold)">tf1573188@gmail.com</a></p>
+      </div>
+
+      <div class="sub-head"><h3>Commission a Matchup</h3><p>Pick any two fighters — your email will open with a request template covering duration, attire, venue, style, and result. Fill in what matters to you and leave the rest to us.</p></div>
 
       <div class="comm-selected">
         <div class="comm-pick empty" id="comm-pick-a">
@@ -1706,18 +1732,15 @@
       <div class="comm-submit">
         <button class="btn btn-gold" id="comm-btn" disabled onclick="commSubmit()">Commission This Fight</button>
       </div>
-      <div class="comm-note">Email us to request a quote. All commissions are paid productions — we'll confirm availability and pricing.</div>
       <div id="comm-confirm" style="display:none;margin-top:16px;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px;margin-left:auto;margin-right:auto">
         <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
         <p style="color:var(--muted);font-size:13px;margin-top:6px">If your email client didn't open, send your commission request directly to <a href="mailto:tf1573188@gmail.com" style="color:var(--gold)">tf1573188@gmail.com</a></p>
       </div>
-      <div class="comm-note" style="margin-top:10px">Enter the Dragon — follow us for fight announcements and previews: <a href="https://www.instagram.com/dragonsfighting123/" target="_blank" rel="noopener" style="color:var(--gold)">Instagram</a> · <a href="https://www.tiktok.com/@dragonsfighting" target="_blank" rel="noopener" style="color:var(--gold)">TikTok</a></div>
 
       <div class="comm-grid">${sorted.map(commCard).join('')}</div>
 
     </div></section>`;
   }
-
   let savedScroll = 0;       // remembers roster scroll position
   let lastRoute = null;
   function render(){
