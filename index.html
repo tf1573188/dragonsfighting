@@ -1682,12 +1682,16 @@
    window.commSubmit = function(){
     const a = f(commPicks[0]), b = f(commPicks[1]);
     if(!a || !b) return;
+    const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const duration = val('cm-duration') || '(no preference)';
+    const result = val('cm-result') || '(let DRAGONS decide)';
     const subj = encodeURIComponent('DRAGONS Matchup Commission: '+a.name+' vs '+b.name);
     const body = encodeURIComponent(
       'I\'d like to commission a matchup:\n\n'+
       'Fighter A: '+a.name+' "'+a.alias+'" ('+a.nationality+', '+a.baseStyle+')\n'+
       'Fighter B: '+b.name+' "'+b.alias+'" ('+b.nationality+', '+b.baseStyle+')\n\n'+
-      'Why this fight:\n\n'
+      'Duration: '+duration+'\n'+
+      'Who wins? '+result+'\n\n'
     );
     window.open('mailto:tf1573188@gmail.com?subject='+subj+'&body='+body, '_self');
     // Show confirmation state after a short delay
@@ -1700,14 +1704,36 @@
   };
 
   window.commFighterCreate = function(){
-    const ideaEl = document.getElementById('cf-idea');
-    const idea = ideaEl ? ideaEl.value.trim() : '';
-    const subj = encodeURIComponent('DRAGONS Fighter Commission');
+    const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    const errEl = document.getElementById('cf-error');
+    const ageRaw = val('cf-age');
+    const ageNum = parseInt(ageRaw, 10);
+    if(!ageRaw || isNaN(ageNum) || ageNum < 18){
+      if(errEl) errEl.style.display = 'block';
+      const ageEl = document.getElementById('cf-age');
+      if(ageEl) ageEl.style.borderColor = '#e07a5f';
+      return;
+    }
+    if(errEl) errEl.style.display = 'none';
+
+    const name = val('cf-name') || '(not specified)';
+    const nickname = val('cf-nickname') || '(not specified)';
+    const nationality = val('cf-nationality') || '(not specified)';
+    const height = val('cf-height') || '(not specified)';
+    const style = val('cf-style') || '(not specified)';
+    const attire = val('cf-attire') || '(not specified)';
+    const subj = encodeURIComponent('DRAGONS Fighter Commission: '+(val('cf-name') || 'New Fighter'));
     const body = encodeURIComponent(
       'I\'d like to commission a new fighter for the DRAGONS roster.\n\n'+
-      'My idea / concept:\n'+(idea || '(describe name, nation, discipline, personality, etc.)')+'\n\n'+
-      'Reference image(s): attach before sending\n\n'+
-      'Anything else:\n\n'
+      'Name: '+name+'\n'+
+      'Nickname/Alias: '+nickname+'\n'+
+      'Nationality: '+nationality+'\n'+
+      'Age: '+ageNum+'\n'+
+      'Height: '+height+'\n'+
+      'Fighting style: '+style+'\n'+
+      'Attire: '+attire+'\n\n'+
+      'Additional direction / personality / backstory notes:\n\n'+
+      'Reference image(s): attach before sending\n\n'
     );
     window.open('mailto:tf1573188@gmail.com?subject='+subj+'&body='+body, '_self');
     setTimeout(function(){
@@ -1727,16 +1753,25 @@ function commission(){
       <div class="sub-head"><h3>Commission a Fighter</h3><p>Bring your own fighter into the circuit. Supply a reference image and as much direction as you like — we build her into a full DRAGONS fighter with a profile, gallery, bio, and an official place on the roster.</p></div>
 
       <div class="comm-fighter-callout">
-        <input type="text" id="cf-idea" placeholder="Optional: fighter name, nation, or concept idea" style="display:block;margin:0 auto 14px;max-width:420px;width:100%;padding:12px 16px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px;text-align:center">
+        <div style="text-align:center;font-family:'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:0 0 10px">Optional:</div>
+        <div class="cf-fields" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;max-width:520px;margin:0 auto 16px">
+          <input type="text" id="cf-name" placeholder="Fighter name" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="text" id="cf-nickname" placeholder="Nickname / alias" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="text" id="cf-nationality" placeholder="Nationality" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="number" id="cf-age" placeholder="Age (18+)" min="18" step="1" oninput="document.getElementById('cf-error').style.display='none';this.style.borderColor='var(--muted)'" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="text" id="cf-height" placeholder="Height" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="text" id="cf-style" placeholder="Fighting style" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+          <input type="text" id="cf-attire" placeholder="Attire" style="grid-column:1 / -1;padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+        </div>
+        <div id="cf-error" style="display:none;color:#e07a5f;font-size:13px;margin-bottom:12px">Please enter an age of 18 or older to submit a fighter commission.</div>
         <button class="btn btn-gold" onclick="commFighterCreate()">Commission a Fighter</button>
-        <!-- was: onclick="commFighterSubmit()" — that function is the matchup mailto handler, unrelated to this button -->
       </div>
-      <div id="cf-confirm" style="display:none;margin:16px 0 0;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px">
+      <div id="cf-confirm" style="display:none;margin:16px auto 0;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px">
         <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
         <p style="color:var(--muted);font-size:13px;margin-top:6px">Attach your reference image(s) before sending. If your email client didn't open, send your request directly to <a href="mailto:tf1573188@gmail.com" style="color:var(--gold)">tf1573188@gmail.com</a></p>
       </div>
 
-      <div class="sub-head"><h3>Commission a Matchup</h3><p>Pick any two fighters — your email will open with a request template covering duration, attire, venue, style, and result. Fill in what matters to you and leave the rest to us.</p></div>
+      <div class="sub-head"><h3>Commission a Matchup</h3><p>Pick any two fighters, then set the duration and preferred result — your email will open pre-filled with your choices. Leave any field blank and we'll decide.</p></div>
 
       <div class="comm-selected">
         <div class="comm-pick empty" id="comm-pick-a">
@@ -1748,6 +1783,12 @@ function commission(){
           <div class="cp-label">Fighter B</div>
           <div class="cp-name">Select second fighter</div>
         </div>
+      </div>
+
+      <div style="text-align:center;font-family:'Oswald',sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--muted);margin:20px 0 10px">Optional:</div>
+      <div class="cm-fields" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;max-width:520px;margin:0 auto">
+        <input type="text" id="cm-duration" placeholder="Duration" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
+        <input type="text" id="cm-result" placeholder="Who wins?" style="padding:12px 14px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px">
       </div>
 
       <div class="comm-submit">
