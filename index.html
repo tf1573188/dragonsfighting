@@ -315,7 +315,7 @@
   .comm-pick.empty .cp-name{color:var(--muted);font-weight:400;font-style:italic}
   .comm-vs{font-family:'Noto Serif SC',serif;color:var(--gold);font-size:28px}
   .comm-submit{text-align:center;margin-top:8px}
-  .comm-submit .btn{padding:14px 36px;font-size:15px}
+  .comm-submit .btn{padding:14px 36px}
   .comm-submit .btn[disabled]{opacity:.3;pointer-events:none}
   .comm-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px;max-width:500px;margin-left:auto;margin-right:auto}
 .comm-fighter-callout{margin:0 0 56px;text-align:center}
@@ -1679,7 +1679,7 @@
     if(btn) btn.disabled = !(a && b);
   }
 
-   window.commFighterSubmit = function(){
+   window.commSubmit = function(){
     const a = f(commPicks[0]), b = f(commPicks[1]);
     if(!a || !b) return;
     const subj = encodeURIComponent('DRAGONS Matchup Commission: '+a.name+' vs '+b.name);
@@ -1699,6 +1699,25 @@
     }, 600);
   };
 
+  window.commFighterCreate = function(){
+    const ideaEl = document.getElementById('cf-idea');
+    const idea = ideaEl ? ideaEl.value.trim() : '';
+    const subj = encodeURIComponent('DRAGONS Fighter Commission');
+    const body = encodeURIComponent(
+      'I\'d like to commission a new fighter for the DRAGONS roster.\n\n'+
+      'My idea / concept:\n'+(idea || '(describe name, nation, discipline, personality, etc.)')+'\n\n'+
+      'Reference image(s): attach before sending\n\n'+
+      'Anything else:\n\n'
+    );
+    window.open('mailto:tf1573188@gmail.com?subject='+subj+'&body='+body, '_self');
+    setTimeout(function(){
+      const note = document.getElementById('cf-confirm');
+      if(note){ note.style.display='block'; }
+      const btn = document.querySelector('.comm-fighter-callout .btn');
+      if(btn){ btn.textContent='Request Sent ✓'; btn.disabled=true; btn.style.opacity='0.6'; }
+    }, 600);
+  };
+
 function commission(){
     commPicks = [null, null];
     const sorted = [...FIGHTERS].sort((a,b)=>a.name.localeCompare(b.name));
@@ -1708,7 +1727,9 @@ function commission(){
       <div class="sub-head"><h3>Commission a Fighter</h3><p>Bring your own fighter into the circuit. Supply a reference image and as much direction as you like — we build her into a full DRAGONS fighter with a profile, gallery, bio, and an official place on the roster.</p></div>
 
       <div class="comm-fighter-callout">
-        <button class="btn btn-gold" onclick="commFighterSubmit()">Commission a Fighter</button>
+        <input type="text" id="cf-idea" placeholder="Optional: fighter name, nation, or concept idea" style="display:block;margin:0 auto 14px;max-width:420px;width:100%;padding:12px 16px;background:transparent;border:1px solid var(--muted);border-radius:4px;color:inherit;font-family:inherit;font-size:14px;text-align:center">
+        <button class="btn btn-gold" onclick="commFighterCreate()">Commission a Fighter</button>
+        <!-- was: onclick="commFighterSubmit()" — that function is the matchup mailto handler, unrelated to this button -->
       </div>
       <div id="cf-confirm" style="display:none;margin:16px 0 0;padding:14px 20px;background:rgba(31,158,107,.1);border:1px solid var(--emerald);border-radius:4px;text-align:center;max-width:500px">
         <span style="font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--emerald)">Request sent ✓</span>
