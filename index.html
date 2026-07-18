@@ -613,54 +613,54 @@
     <section>
       <div class="wrap">
         <div class="sec-head"><div><span class="eyebrow">Now Available</span><h2>Featured Fight</h2></div>
-        <p>The circuit's inaugural bout. Watch it now on Gumroad.</p></div>
+        <p>The circuit's second bout. Watch it now on Gumroad.</p></div>
         <div class="featured-fight">
           <div class="ff-fighters">
-          <div class="ff-fighter" onclick="go('fighter/cheryl-ong')">
+          <div class="ff-fighter" onclick="go('fighter/ying-ying')">
             <div class="ff-img">
-              <img src="images/cheryl-ong.png" alt="Cheryl Ong" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/ying-ying.png" alt="Ying Ying Li" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#d83a2e"></div>
+            <div class="ff-fighter-accent" style="background:#1f9e6b"></div>
             <div class="ff-info">
-              <div class="ff-name">Cheryl Ong</div>
-              <div class="ff-alias">"Lionheart"</div>
-              <div class="ff-nation">🇸🇬 Singapore · Kickboxing</div>
+              <div class="ff-name">Ying Ying Li</div>
+              <div class="ff-alias">"Porcelain"</div>
+              <div class="ff-nation">🇨🇳 China · Wing Chun</div>
             </div>
           </div>
           <div class="ff-vs">
             <span class="ff-vs-glyph">対</span>
-            <span class="ff-vs-label">Fight 1 · DRAGONS</span>
+            <span class="ff-vs-label">Fight 2 · DRAGONS</span>
           </div>
-          <div class="ff-fighter" onclick="go('fighter/pei-yee')">
+          <div class="ff-fighter" onclick="go('fighter/jia-park')">
             <div class="ff-img">
-              <img src="images/pei-yee.png" alt="Pei Yee Lim" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/jia-park.png" alt="Jia Park" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#4ac86b"></div>
+            <div class="ff-fighter-accent" style="background:#1fb6c9"></div>
             <div class="ff-info">
-              <div class="ff-name">Pei Yee Lim</div>
-              <div class="ff-alias">"Tempest"</div>
-              <div class="ff-nation">🇲🇾 Malaysia · Kickboxing</div>
+              <div class="ff-name">Jia Park</div>
+              <div class="ff-alias">"Universal"</div>
+              <div class="ff-nation">🇰🇷 South Korea · Kickboxing</div>
             </div>
           </div>
-          <div class="ff-poll" id="ff-poll-1">
+          <div class="ff-poll" id="ff-poll-2">
             <div class="ff-poll-header">
               <span class="ff-poll-label">WHO WINS?</span>
-              <span class="ff-poll-status" id="poll-status-1"></span>
+              <span class="ff-poll-status" id="poll-status-2"></span>
             </div>
-            <div class="ff-poll-bar" id="poll-bar-1">
-              <button class="ff-poll-side ff-poll-left" onclick="castVote(1,'left')" id="poll-left-1">
-                <span class="ff-poll-name">Cheryl Ong</span>
-                <span class="ff-poll-pct" id="poll-pct-left-1"></span>
+            <div class="ff-poll-bar" id="poll-bar-2">
+              <button class="ff-poll-side ff-poll-left" onclick="castVote(2,'left')" id="poll-left-2">
+                <span class="ff-poll-name">Ying Ying Li</span>
+                <span class="ff-poll-pct" id="poll-pct-left-2"></span>
               </button>
-              <button class="ff-poll-side ff-poll-right" onclick="castVote(1,'right')" id="poll-right-1">
-                <span class="ff-poll-name">Pei Yee Lim</span>
-                <span class="ff-poll-pct" id="poll-pct-right-1"></span>
+              <button class="ff-poll-side ff-poll-right" onclick="castVote(2,'right')" id="poll-right-2">
+                <span class="ff-poll-name">Jia Park</span>
+                <span class="ff-poll-pct" id="poll-pct-right-2"></span>
               </button>
             </div>
-            <div class="ff-poll-fill" id="poll-fill-1"></div>
+            <div class="ff-poll-fill" id="poll-fill-2"></div>
           </div>
           <div class="ff-cta">
-            <a class="btn btn-gold" href="https://dragonsfighting.gumroad.com/l/bjgyp" target="_blank" rel="noopener">Watch Fight 1 ↗</a>
+            <a class="btn btn-gold" href="https://dragonsfighting.gumroad.com/l/yhais" target="_blank" rel="noopener">Watch Fight 2 ↗</a>
             <button class="btn btn-ghost" onclick="go('vault')">The Vault</button>
           </div>
         </div>
@@ -1439,7 +1439,7 @@
   // Leave empty until real fights are produced.
   const FIGHTS = [
     { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1, released:true },
-    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 2", video:"yingying-vs-jia", shopUrl: SHOP.fight2, released:false },
+    { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 2", video:"yingying-vs-jia", shopUrl: SHOP.fight2, released:true },
     { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null, released:false },
   ];
   // Only released fights count toward records and appear on the Spoilers page.
@@ -1524,7 +1524,7 @@
     return `<section><div class="wrap">
       ${header}
       <div style="background:#2a1a0a;border:1px solid #c86b2e;border-radius:4px;padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ You are in Spoiler territory</span>
+        <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#c86b2e">⚠ SPOILERS!</span>
         <span style="color:#cdc8ba;font-size:14px">This page shows full fight results. To watch without spoilers, visit the <span class="fname" onclick="go('shop')" style="color:var(--gold)">Shop</span>.</span>
         ${fights.length>1?`<button id="reveal-all-btn" class="rc-reveal-btn" style="margin:0 0 0 auto" onclick="revealAll()">Reveal all</button>`:''}
       </div>
@@ -1974,7 +1974,7 @@ function commission(){
   window.revealAll=revealAll;
   /* FIGHT PREDICTION POLL */
   const POLL_CONFIG = {
-    1: { left: 'Cheryl Ong', right: 'Pei Yee Lim', seedLeft: 43, seedRight: 57, closed: false, result: null }
+    2: { left: 'Ying Ying Li', right: 'Jia Park', seedLeft: 50, seedRight: 50, closed: false, result: null }
   };
 
   function initPolls() {
