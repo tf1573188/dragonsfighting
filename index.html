@@ -550,6 +550,7 @@
     gumroad: "https://dragonsfighting.gumroad.com/",
     fight1:  "https://dragonsfighting.gumroad.com/l/bjgyp",
     fight2:  "https://dragonsfighting.gumroad.com/l/yhais",
+    fight3:  "https://dragonsfighting.gumroad.com/l/lovhll",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -1068,158 +1069,56 @@
   // content: full article HTML (for internal pieces)
   const VAULT_ITEMS = [
     {
-      id: 'v001',
-      type: 'spotlight',
-      fighter: 'pei-yee',
-      title: 'The Tempest from Penang',
-      teaser: 'Before she became the most talked-about striker in the circuit, Pei Yee Lim was throwing combinations at a punching bag above a wet market. A portrait.',
-      thumb: null,
-      date: 'DRAGONS Circuit · Issue 01',
-      link: null,
-      layout: 'photo-right',
-      content: `
-        <p class="vault-lead">She is the first one through the gym door every morning, and she will be the last one to leave. That is not a boast — it is simply what Pei Yee Lim considers the minimum.</p>
-        <p>Penang gave her the heat, the hunger, and the hours. Her mother ran a hawker stall on Chulia Street — char koay teow, six days a week, before the sun came up. Pei Yee worked the mornings before school and the evenings after, and somewhere in between she found a community gym above a row of shophouses where a retired kickboxer called Coach Rajan was charging kids fifty ringgit a month to learn how to fight. He spotted her in the second week. By the third, he was covering her fees himself.</p>
-        <p>"She trained like she was afraid of stopping," Rajan says. "Like if she stopped moving, something would catch her."</p>
-        <p>What she was outrunning, she will not say directly. But the goal has always been specific: a real home for her family. Not rented. Owned. Something that stays.</p>
-        <h3>The Volume Game</h3>
-        <p>Pei Yee's fighting style is an extension of her personality — relentless, cheerful, and fundamentally unwilling to let an opponent settle. She throws in combinations that build into walls of output, trusting her conditioning to outlast whatever answer comes back. The nickname arrived naturally. She does not storm the ring. She is the storm.</p>
-        <p>"My pace is my weapon," she says. "Not my power, not my technique — my pace. Because nobody can match it for a full fight. I know this because I have tested it. Every day."</p>
-        <p>She is not wrong. In sparring, her training partners rotate in fresh every three rounds while she continues. She finishes each session with footwork drills. The char koay teow, she says, is non-negotiable fuel.</p>
-        <h3>Fight 1</h3>
-        <p>The circuit's inaugural bout matched her against Cheryl Ong of Singapore — another forward-pressure fighter with a different philosophy. Where Pei Yee buries opponents in output, Cheryl makes every exchange personal. Two hawker-district kids from neighbouring countries, neither of whom learned to take a step back.</p>
-        <p>What happened between the bells is in the record now. Pei Yee does not discuss the details. She is already thinking about what comes next.</p>
-        <p>"I send money home first," she says, when asked how she celebrated. "Then I go back to the gym."</p>
-        <div class="vault-quote">"Saya masuk paling awal, balik paling lewat." <span>(First one in, last one out.)</span></div>
-      `
-    },
-    {
-      id: 'v002',
-      type: 'presser',
-      fighter: null,
-      title: 'Fight 1 Press Conference: Pei Yee vs Cheryl',
-      teaser: "Both fighters face the cameras ahead of the circuit's inaugural bout. Tension, respect, and one very pointed prediction.",
-      thumb: 'images/vault-v002-presser.png',
-      heroThumb: 'images/vault-v002-presser.gif',
-      date: 'DRAGONS Circuit · Pre-Fight',
-      link: null,
-      layout: 'hero',
-      content: `
-        <p class="vault-lead">The room was small, the table was too close, and Cheryl Ong arrived seven minutes late. Pei Yee Lim was already seated, water untouched, watching the door.</p>
-        <p>The DRAGONS Fight 1 press conference was not supposed to be contentious. Both fighters had spoken publicly about respecting each other's styles. The circuit's first official event was meant to open with good faith and mutual acknowledgement.</p>
-        <p>It lasted approximately four minutes before Cheryl said what she was thinking.</p>
-        <h3>"I Don't Take Steps Back"</h3>
-        <p><strong>On what she expects from Pei Yee:</strong></p>
-        <p class="vault-speaker">Cheryl: "She's going to come forward. That's her whole game — volume, pressure, keep coming. I know this. I've watched every clip of her I could find. But here's the thing: I come forward too. So what happens when two people who never step back walk into each other?"</p>
-        <p><strong>Pei Yee, without looking up from her water:</strong></p>
-        <p class="vault-speaker">Pei Yee: "One of them goes down."</p>
-        <p>A beat of silence. Cheryl laughed first.</p>
-        <p><strong>On the significance of Fight 1:</strong></p>
-        <p class="vault-speaker">Pei Yee: "I think about my mother watching this. She has never seen me fight in person — she cannot leave the stall. So this is the fight she watches on a screen, behind the counter, between orders. I want her to see something she is proud of."</p>
-        <p class="vault-speaker">Cheryl: "My mother will also be watching. From the crowd. She took the night off, which she has never done in twenty years. So same — I need to give her something."</p>
-        <h3>The Prediction</h3>
-        <p>Asked for a prediction, Cheryl was immediate.</p>
-        <p class="vault-speaker">Cheryl: "Finish. I don't know what round, but it doesn't go to the cards. It's not that kind of fight."</p>
-        <p>Pei Yee considered this for a moment, then nodded once.</p>
-        <p class="vault-speaker">Pei Yee: "She's right about that part."</p>
-        <p>They did not shake hands at the end. They did not need to. Both of them already knew exactly what was coming.</p>
-      `
-    },
-    {
-      id: 'v003',
-      type: 'spotlight',
-      fighter: 'cheryl-ong',
-      title: "Lionheart — Inside Cheryl Ong's Camp",
-      teaser: "Inside Cheryl's prep for Fight 1. Pad work, sparring, and the Bedok sessions that built a fighter who never learned to step back.",
-      thumb: 'images/cheryl-ong-2.png',
-      date: 'DRAGONS Circuit · Camp Diary',
-      link: null,
-      layout: 'photo-right',
-      videoUrl: null, // paste YouTube or TikTok URL here e.g. 'https://www.youtube.com/embed/VIDEO_ID'
-      content: `
-        <p class="vault-lead">Cheryl Ong trains in a gym that smells of liniment oil and decades of use, in a converted shophouse ten minutes from the Bedok flat she grew up in. She chose it deliberately.</p>
-        <p>"I could train somewhere newer," she says, unwrapping her hands after a session that ran forty minutes over schedule. "Fancier. Better lighting. But this place remembers what hard work looks like. The walls know."</p>
-        <p>The camp for Fight 1 ran six weeks. She trained twice daily, six days a week — mornings on the pads with her coach, afternoons on sparring and conditioning. She did not take a rest day in the final fortnight.</p>
-        <h3>The Game Plan</h3>
-        <p>Cheryl's coaching team identified Pei Yee's pace as the primary variable. The plan was not to match it — "you don't race a machine on its own track," her coach says — but to absorb the early pressure, disrupt the rhythm with clinch work, and trust Cheryl's durability to outlast the storm.</p>
-        <p class="vault-speaker">Cheryl: "I knew she was going to come. I knew it was going to hurt in the first two rounds. So we drilled for that. We made the hurt familiar so it doesn't surprise me when it arrives."</p>
-        <p>The sparring partners rotated. Cheryl did not.</p>
-        <h3>The Night Before</h3>
-        <p>She ate char kway teow — East Coast hawker, her specification — and watched two rounds of old footage before turning it off. She does not sleep well before fights. She has stopped pretending otherwise.</p>
-        <p>"My mother called at ten," she says. "She said: don't take steps back. I said: Mum, I never learned how." She pauses. "She said: I know. I taught you that."</p>
-        <div class="vault-quote">"The crowd knows me as the one who refuses to take a backward step. That's not a style. That's just who I am."</div>
-        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
-      `
-    },
-    {
-      id: 'v004',
-      type: 'spotlight',
-      fighter: 'hana-jung',
-      title: `"Once You Grip, It's Over" — Hana Jung`,
-      teaser: "South Korea's ssireum specialist on her grandfather's legacy, the belt grab as a philosophy, and why she chose the cage over the tournament ground.",
-      thumb: 'images/hana-jung-1.png',
-      date: 'DRAGONS Circuit · Issue 01',
-      link: null,
-      layout: 'photo-left',
-      gifThumb: null, // paste path to GIF e.g. 'images/hana-highlight.gif'
-      content: `
-        <p class="vault-lead">Hana Jung speaks in short sentences. She considers each one before it arrives. In a sport full of people who perform confidence, she is the rare kind who simply has it — quiet, settled, and faintly unsettling to be across from.</p>
-        <p>We met in Seoul, at a café near her gym in Mapo-gu. She ordered barley tea. She sat with her back to the wall.</p>
-        <p><strong>Your grandfather competed in ssireum. When did you first understand what that meant?</strong></p>
-        <p class="vault-speaker">I was maybe six or seven. I watched him compete at a village festival — it was outdoors, a sand circle, very traditional. He was not young by then. But when he grabbed the belt, something changed. His whole body organised itself around that grip. I didn't understand technique then. I just thought: this is what certainty looks like.</p>
-        <p><strong>When did you start training it yourself?</strong></p>
-        <p class="vault-speaker">Before I knew I was training it. He taught me grip games when I was small — who can hold on longest, who can pull whom off balance. I thought we were playing. He was teaching me the fundamentals of ssireum without calling them that. By the time I got to a real gym, my grip was already there.</p>
-        <p><strong>You competed in the amateur ssireum circuit through university. Why make the move to MMA?</strong></p>
-        <p class="vault-speaker">Because ssireum ends when the throw happens. The fight is won or lost in one moment. I wanted to find out what happens after. I wanted a longer conversation.</p>
-        <p><strong>How does ssireum translate to a cage?</strong></p>
-        <p class="vault-speaker">People expect a grappler to wait. To be patient. To tie up and grind. That is not ssireum. Ssireum is a closing system. I close distance, I grip, and the throw arrives before the opponent has processed the contact. The cage wall helps. There is no stepping outside the sand circle here.</p>
-        <p><strong>You've been compared to Yuna Seo — the other Korean fighter in the circuit. Do you see it?</strong></p>
-        <p class="vault-speaker">Yuna performs. She is very good at performing. People enjoy watching her. That is a real skill and I do not diminish it. But performance and outcome are different things. When we eventually meet — and we will — the question is what happens in the clinch. I know what happens in the clinch.</p>
-        <p><strong>Last question. Your grandfather — does he watch your fights?</strong></p>
-        <p class="vault-speaker">He watches everything. He is very old now and his eyes are not good, so my cousin sits beside him and describes what is happening. She says he only ever asks one question: did she get the grip? When the answer is yes, he stops asking. He knows what comes next.</p>
-        <div class="vault-quote">"할아버지가 가르쳐줘어 — 잡으면 끝이야." <span>(My grandfather taught me — once you grip, it's over.)</span></div>
-      `
-    },
-    {
-      id: 'v005',
-      type: 'spotlight',
-      fighter: 'jia-park',
-      title: '“Wing Chun is a Museum Piece” — Jia Park',
-      teaser: "South Korea's all-rounder on Wing Chun, why it doesn't survive contact, and what she wants from a fight the circuit hasn't announced yet.",
-      thumb: 'images/jia-park-1.png',
-      heroThumb: 'images/vault-v005-spotlight.gif',
-      date: 'DRAGONS Circuit · Issue 02',
+      id: 'v007',
+      type: 'interview',
+      fighter: 'kanyarat-srisuk',
+      title: '"She Is Not Doing Muay Thai" — Kanyarat Srisuk Before Fight 3',
+      teaser: 'We sat with Kanyarat Srisuk the week before DRAGONS 3. She had one comment about her opponent. She did not take it back.',
+      thumb: 'images/kanyarat-srisuk.png',
+      date: 'DRAGONS Circuit · Fight Week, DRAGONS 3',
       link: null,
       layout: 'photo-left',
       content: `
-        <p class="vault-lead">Jia Park does not dislike the fighter across from her in this conversation's subtext. That, she wants to make clear before saying anything else. What she dislikes is the argument a particular fighting style makes — and she has been waiting for someone to ask her about it.</p>
-
-        <p>We are sitting backstage at a circuit event, forty minutes before the evening's first bout. Jia is in full walkout gear, still filming content for her phone, still warm. She sets the phone down when a specific name comes up.</p>
-
-        <p><strong>The circuit has given your likely next opponent the alias "Porcelain." Is that a compliment or a warning?</strong></p>
-        <p class="vault-speaker">Both, maybe. Precise. Technical. The Wing Chun centreline game is real — I've watched the footage and she's not faking it. But porcelain breaks. That's the thing about something that's been on a shelf for a long time. It looks perfect until it meets something that doesn't care how old it is.</p>
-
-        <p><strong>You think Wing Chun doesn't translate to the cage against someone like you.</strong></p>
-        <p class="vault-speaker">I think Wing Chun against someone who has never trained Wing Chun looks devastating. The chain punches up the centreline, the trapping — it works on people who don't know how to answer it. But I know how to answer it. Most people on this roster know how to answer it. The moment you stop her forward momentum, the whole system stalls. It was designed for a straight line. Fights aren't straight lines.</p>
-
-        <p><strong>That's a specific critique. Have you studied the footage?</strong></p>
-        <p class="vault-speaker">I've studied everything. That's what "Universal" means — I don't have one answer, I have every answer. My next opponent has one answer and has refined it to an extraordinary degree. I respect the refinement. But one answer is still one answer.</p>
-
-        <p><strong>You're going in as the underdog by most accounts. Does that bother you?</strong></p>
-        <p class="vault-speaker">Against me? No. Underdog means someone has decided the outcome in advance. I haven't. I'm saying the danger disappears the moment I change the angle. And I will change the angle. That's literally all I do.</p>
-
-        <h3>The Challenge</h3>
-
-        <p><strong>Is this a callout?</strong></p>
-        <p class="vault-speaker">It's an observation. If the circuit wants to make it a callout, I'm available. She knows where to find me. I'll be the one making noise on the way in.</p>
-
-        <p><strong>What does she think of you?</strong></p>
-        <p class="vault-speaker">She hasn't said. That's the other thing about porcelain — very quiet. Very composed. I find that interesting. The composed ones either have nothing to prove or everything to hide. I'm curious which one she is.</p>
-
-        <p><strong>Last question. You fought her compatriot before. You know what the Chinese contingent on this roster feels like in the cage. Does that matter?</strong></p>
-        <p class="vault-speaker">Every fighter matters. But I don't fight nationalities, I fight styles. And her style has an answer. I just need the circuit to give me the question.</p>
-
-        <div class="vault-quote">"All-rounder beats specialist. Watch." <span>— Jia Park</span></div>
+        <p class="vault-lead">The gym in Chiang Mai smells of liniment and old canvas. Kanyarat Srisuk is already on the pads when we arrive — twenty minutes early for a meeting she agreed to reluctantly. She finishes the round before she acknowledges us. Then she sits down, pours water, and waits.</p>
+        <p>We ask about Jhut Chirathivat.</p>
+        <p class="vault-speaker">Kanyarat: "She is talented. She is also not doing Muay Thai."</p>
+        <p>We ask her to clarify.</p>
+        <p class="vault-speaker">Kanyarat: "The grappling entries. The spinning techniques. These are not in the art. I am not saying she cannot fight — she can. I am saying what she does has a different name. Calling it Muay Thai is not accurate."</p>
+        <p><strong>Does it concern her?</strong></p>
+        <p class="vault-speaker">Kanyarat: "No. The things that work in Muay Thai work because of why they work — the angles, the timing, the position. If she brings something from outside, I will read it the same way. The principles do not change."</p>
+        <p><strong>She was shown Jhut's response — "Muay Thai is whatever I do. That is how living arts work."</strong></p>
+        <p class="vault-speaker">Kanyarat: "I understand the argument. I disagree with it. Living does not mean anything goes. A language that accepts any word stops being a language."</p>
+        <p>A long pause. She refills her water.</p>
+        <p class="vault-speaker">Kanyarat: "I will say this. If she beats me with something that is not Muay Thai, then I lost. That will mean something. I will have to think about what."</p>
+        <p><strong>And if she beats her with pure technique?</strong></p>
+        <p class="vault-speaker">Kanyarat: "Then the art won. That is the only outcome I am preparing for."</p>
+        <div class="vault-quote">"A language that accepts any word stops being a language." <span>— Kanyarat Srisuk</span></div>
+      `
+    },
+    {
+      id: 'v008',
+      type: 'interview',
+      fighter: 'jhut-chirathivat',
+      title: '"Muay Thai Is Whatever I Do" — Jhut Chirathivat Before Fight 3',
+      teaser: 'Jhut Chirathivat heard what Kanyarat said. She smiled. Then she explained why she is not changing anything.',
+      thumb: 'images/jhut-chirathivat.png',
+      date: 'DRAGONS Circuit · Fight Week, DRAGONS 3',
+      link: null,
+      layout: 'photo-right',
+      content: `
+        <p class="vault-lead">Jhut Chirathivat is shown the quote on a phone screen. She reads it once, hands the phone back, and smiles. Not a smirk — something warmer than that. Like she expected it and finds it fair.</p>
+        <p class="vault-speaker">Jhut: "She is not wrong that I do things outside the classical system. I do. That is a factual observation."</p>
+        <p><strong>But?</strong></p>
+        <p class="vault-speaker">Jhut: "No but. I just disagree about what that means. Muay Thai is a living art. It goes where its fighters take it. Every technique that is now classical was once new. Someone added it. Someone was told it did not belong."</p>
+        <p><strong>She seems unbothered by the criticism.</strong></p>
+        <p class="vault-speaker">Jhut: "I wai before every fight. I wai Kanyarat before this one. I mean it every time. The respect is real. The spinning back elbow is also real. I do not think these things contradict each other."</p>
+        <p><strong>On what Kanyarat brings:</strong></p>
+        <p class="vault-speaker">Jhut: "The best traditional game on the circuit. Her teep is almost impossible to time — she disguises the weight shift completely. Her elbows are precise. She does not waste anything. If I fight her fight, I lose."</p>
+        <p><strong>So what does she do?</strong></p>
+        <p class="vault-speaker">Jhut: "I make her fight my fight. The clinch is where I live. The unorthodox entries — she has not prepared for those. Nobody prepares for something they do not believe exists."</p>
+        <p>She stands to leave. At the door she stops.</p>
+        <p class="vault-speaker">Jhut: "If I win with the spinning back elbow — the one she says is not Muay Thai — I hope she thinks about what that means. Not for me. For the art she loves."</p>
+        <div class="vault-quote">"Nobody prepares for something they do not believe exists." <span>— Jhut Chirathivat</span></div>
       `
     },
     {
@@ -1277,6 +1176,161 @@
         <p>She is already thinking about the next one.</p>
 
         <div class="vault-quote">"체系造就了我，但没有定义我。" <span>(The system made me, but it didn't define me.)</span></div>
+      `
+    },
+    {
+      id: 'v005',
+      type: 'spotlight',
+      fighter: 'jia-park',
+      title: '“Wing Chun is a Museum Piece” — Jia Park',
+      teaser: "South Korea's all-rounder on Wing Chun, why it doesn't survive contact, and what she wants from a fight the circuit hasn't announced yet.",
+      thumb: 'images/jia-park-1.png',
+      heroThumb: 'images/vault-v005-spotlight.gif',
+      date: 'DRAGONS Circuit · Issue 02',
+      link: null,
+      layout: 'photo-left',
+      content: `
+        <p class="vault-lead">Jia Park does not dislike the fighter across from her in this conversation's subtext. That, she wants to make clear before saying anything else. What she dislikes is the argument a particular fighting style makes — and she has been waiting for someone to ask her about it.</p>
+
+        <p>We are sitting backstage at a circuit event, forty minutes before the evening's first bout. Jia is in full walkout gear, still filming content for her phone, still warm. She sets the phone down when a specific name comes up.</p>
+
+        <p><strong>The circuit has given your likely next opponent the alias "Porcelain." Is that a compliment or a warning?</strong></p>
+        <p class="vault-speaker">Both, maybe. Precise. Technical. The Wing Chun centreline game is real — I've watched the footage and she's not faking it. But porcelain breaks. That's the thing about something that's been on a shelf for a long time. It looks perfect until it meets something that doesn't care how old it is.</p>
+
+        <p><strong>You think Wing Chun doesn't translate to the cage against someone like you.</strong></p>
+        <p class="vault-speaker">I think Wing Chun against someone who has never trained Wing Chun looks devastating. The chain punches up the centreline, the trapping — it works on people who don't know how to answer it. But I know how to answer it. Most people on this roster know how to answer it. The moment you stop her forward momentum, the whole system stalls. It was designed for a straight line. Fights aren't straight lines.</p>
+
+        <p><strong>That's a specific critique. Have you studied the footage?</strong></p>
+        <p class="vault-speaker">I've studied everything. That's what "Universal" means — I don't have one answer, I have every answer. My next opponent has one answer and has refined it to an extraordinary degree. I respect the refinement. But one answer is still one answer.</p>
+
+        <p><strong>You're going in as the underdog by most accounts. Does that bother you?</strong></p>
+        <p class="vault-speaker">Against me? No. Underdog means someone has decided the outcome in advance. I haven't. I'm saying the danger disappears the moment I change the angle. And I will change the angle. That's literally all I do.</p>
+
+        <h3>The Challenge</h3>
+
+        <p><strong>Is this a callout?</strong></p>
+        <p class="vault-speaker">It's an observation. If the circuit wants to make it a callout, I'm available. She knows where to find me. I'll be the one making noise on the way in.</p>
+
+        <p><strong>What does she think of you?</strong></p>
+        <p class="vault-speaker">She hasn't said. That's the other thing about porcelain — very quiet. Very composed. I find that interesting. The composed ones either have nothing to prove or everything to hide. I'm curious which one she is.</p>
+
+        <p><strong>Last question. You fought her compatriot before. You know what the Chinese contingent on this roster feels like in the cage. Does that matter?</strong></p>
+        <p class="vault-speaker">Every fighter matters. But I don't fight nationalities, I fight styles. And her style has an answer. I just need the circuit to give me the question.</p>
+
+        <div class="vault-quote">"All-rounder beats specialist. Watch." <span>— Jia Park</span></div>
+      `
+    },
+    {
+      id: 'v004',
+      type: 'spotlight',
+      fighter: 'hana-jung',
+      title: `"Once You Grip, It's Over" — Hana Jung`,
+      teaser: "South Korea's ssireum specialist on her grandfather's legacy, the belt grab as a philosophy, and why she chose the cage over the tournament ground.",
+      thumb: 'images/hana-jung-1.png',
+      date: 'DRAGONS Circuit · Issue 01',
+      link: null,
+      layout: 'photo-left',
+      gifThumb: null, // paste path to GIF e.g. 'images/hana-highlight.gif'
+      content: `
+        <p class="vault-lead">Hana Jung speaks in short sentences. She considers each one before it arrives. In a sport full of people who perform confidence, she is the rare kind who simply has it — quiet, settled, and faintly unsettling to be across from.</p>
+        <p>We met in Seoul, at a café near her gym in Mapo-gu. She ordered barley tea. She sat with her back to the wall.</p>
+        <p><strong>Your grandfather competed in ssireum. When did you first understand what that meant?</strong></p>
+        <p class="vault-speaker">I was maybe six or seven. I watched him compete at a village festival — it was outdoors, a sand circle, very traditional. He was not young by then. But when he grabbed the belt, something changed. His whole body organised itself around that grip. I didn't understand technique then. I just thought: this is what certainty looks like.</p>
+        <p><strong>When did you start training it yourself?</strong></p>
+        <p class="vault-speaker">Before I knew I was training it. He taught me grip games when I was small — who can hold on longest, who can pull whom off balance. I thought we were playing. He was teaching me the fundamentals of ssireum without calling them that. By the time I got to a real gym, my grip was already there.</p>
+        <p><strong>You competed in the amateur ssireum circuit through university. Why make the move to MMA?</strong></p>
+        <p class="vault-speaker">Because ssireum ends when the throw happens. The fight is won or lost in one moment. I wanted to find out what happens after. I wanted a longer conversation.</p>
+        <p><strong>How does ssireum translate to a cage?</strong></p>
+        <p class="vault-speaker">People expect a grappler to wait. To be patient. To tie up and grind. That is not ssireum. Ssireum is a closing system. I close distance, I grip, and the throw arrives before the opponent has processed the contact. The cage wall helps. There is no stepping outside the sand circle here.</p>
+        <p><strong>You've been compared to Yuna Seo — the other Korean fighter in the circuit. Do you see it?</strong></p>
+        <p class="vault-speaker">Yuna performs. She is very good at performing. People enjoy watching her. That is a real skill and I do not diminish it. But performance and outcome are different things. When we eventually meet — and we will — the question is what happens in the clinch. I know what happens in the clinch.</p>
+        <p><strong>Last question. Your grandfather — does he watch your fights?</strong></p>
+        <p class="vault-speaker">He watches everything. He is very old now and his eyes are not good, so my cousin sits beside him and describes what is happening. She says he only ever asks one question: did she get the grip? When the answer is yes, he stops asking. He knows what comes next.</p>
+        <div class="vault-quote">"할아버지가 가르쳐줘어 — 잡으면 끝이야." <span>(My grandfather taught me — once you grip, it's over.)</span></div>
+      `
+    },
+    {
+      id: 'v003',
+      type: 'spotlight',
+      fighter: 'cheryl-ong',
+      title: "Lionheart — Inside Cheryl Ong's Camp",
+      teaser: "Inside Cheryl's prep for Fight 1. Pad work, sparring, and the Bedok sessions that built a fighter who never learned to step back.",
+      thumb: 'images/cheryl-ong-2.png',
+      date: 'DRAGONS Circuit · Camp Diary',
+      link: null,
+      layout: 'photo-right',
+      videoUrl: null, // paste YouTube or TikTok URL here e.g. 'https://www.youtube.com/embed/VIDEO_ID'
+      content: `
+        <p class="vault-lead">Cheryl Ong trains in a gym that smells of liniment oil and decades of use, in a converted shophouse ten minutes from the Bedok flat she grew up in. She chose it deliberately.</p>
+        <p>"I could train somewhere newer," she says, unwrapping her hands after a session that ran forty minutes over schedule. "Fancier. Better lighting. But this place remembers what hard work looks like. The walls know."</p>
+        <p>The camp for Fight 1 ran six weeks. She trained twice daily, six days a week — mornings on the pads with her coach, afternoons on sparring and conditioning. She did not take a rest day in the final fortnight.</p>
+        <h3>The Game Plan</h3>
+        <p>Cheryl's coaching team identified Pei Yee's pace as the primary variable. The plan was not to match it — "you don't race a machine on its own track," her coach says — but to absorb the early pressure, disrupt the rhythm with clinch work, and trust Cheryl's durability to outlast the storm.</p>
+        <p class="vault-speaker">Cheryl: "I knew she was going to come. I knew it was going to hurt in the first two rounds. So we drilled for that. We made the hurt familiar so it doesn't surprise me when it arrives."</p>
+        <p>The sparring partners rotated. Cheryl did not.</p>
+        <h3>The Night Before</h3>
+        <p>She ate char kway teow — East Coast hawker, her specification — and watched two rounds of old footage before turning it off. She does not sleep well before fights. She has stopped pretending otherwise.</p>
+        <p>"My mother called at ten," she says. "She said: don't take steps back. I said: Mum, I never learned how." She pauses. "She said: I know. I taught you that."</p>
+        <div class="vault-quote">"The crowd knows me as the one who refuses to take a backward step. That's not a style. That's just who I am."</div>
+        <p><em>Fight footage from DRAGONS Fight 1 is available on <a href="https://dragonsfighting.gumroad.com/" target="_blank" rel="noopener" style="color:var(--gold)">Gumroad</a>.</em></p>
+      `
+    },
+    {
+      id: 'v002',
+      type: 'presser',
+      fighter: null,
+      title: 'Fight 1 Press Conference: Pei Yee vs Cheryl',
+      teaser: "Both fighters face the cameras ahead of the circuit's inaugural bout. Tension, respect, and one very pointed prediction.",
+      thumb: 'images/vault-v002-presser.png',
+      heroThumb: 'images/vault-v002-presser.gif',
+      date: 'DRAGONS Circuit · Pre-Fight',
+      link: null,
+      layout: 'hero',
+      content: `
+        <p class="vault-lead">The room was small, the table was too close, and Cheryl Ong arrived seven minutes late. Pei Yee Lim was already seated, water untouched, watching the door.</p>
+        <p>The DRAGONS Fight 1 press conference was not supposed to be contentious. Both fighters had spoken publicly about respecting each other's styles. The circuit's first official event was meant to open with good faith and mutual acknowledgement.</p>
+        <p>It lasted approximately four minutes before Cheryl said what she was thinking.</p>
+        <h3>"I Don't Take Steps Back"</h3>
+        <p><strong>On what she expects from Pei Yee:</strong></p>
+        <p class="vault-speaker">Cheryl: "She's going to come forward. That's her whole game — volume, pressure, keep coming. I know this. I've watched every clip of her I could find. But here's the thing: I come forward too. So what happens when two people who never step back walk into each other?"</p>
+        <p><strong>Pei Yee, without looking up from her water:</strong></p>
+        <p class="vault-speaker">Pei Yee: "One of them goes down."</p>
+        <p>A beat of silence. Cheryl laughed first.</p>
+        <p><strong>On the significance of Fight 1:</strong></p>
+        <p class="vault-speaker">Pei Yee: "I think about my mother watching this. She has never seen me fight in person — she cannot leave the stall. So this is the fight she watches on a screen, behind the counter, between orders. I want her to see something she is proud of."</p>
+        <p class="vault-speaker">Cheryl: "My mother will also be watching. From the crowd. She took the night off, which she has never done in twenty years. So same — I need to give her something."</p>
+        <h3>The Prediction</h3>
+        <p>Asked for a prediction, Cheryl was immediate.</p>
+        <p class="vault-speaker">Cheryl: "Finish. I don't know what round, but it doesn't go to the cards. It's not that kind of fight."</p>
+        <p>Pei Yee considered this for a moment, then nodded once.</p>
+        <p class="vault-speaker">Pei Yee: "She's right about that part."</p>
+        <p>They did not shake hands at the end. They did not need to. Both of them already knew exactly what was coming.</p>
+      `
+    },
+    {
+      id: 'v001',
+      type: 'spotlight',
+      fighter: 'pei-yee',
+      title: 'The Tempest from Penang',
+      teaser: 'Before she became the most talked-about striker in the circuit, Pei Yee Lim was throwing combinations at a punching bag above a wet market. A portrait.',
+      thumb: null,
+      date: 'DRAGONS Circuit · Issue 01',
+      link: null,
+      layout: 'photo-right',
+      content: `
+        <p class="vault-lead">She is the first one through the gym door every morning, and she will be the last one to leave. That is not a boast — it is simply what Pei Yee Lim considers the minimum.</p>
+        <p>Penang gave her the heat, the hunger, and the hours. Her mother ran a hawker stall on Chulia Street — char koay teow, six days a week, before the sun came up. Pei Yee worked the mornings before school and the evenings after, and somewhere in between she found a community gym above a row of shophouses where a retired kickboxer called Coach Rajan was charging kids fifty ringgit a month to learn how to fight. He spotted her in the second week. By the third, he was covering her fees himself.</p>
+        <p>"She trained like she was afraid of stopping," Rajan says. "Like if she stopped moving, something would catch her."</p>
+        <p>What she was outrunning, she will not say directly. But the goal has always been specific: a real home for her family. Not rented. Owned. Something that stays.</p>
+        <h3>The Volume Game</h3>
+        <p>Pei Yee's fighting style is an extension of her personality — relentless, cheerful, and fundamentally unwilling to let an opponent settle. She throws in combinations that build into walls of output, trusting her conditioning to outlast whatever answer comes back. The nickname arrived naturally. She does not storm the ring. She is the storm.</p>
+        <p>"My pace is my weapon," she says. "Not my power, not my technique — my pace. Because nobody can match it for a full fight. I know this because I have tested it. Every day."</p>
+        <p>She is not wrong. In sparring, her training partners rotate in fresh every three rounds while she continues. She finishes each session with footwork drills. The char koay teow, she says, is non-negotiable fuel.</p>
+        <h3>Fight 1</h3>
+        <p>The circuit's inaugural bout matched her against Cheryl Ong of Singapore — another forward-pressure fighter with a different philosophy. Where Pei Yee buries opponents in output, Cheryl makes every exchange personal. Two hawker-district kids from neighbouring countries, neither of whom learned to take a step back.</p>
+        <p>What happened between the bells is in the record now. Pei Yee does not discuss the details. She is already thinking about what comes next.</p>
+        <p>"I send money home first," she says, when asked how she celebrated. "Then I go back to the gym."</p>
+        <div class="vault-quote">"Saya masuk paling awal, balik paling lewat." <span>(First one in, last one out.)</span></div>
       `
     }
   ];
@@ -1396,7 +1450,7 @@
     return `<section><div class="wrap">
       <span class="eyebrow">The Vault</span>
       <div class="sec-head"><h2>Features & Media</h2><p>The world behind the fights — features, venues, and lore from inside the circuit.</p></div>
-      <div class="vault-grid">${VAULT_ITEMS.slice(0,6).map(vaultCard).join('')}</div>
+      <div class="vault-grid">${VAULT_ITEMS.slice(0,9).map(vaultCard).join('')}</div>
 
       <div style="margin-top:72px;padding-top:56px;border-top:1px solid var(--line)">
         <div class="sec-head"><h2>Venues</h2><p>The circuit rotates. The venue changes the fight.</p></div>
@@ -1440,7 +1494,7 @@
   const FIGHTS = [
     { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1, released:true },
     { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 2", video:"yingying-vs-jia", shopUrl: SHOP.fight2, released:true },
-    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-03", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: null, released:false },
+    { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-25", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: SHOP.fight3, released:true },
   ];
   // Only released fights count toward records and appear on the Spoilers page.
   // Flip released:true when a fight goes live.
