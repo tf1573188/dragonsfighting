@@ -393,8 +393,8 @@ const FIGHTERS = [
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Osaka",
-    "baseStyle": "Kudo",
-    "ruleset": "MMA",
+    "baseStyle": "Karate",
+    "ruleset": "Kickboxing",
     "division": "Strawweight",
     "color": "#c0263a",
     "record": { "w": 0, "l": 0, "ko": 0 },
@@ -407,8 +407,8 @@ const FIGHTERS = [
       "saki-mori-5.png"
     ],
     "bio": {
-      "origin": "Saki grew up in Namba, Osaka — the working-class warren behind the bright signs, where the Yamaguchi-gumi's shadow was as normal as the vending machines. Her father ran a small pachinko parlour that paid tribute to the local kumicho. She was seventeen when a retired fighter associated with the organisation pulled her out of a street altercation and put her in a Kudo dojo instead, recognising something in the way she fought back. She trained under his instruction for four years, paid off the debt with wins, and arrived at the circuit owing nobody anything. She does not discuss where she came from. The people who know her from those years don't discuss it either.",
-      "style": "A Kudo fighter — the Japanese hybrid art built for real fights, where headbutts are legal and nothing about it is polite. Saki fights like the street altercation she was pulled out of never ended: swarming forward pressure, short elbows and headbutts in close, combinations that land like debts being collected — methodical, accumulative, and not finished until the account is settled. Four years of formal training never sanded the Namba off her. It just taught the chaos where to aim.",
+      "origin": "Saki grew up in Namba, Osaka — the working-class warren behind the bright signs, where the Yamaguchi-gumi's shadow was as normal as the vending machines. Her father ran a small pachinko parlour that paid tribute to the local kumicho. She was seventeen when a retired fighter associated with the organisation pulled her out of a street altercation and put her in a gym instead, recognising something in the way she fought back. She trained under his instruction for four years, paid off the debt with wins, and arrived at the circuit owing nobody anything. She does not discuss where she came from. The people who know her from those years don't discuss it either.",
+      "style": "A relentless pressure fighter who advances in straight lines and makes every exchange feel personal. She treats combinations like debts being collected — methodical, accumulative, and not finished until the account is settled. Her Karate base gives her the timing to close distance through hands, and she uses it to walk opponents backward until they run out of ring.",
       "personal": "Polite to the point of formality outside the ring — she bows, she uses correct honorifics, she thanks coaches and corners. Inside the ring, the formality is replaced by something else entirely. Has a vending-machine coffee superstition she refuses to explain. Studies tape obsessively, keeps her hair blunt so nothing gets in her eyes, and has not been back to Namba since the night she left it.",
       "rival": "Holds quiet professional respect for Yuna Seo and treats their potential bout as the one that actually matters — a Japan–Korea striking duel that both fighters pretend they aren't thinking about. Inside the organisation she trained with, they called her the best fighter they'd ever produced. She has never repeated this.",
       "goal": "Fights to honour the coach who pulled her out of the street and gave her a direction, and to be the last person standing in a room full of people who had every advantage she didn't."
@@ -418,7 +418,7 @@ const FIGHTERS = [
       "\"Osaka doesn't make gentle people. It makes people who know how to be gentle.\""
     ],
     "stats": {
-      "age": "20",
+      "age": "21",
       "height": "168 cm (5'6\")",
       "weight": "53 kg (117 lb)",
       "reach": "168 cm (66 in)",
@@ -1905,7 +1905,7 @@ const FIGHTERS = [
       "\"I switch stances because one angle is never the whole picture. Katong taught me that.\""
     ],
     "stats": {
-      "age": "20",
+      "age": "23",
       "height": "170 cm (5'7\")",
       "weight": "54 kg (119 lb)",
       "reach": "170 cm (67 in)",
@@ -2553,6 +2553,141 @@ const FIGHTERS = [
       "\"O le tele o sua, o le tele lea o le taumafa.\" (The more the soup, the more the feast.)"
     ],
     "stats": { "age": "20", "height": "168 cm (5'6\")", "weight": "53 kg (117 lb)", "reach": "169 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "avani-rao",
+    "name": "Avani Rao",
+    "alias": "Indra",
+    "nationality": "India",
+    "flag": "🇮🇳",
+    "hometown": "Bangalore",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#FF9933",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "avani-rao.png",
+    "gallery": ["avani-rao-1.png","avani-rao-2.png","avani-rao-3.png","avani-rao-4.png","avani-rao-5.png"],
+    "bio": {
+      "origin": "Avani grew up in Bangalore to an Indian father and a Eurasian mother, in a house that ran on three languages and never fully agreed on which one came first. She started in Wushu at a club near Cubbon Park because a cousin was already going, moved to Muay Thai in her teens when the acrobatics stopped satisfying her, and found boxing last — the discipline that finally organised everything else she'd learned into something that could actually win a fight. No single art produced her. She built herself out of the parts that worked.",
+      "style": "A technical striker whose combinations don't repeat — she reads distance and angle in real time and reaches for whichever tool fits, a Wushu-fast entry into a boxing combination finished with a Muay Thai teep to reset range. Fast, disciplined, and always thinking two exchanges ahead. Her one honest weakness is that the fight IQ occasionally outruns the discipline to protect herself, and she takes on more damage than the scorecards suggest she should.",
+      "personal": "Calm, introspective, and quietly precise about everything — the mala bracelet never comes off, worn down to a shine from a habit she's had since she was twelve, and she runs the beads between rounds the way other fighters pace. Disciplined in training to a degree the rest of the roster finds slightly monastic. Keeps a lower back tattoo she's never explained and doesn't intend to. Speaks English, Hindi, and Kannada, and switches between them mid-sentence without noticing she's done it.",
+      "rival": "The roster hasn't decided who she belongs against yet — she trained in three disciplines that put her in nobody's natural bracket, and the Matchmaker has been unusually quiet about her file. She's watched the China trio's internal argument over who represents what with real interest, recognising a version of her own unresolved question.",
+      "goal": "Fights to put an Indian name on a card that has never had one, and to prove that a fighter built from three borrowed traditions can still hit harder than someone who only ever trained in one."
+    },
+    "quotes": [
+      "\"Three styles trained, one fist thrown — that's the only lineage that matters.\"",
+      "\"I didn't inherit a style. I built one.\""
+    ],
+    "stats": { "age": "22", "height": "167 cm (5'6\")", "weight": "54 kg (119 lb)", "reach": "167 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "dao-kongfai",
+    "name": "Dao",
+    "alias": "Kongfai",
+    "nationality": "Laos",
+    "flag": "🇱🇦",
+    "hometown": "Vientiane",
+    "baseStyle": "Muay Lao",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1a3e8c",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "dao-kongfai.png",
+    "gallery": ["dao-kongfai-1.png","dao-kongfai-2.png","dao-kongfai-3.png","dao-kongfai-4.png","dao-kongfai-5.png"],
+    "bio": {
+      "origin": "Dao grew up a few streets back from the Mekong in Vientiane, close enough that the smell of the river was just the smell of home. Muay Lao is not a sport with academies on every corner the way its Thai cousin is — she learned it the way most Lao fighters still do, through an uncle who'd fought on temple-fair cards and a training group that met on packed dirt behind a noodle stall after the lunch rush cleared out. The circuit's scouts nearly missed her entirely. Laos rarely produces fighters anyone outside the country hears about, and she has never once treated that as a disadvantage.",
+      "style": "A clinch-first fighter who wants the fight close and ugly from the opening exchange — Muay Lao's elbow-and-knee grammar, thrown from tighter range and with less of the ceremonial distance Muay Thai keeps. She fights like the clinch is home and the open range is just the walk there. Economical, relentless at close quarters, and comfortable absorbing to land — she is not chasing a highlight, she is chasing the moment her opponent stops wanting to be that close to her.",
+      "personal": "Unhurried outside the ring in a way that reads almost domestic — she still does her own market shopping in Vientiane when she's home, still cooks for whoever's around, still stops for iced coffee at the same stall between sessions and says almost nothing while she drinks it. The calm is not performance. She has one setting for daily life and a completely different one for the clinch, and the gap between the two is the most interesting thing about her to anyone who's spent real time with her.",
+      "rival": "The roster's other Southeast Asian strikers — Kanyarat and Nong Pim among the Thai contingent especially — represent the tradition Muay Lao is constantly measured against and constantly overlooked next to. Dao has said, once, that she's tired of being introduced as 'basically Muay Thai.' She has not said it twice. She intends to make the point with elbows instead.",
+      "goal": "Fights to put Laos — a country the circuit's own marketing has never once mentioned — on a card built to showcase everyone else's traditions, and to make Muay Lao a name people learn instead of a footnote they skip."
+    },
+    "quotes": [
+      "\"They keep calling it Thai boxing's cousin. I am not somebody's cousin.\"",
+      "\"I don't need the room. I just need you close enough to reach.\""
+    ],
+    "stats": { "age": "21", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "tseyang-dolma",
+    "name": "Tseyang Dolma",
+    "alias": "The Highland Dragon",
+    "nationality": "Tibet",
+    "flag": "🏴",
+    "hometown": "Lhasa",
+    "baseStyle": "Amdo MMA",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#6e8c15",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "tseyang-dolma.png",
+    "gallery": ["tseyang-dolma-1.png","tseyang-dolma-2.png","tseyang-dolma-3.png","tseyang-dolma-4.png","tseyang-dolma-5.png"],
+    "bio": {
+      "origin": "Tseyang was raised in Lhasa by a Tibetan father and a mother from Hong Kong, in a household that kept Losar and Lunar New Year with equal seriousness and never treated the two halves of her as a contradiction. She grew up on the Bökh wrestling her father's family had practiced for generations, learned at altitude on packed earth before she ever set foot in an actual gym, and added striking later — imported, borrowed, bolted onto a wrestling base that was never going anywhere. She still trains at altitude by choice. She has never once treated her conditioning as an accident of geography; she treats it as an inheritance.",
+      "style": "Amdo MMA — traditional Tibetan wrestling stance and clinch-entry married to a striking arsenal built for closing that gap fast. She wants underhooks and top position, and she is patient enough to wait an entire exchange for the takedown that gets her there. Ground-and-pound finisher once she's on top; disciplined and unhurried in getting there. Her cardio at sea level borders on unfair — nobody the circuit has flown in from lower altitude has yet managed to slow her down in a third round.",
+      "personal": "Devout in a way that is simply part of her day rather than a performance of it — morning prayer at the local monastery before training, butter tea with family most evenings, the Tibetan language and its script kept close even as English and Cantonese move through the same house. Studies constantly, reads whenever there's a gap in the schedule, and carries herself like someone who has never needed to raise her voice to be taken seriously. The circuit's louder personalities find her stillness unreadable. She has never minded being underestimated on that basis.",
+      "rival": "Watches Rainie Yang and Vanessa Chow — China and Hong Kong's judo entries — with the specific interest of someone who knows exactly how a grappling-first fighter gets discounted by a striking-heavy card. Has not fought either. Suspects the Matchmaker is saving it.",
+      "goal": "Fights to bring Bökh — a wrestling tradition most of the circuit's audience has never heard named — onto a card built almost entirely on borrowed Southeast and East Asian striking arts, and to make Tibet a line on the roster instead of a footnote inside someone else's nationality field."
+    },
+    "quotes": [
+      "\"You can out-strike me. You cannot out-breathe me.\"",
+      "\"I fight for my land. I fight for my people. I fight to be free.\""
+    ],
+    "stats": { "age": "19", "height": "168 cm (5'6\")", "weight": "52 kg (115 lb)", "reach": "166 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "manawa",
+    "name": "Manawa",
+    "alias": "Sky Maiden",
+    "nationality": "New Zealand",
+    "flag": "🇳🇿",
+    "hometown": "Wellington",
+    "baseStyle": "Boxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#164a8c",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "manawa.png",
+    "gallery": ["manawa-1.png","manawa-2.png","manawa-3.png","manawa-4.png","manawa-5.png"],
+    "bio": {
+      "origin": "Manawa grew up between a small West Coast town and Wellington, Māori on her mother's side and Pākehā on her father's, in a household where whakapapa was spoken about plainly and often rather than treated as an occasion. She started boxing at twelve at a converted RSA hall because her older cousin trained there, and stayed because New Zealand boxing has a real, unglamorous pedigree behind it — hard gyms, harder sparring, no shortcuts. She still goes home to the coast between camps, still knows the black sand beaches better than any ring she's fought in.",
+      "style": "A classical boxer first — tight guard, sharp jab, footwork built on angles rather than pure aggression. She controls range the old-fashioned way and waits for the opponent to make the mistake rather than manufacturing chaos to force one. Patient, composed, and technically several levels above most of the volume-forward strikers she's matched against. Her counter right hand is the shot her coaches built an entire camp around.",
+      "personal": "Understated and dryly funny, with an ease in her own skin that reads as quiet confidence rather than performance. Comfortable barefoot on a beach or in front of a camera, equally comfortable saying nothing for an hour. Carries her Māori heritage without making it a talking point — it simply is who she is, present in how she trains, how she eats, how she moves through both a big city and a small coastal town without changing who she is in either. Finishes a long day the same way most of the country does: fish and chips, eaten out of the paper, no ceremony required.",
+      "rival": "Talia Faleolo is the obvious comparison — both Pacific-heritage fighters representing countries the circuit's marketing has treated as afterthoughts next to its East and Southeast Asian core. Manawa has said she'd fight Talia anywhere, any time, no build-up needed. Talia has said the same. Neither has explained why it hasn't happened yet.",
+      "goal": "Fights to put New Zealand — and specifically a Māori fighter representing it — on a card that has never once included either, and to prove that a boxer with no gimmick and no highlight-reel flash can still out-think anyone the circuit puts in front of her."
+    },
+    "quotes": [
+      "\"I don't need to be loud. I need to be right, and I need to be right longer than you.\"",
+      "\"Kia kaha. Stay strong — that's not a slogan where I'm from. That's just Tuesday.\""
+    ],
+    "stats": { "age": "23", "height": "170 cm (5'7\")", "weight": "53 kg (117 lb)", "reach": "172 cm (68 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "sok-channary",
+    "name": "Sok Channary",
+    "alias": "Moon-Faced",
+    "nationality": "Cambodia",
+    "flag": "🇰🇭",
+    "hometown": "Phnom Penh",
+    "baseStyle": "Kun Khmer",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#aa42bf",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "sok-channary.png",
+    "gallery": ["sok-channary-1.png","sok-channary-2.png","sok-channary-3.png","sok-channary-4.png","sok-channary-5.png"],
+    "bio": {
+      "origin": "Channary grew up in Phnom Penh, in a family that had fought for the country's fighting tradition to survive at all — Kun Khmer was nearly erased within living memory, and every gym that teaches it now does so as an act of restoration as much as sport. Her grandfather trained in secret before it was safe to train openly; her mother trained the moment it was. Channary started as a small child in a Phnom Penh gym that still hangs a photograph of her grandfather on the wall, and has never once needed reminding what the art cost to keep alive.",
+      "style": "Kun Khmer in its purest form — elbows and knees thrown with an economy and violence that Muay Thai's more ceremonial pace doesn't ask for, and a clinch game built to end exchanges quickly rather than control them at length. Aggressive forward pressure married to real technical precision; she is not wild, she is efficient, and efficient hurts more. Opponents who expect a slower, more ritualized striking pace are consistently unprepared for how early she wants the fight to get violent.",
+      "personal": "Quiet and watchful outside the ring, with a stillness that reads as devotion rather than shyness — she lights incense at the local pagoda before fights, keeps the offering simple, and treats the ritual as private rather than performative. Shops the wet markets herself, prefers cooking at home to eating out, and carries herself with the unhurried calm of someone raised around a tradition that survived by being patient. The nickname — Moon-Faced, an old Khmer compliment for calm, luminous features — was her grandmother's before it was hers.",
+      "rival": "Watches the Thai contingent — Nong Pim and Kanyarat especially — with the specific edge of someone representing a striking art that spent decades being read as a regional variant of its more famous neighbor. Has never said this aloud in the ring. Has made the point with elbows instead, which she considers the more honest venue for it.",
+      "goal": "Fights to put Kun Khmer — a tradition her own country nearly lost — on a card that already features Muay Thai, Lethwei, and Muay Lao, and to make sure Cambodia is remembered as a fighting nation in its own right, not a footnote in someone else's."
+    },
+    "quotes": [
+      "\"They ask me if it's just Thai boxing with a different name. I ask them to step closer and find out.\"",
+      "\"My grandfather trained where no one could see him. I fight where everyone can.\""
+    ],
+    "stats": { "age": "22", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
   }
 ];
 
