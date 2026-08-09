@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DRAGONS — Pan-Asian Fighting Circuit</title>
-<meta name="description" content="DRAGONS is a fictional pan-Asian female fighting circuit. 67 original fighters across 24 nations — AI-generated fight videos sold on Gumroad.">
+<meta name="description" content="DRAGONS is a fictional pan-Asian female fighting circuit. 68 original fighters across 24 nations — AI-generated fight videos sold on Gumroad.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dragonsfighting.com/">
 <meta property="og:title" content="DRAGONS — Pan-Asian Fighting Circuit">
-<meta property="og:description" content="67 original fighters. 24 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta property="og:description" content="68 original fighters. 24 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
 <meta property="og:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
 <meta property="og:image:width" content="630">
 <meta property="og:image:height" content="840">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DRAGONS — Pan-Asian Fighting Circuit">
-<meta name="twitter:description" content="67 original fighters. 24 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
+<meta name="twitter:description" content="68 original fighters. 24 nations. One ring. AI-generated fight videos — watch the circuit unfold.">
 <meta name="twitter:image" content="https://dragonsfighting.com/images/pei-yee-lim.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,10 +112,10 @@
   .ff-poll-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
   .ff-poll-status{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
   .ff-poll-bar{display:flex;gap:2px;padding:10px 20px 14px}
-  .ff-poll-side{flex:1;border:1px solid var(--line);border-radius:3px;padding:12px 16px;cursor:pointer;background:transparent;display:flex;justify-content:space-between;align-items:center;transition:.2s;font-family:'Oswald',sans-serif}
+  .ff-poll-side{flex:1;border:1px solid var(--line);border-radius:3px;padding:12px 16px;cursor:pointer;background:transparent;display:flex;justify-content:center;align-items:center;position:relative;transition:.2s;font-family:'Oswald',sans-serif}
   .ff-poll-side:hover{border-color:var(--gold);background:rgba(212,165,40,.06)}
   .ff-poll-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
-  .ff-poll-pct{font-size:15px;font-weight:700;color:var(--gold);min-width:40px;text-align:right;opacity:0;transition:opacity .3s}
+  .ff-poll-pct{font-size:15px;font-weight:700;color:var(--gold);position:absolute;right:16px;opacity:0;transition:opacity .3s}
   .ff-poll.voted .ff-poll-pct{opacity:1}
   .ff-poll.voted .ff-poll-side{cursor:default}
   .ff-poll.voted .ff-poll-side.selected{border-color:var(--gold);background:rgba(212,165,40,.1)}
@@ -551,6 +551,7 @@
     fight1:  "https://dragonsfighting.gumroad.com/l/bjgyp",
     fight2:  "https://dragonsfighting.gumroad.com/l/yhais",
     fight3:  "https://dragonsfighting.gumroad.com/l/lovhll",
+    fight4:  "https://dragonsfighting.gumroad.com/l/muittr",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -598,7 +599,7 @@
           <div class="wordmark">DRAGONS</div>
           <div class="underbar"><span class="ln"></span><span class="tag">Pan-Asian Fighting Circuit</span><span class="ln r"></span></div>
         </div>
-        <p class="sub">67 fighters. 24 nations. One circuit. A fictional world built one bout at a time.</p>
+        <p class="sub">68 fighters. 24 nations. One circuit. A fictional world built one bout at a time.</p>
         <div class="hero-cta">
           <button class="btn btn-gold" onclick="go('roster')">Meet the Roster</button>
           <button class="btn btn-ghost" onclick="go('shop')">Watch the Fights</button>
@@ -614,55 +615,113 @@
     <section>
       <div class="wrap">
         <div class="sec-head"><div><span class="eyebrow">Now Available</span><h2>Featured Fight</h2></div>
-        <p>The circuit's second bout. Watch it now on Gumroad.</p></div>
+        <p>The circuit's fourth bout. Watch it now on Gumroad.</p></div>
         <div class="featured-fight">
           <div class="ff-fighters">
-          <div class="ff-fighter" onclick="go('fighter/ying-ying')">
+          <div class="ff-fighter" onclick="go('fighter/ainur-nazar')">
             <div class="ff-img">
-              <img src="images/ying-ying.png" alt="Ying Ying Li" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/ainur-nazar.png" alt="Ainur Nazar" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#1f9e6b"></div>
+            <div class="ff-fighter-accent" style="background:#3a7bc8"></div>
             <div class="ff-info">
-              <div class="ff-name">Ying Ying Li</div>
-              <div class="ff-alias">"Porcelain"</div>
-              <div class="ff-nation">🇨🇳 China · Wing Chun</div>
+              <div class="ff-name">Ainur Nazar</div>
+              <div class="ff-alias">"Golden Fleece"</div>
+              <div class="ff-nation">🇰🇿 Kazakhstan · Kazakh Kuresh</div>
             </div>
           </div>
           <div class="ff-vs">
             <span class="ff-vs-glyph">対</span>
-            <span class="ff-vs-label">Fight 2 · DRAGONS</span>
+            <span class="ff-vs-label">Fight 4 · DRAGONS</span>
           </div>
-          <div class="ff-fighter" onclick="go('fighter/jia-park')">
+          <div class="ff-fighter" onclick="go('fighter/emi-sato-wright')">
             <div class="ff-img">
-              <img src="images/jia-park.png" alt="Jia Park" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/emi-sato-wright.png" alt="Emi Sato-Wright" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#1fb6c9"></div>
+            <div class="ff-fighter-accent" style="background:#c0263a"></div>
             <div class="ff-info">
-              <div class="ff-name">Jia Park</div>
-              <div class="ff-alias">"Universal"</div>
-              <div class="ff-nation">🇰🇷 South Korea · Kickboxing</div>
+              <div class="ff-name">Emi Sato-Wright</div>
+              <div class="ff-alias">"Half-Blood"</div>
+              <div class="ff-nation">🇯🇵 Japan · Karate</div>
             </div>
           </div>
-          <div class="ff-poll" id="ff-poll-2">
+          <div class="ff-poll" id="ff-poll-4">
             <div class="ff-poll-header">
               <span class="ff-poll-label">WHO WINS?</span>
-              <span class="ff-poll-status" id="poll-status-2"></span>
+              <span class="ff-poll-status" id="poll-status-4"></span>
             </div>
-            <div class="ff-poll-bar" id="poll-bar-2">
-              <button class="ff-poll-side ff-poll-left" onclick="castVote(2,'left')" id="poll-left-2">
-                <span class="ff-poll-name">Ying Ying Li</span>
-                <span class="ff-poll-pct" id="poll-pct-left-2"></span>
+            <div class="ff-poll-bar" id="poll-bar-4">
+              <button class="ff-poll-side ff-poll-left" onclick="castVote(4,'left')" id="poll-left-4">
+                <span class="ff-poll-name">Ainur Nazar</span>
+                <span class="ff-poll-pct" id="poll-pct-left-4"></span>
               </button>
-              <button class="ff-poll-side ff-poll-right" onclick="castVote(2,'right')" id="poll-right-2">
-                <span class="ff-poll-name">Jia Park</span>
-                <span class="ff-poll-pct" id="poll-pct-right-2"></span>
+              <button class="ff-poll-side ff-poll-right" onclick="castVote(4,'right')" id="poll-right-4">
+                <span class="ff-poll-name">Emi Sato-Wright</span>
+                <span class="ff-poll-pct" id="poll-pct-right-4"></span>
               </button>
             </div>
-            <div class="ff-poll-fill" id="poll-fill-2"></div>
+            <div class="ff-poll-fill" id="poll-fill-4"></div>
           </div>
           <div class="ff-cta">
-            <a class="btn btn-gold" href="https://dragonsfighting.gumroad.com/l/yhais" target="_blank" rel="noopener">Watch Fight 2 ↗</a>
+            <a class="btn btn-gold" href="https://dragonsfighting.gumroad.com/l/muittr" target="_blank" rel="noopener">Watch Fight 4 ↗</a>
             <button class="btn btn-ghost" onclick="go('vault')">The Vault</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top:1px solid var(--line)">
+      <div class="wrap">
+        <div class="sec-head"><div><span class="eyebrow">Fight Week</span><h2>Coming Up</h2></div>
+        <p>The circuit's fifth bout. Cast your prediction before it drops.</p></div>
+        <div class="featured-fight">
+          <div class="ff-fighters">
+          <div class="ff-fighter" onclick="go('fighter/saki-mori')">
+            <div class="ff-img">
+              <img src="images/saki-mori.png" alt="Saki Mori" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#c0263a"></div>
+            <div class="ff-info">
+              <div class="ff-name">Saki Mori</div>
+              <div class="ff-alias">"Yakuza"</div>
+              <div class="ff-nation">🇯🇵 Japan · Karate</div>
+            </div>
+          </div>
+          <div class="ff-vs">
+            <span class="ff-vs-glyph">対</span>
+            <span class="ff-vs-label">Fight 5 · DRAGONS</span>
+          </div>
+          <div class="ff-fighter" onclick="go('fighter/celeste-de-souza')">
+            <div class="ff-img">
+              <img src="images/celeste-de-souza.png" alt="Celeste De Souza" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#d83a2e"></div>
+            <div class="ff-info">
+              <div class="ff-name">Celeste De Souza</div>
+              <div class="ff-alias">"Rosario"</div>
+              <div class="ff-nation">🇸🇬 Singapore · Karate</div>
+            </div>
+          </div>
+          <div class="ff-poll" id="ff-poll-5">
+            <div class="ff-poll-header">
+              <span class="ff-poll-label">WHO WINS?</span>
+              <span class="ff-poll-status" id="poll-status-5"></span>
+            </div>
+            <div class="ff-poll-bar" id="poll-bar-5">
+              <button class="ff-poll-side ff-poll-left" onclick="castVote(5,'left')" id="poll-left-5">
+                <span class="ff-poll-name">Saki Mori</span>
+                <span class="ff-poll-pct" id="poll-pct-left-5"></span>
+              </button>
+              <button class="ff-poll-side ff-poll-right" onclick="castVote(5,'right')" id="poll-right-5">
+                <span class="ff-poll-name">Celeste De Souza</span>
+                <span class="ff-poll-pct" id="poll-pct-right-5"></span>
+              </button>
+            </div>
+            <div class="ff-poll-fill" id="poll-fill-5"></div>
+          </div>
+          <div class="ff-cta">
+            <button class="btn btn-ghost" onclick="go('roster')">Meet the Fighters</button>
+          </div>
           </div>
         </div>
       </div>
@@ -1495,6 +1554,7 @@
     { winner:"pei-yee", loser:"cheryl-ong", method:"KO", date:"2026-06-28", event:"DRAGONS 1", video:"peiyee-vs-cheryl", shopUrl: SHOP.fight1, released:true },
     { winner:"ying-ying", loser:"jia-park", method:"KO", date:"2026-06-29", event:"DRAGONS 2", video:"yingying-vs-jia", shopUrl: SHOP.fight2, released:true },
     { winner:"jhut-chirathivat", loser:"kanyarat-srisuk", method:"KO", date:"2026-07-25", event:"DRAGONS 3", video:"jhut-vs-kanyarat", shopUrl: SHOP.fight3, released:true },
+    { winner:"ainur-nazar", loser:"emi-sato-wright", method:"KO", date:"2026-08-09", event:"DRAGONS 4", video:"ainur-vs-emi", shopUrl: SHOP.fight4, released:true },
   ];
   // Only released fights count toward records and appear on the Spoilers page.
   // Flip released:true when a fight goes live.
@@ -1640,7 +1700,7 @@
       <span class="eyebrow">Enter the Dragon</span>
       <h2 style="font-size:clamp(34px,6vw,64px);margin:10px 0 24px">DRAGONS</h2>
       <div class="prose">
-        <p>A fictional pan-Asian female fighting circuit. 67 original fighters across 24 nations — each with a discipline, a record, and a reason to fight.</p>
+        <p>A fictional pan-Asian female fighting circuit. 68 original fighters across 24 nations — each with a discipline, a record, and a reason to fight.</p>
         <p>Every bout is AI-generated. Every result is canon. The circuit grows fight by fight.</p>
       </div>
       <div style="margin:40px 0 32px">
@@ -2028,7 +2088,8 @@ function commission(){
   window.revealAll=revealAll;
   /* FIGHT PREDICTION POLL */
   const POLL_CONFIG = {
-    2: { left: 'Ying Ying Li', right: 'Jia Park', seedLeft: 50, seedRight: 50, closed: false, result: null }
+    4: { left: 'Ainur Nazar', right: 'Emi Sato-Wright', seedLeft: 50, seedRight: 50, closed: false, result: null },
+    5: { left: 'Saki Mori', right: 'Celeste De Souza', seedLeft: 50, seedRight: 50, closed: false, result: null }
   };
 
   function initPolls() {

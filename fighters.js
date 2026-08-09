@@ -2688,6 +2688,33 @@ const FIGHTERS = [
       "\"My grandfather trained where no one could see him. I fight where everyone can.\""
     ],
     "stats": { "age": "22", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "risa-villanueva",
+    "name": "Risa Villanueva",
+    "alias": "Kuya's Girl",
+    "nationality": "Japan",
+    "flag": "🇯🇵",
+    "hometown": "Tokyo",
+    "baseStyle": "Panantukan",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#c0263a",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "risa-villanueva.png",
+    "gallery": ["risa-villanueva-1.png","risa-villanueva-2.png","risa-villanueva-3.png","risa-villanueva-4.png","risa-villanueva-5.png"],
+    "bio": {
+      "origin": "Risa was born in Tokyo to a Japanese father and a Filipino mother, and grew up in a household split evenly between two languages and two entirely different rhythms of life. Panantukan came from her mother's older brother — a kuya who'd learned it growing up outside Manila and taught it to her the way it's traditionally passed down, hand to hand, in a parking lot rather than a formal gym. She trained with him every visit to the Philippines and every trip he made to Tokyo, and never once trained the art anywhere else. It is, as far as she's concerned, still his to have taught her.",
+      "style": "Panantukan's dirty-boxing philosophy translated into the ring — open-hand strikes, rapid combinations, and an unpredictability that trips up opponents trained against cleaner, more codified striking arts. She fights like the rules are a suggestion she's only partially agreed to. Fast hands, unconventional angles, and a willingness to turn a clean exchange messy the moment it stops working in her favor.",
+      "personal": "Quietly observant, more at ease people-watching from a Tokyo café window than holding court in one. Still does her own convenience-store runs, still walks the same park route most mornings, unremarkable and unbothered in a city that mostly leaves her alone. Speaks Japanese and Tagalog with the same ease, code-switches without noticing, and treats both halves of where she's from as simply true rather than something to explain or defend.",
+      "rival": "The Philippines contingent — Amihan Reyes, Reyna Bautista, Soleil Aguilar — have all, at different points, half-jokingly claimed her as one of theirs. She has not corrected them. She has also not confirmed it. The ambiguity amuses her more than it should.",
+      "goal": "Fights to keep her uncle's Panantukan alive somewhere more visible than a parking lot, and to prove a style learned informally, outside any federation or lineage the circuit recognizes, can still out-hand anyone the circuit puts in front of her."
+    },
+    "quotes": [
+      "\"My uncle taught me in a parking lot. Nobody in this ring has trained anywhere that honest.\"",
+      "\"I'm not half of anything. I'm all of both.\""
+    ],
+    "stats": { "age": "22", "height": "164 cm (5'4\")", "weight": "51 kg (112 lb)", "reach": "162 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
   }
 ];
 
