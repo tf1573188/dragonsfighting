@@ -340,6 +340,7 @@
   .vault-type.presser{background:var(--emerald);color:#fff}
   .vault-type.spotlight{background:#c86b2e;color:#fff}
   .vault-type.video{background:#1a1a2e;color:var(--gold);border:1px solid var(--gold)}
+  .vault-type.dispatch{background:#3a3a3a;color:var(--gold);border:1px solid var(--gold)}
   .vault-play{width:48px;height:48px;border-radius:50%;background:rgba(212,165,40,.9);display:flex;align-items:center;justify-content:center;font-size:20px;color:#0a0c0b}
   .vault-body{padding:20px;flex:1;display:flex;flex-direction:column}
   .vault-fighter{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
@@ -1078,7 +1079,11 @@
       thumb: 'images/venue-ring.png',
       description: 'A traditional Lumpinee-style ring in an unairconditioned hall in the outer districts of Bangkok. The canvas is old. The lights are bright. The crowd is close enough to hear the fighters breathe. The Ring is where the circuit started — it rewards technical strikers, punishes sloppiness, and has a knack for producing finishes in the third round.',
       atmosphere: 'Loud, humid, partisan. The regulars know every fighter by name.',
-      fights: ['Fight 1: Cheryl Ong vs. Pei Yee Lim']
+      fights: [
+        { label: 'DRAGONS 1: Pei Yee Lim vs. Cheryl Ong', url: SHOP.fight1 },
+        { label: 'DRAGONS 2: Ying Ying Li vs. Jia Park', url: SHOP.fight2 },
+        { label: 'DRAGONS 3: Jhut Chirathivat vs. Kanyarat Srisuk', url: SHOP.fight3 }
+      ]
     },
     {
       id: 'the-warehouse',
@@ -1089,6 +1094,32 @@
       thumb: 'images/venue-warehouse.png',
       description: 'A decommissioned industrial facility somewhere in Southeast Asia — the circuit does not publish the address. A cage sits in the centre of the floor. The ceiling is forty feet high. The acoustics are brutal. Fighters say the darkness at the edges of the venue changes how they fight — there is no crowd to play to, only the cage and whoever is across from it.',
       atmosphere: 'Silent until a finish. Then it is very loud.',
+      fights: [
+        { label: 'DRAGONS 4: Ainur Nazar vs. Emi Sato-Wright', url: SHOP.fight4 }
+      ]
+    },
+    {
+      id: 'the-rooftop',
+      name: 'The Rooftop',
+      subtitle: 'Rotating Location',
+      type: 'All Disciplines',
+      color: '#b31c3a',
+      thumb: 'images/venue-rooftop.png',
+      description: 'The Rooftop is never the same building twice. The circuit picks a new rooftop for every card — sometimes a hotel, sometimes a parking structure, sometimes a building nobody watching would recognise — and strings it with bare bulbs an hour before the first fight. The skyline changes. The single red neon glow bleeding in from whatever building happens to be next door does not. Fighters say it is the venue with the least room to hide: no walls, no crowd noise to disappear into, just the drop on every side and however many floors of city underneath.',
+      atmosphere: 'Quiet, exposed, and lit like the last hour before something happens.',
+      fights: [
+        { label: 'DRAGONS 5: Saki Mori vs. Celeste De Souza', url: null }
+      ]
+    },
+    {
+      id: 'the-cage',
+      name: 'The Cage',
+      subtitle: 'Location Classified · Coming Soon',
+      type: 'All Disciplines',
+      color: '#1f9e6b',
+      thumb: null,
+      description: 'A basement space beneath one of the circuit\'s other venues — an eight-sided chain-link cage on bare stone, lit by a single emerald neon strip and a wagon-wheel fixture overhead. Details on The Cage are still being finalised. Check back as the circuit expands.',
+      atmosphere: 'Details coming soon.',
       fights: []
     }
   ];
@@ -1127,6 +1158,44 @@
   // link: external URL for video | null for internal article
   // content: full article HTML (for internal pieces)
   const VAULT_ITEMS = [
+    {
+      id: 'v010',
+      type: 'dispatch',
+      fighter: null,
+      title: 'Filed From Somewhere Unaddressed — DRAGONS 4 Pre-Fight Dispatch',
+      teaser: 'The warehouse was already full when we arrived. Nobody checked credentials. Nobody asked how we found the place.',
+      thumb: 'images/venue-warehouse-1.png',
+      date: 'DRAGONS Circuit · DRAGONS 4',
+      link: null,
+      layout: 'hero',
+      content: `
+        <p class="vault-lead">The warehouse was already full when we arrived. Nobody checked credentials. Nobody asked how we found the place. You either know or you don't, and if you don't, the address doesn't help anyway.</p>
+        <p>The pendant lights were on. The circle on the concrete floor caught their glow. Two rows of people stood at the edge of the dark — not seated, standing, the way you stand when you expect to need to move.</p>
+        <p>We filed our notes from the back wall.</p>
+        <hr class="vault-divider">
+        <p>Ainur Nazarbayeva arrived first.</p>
+        <p>She came in through the side door, not the main entrance. A duffel bag over one shoulder. The gold thread bracelet on her wrist caught the light for a half-second and then she was in the dark between the entrance and the circle.</p>
+        <p>She is smaller than the footage suggests. In person she moves like someone who grew up where space was contested — shoulders slightly forward, weight already low, the posture of a woman who learned to establish grips before anyone offered them.</p>
+        <p>She rolled her neck. She looked at the circle. She looked unbothered.</p>
+        <p>The people around us did not react when she entered. They noted her the way you note a weather front — not with alarm, but with the awareness that something is coming.</p>
+        <hr class="vault-divider">
+        <p>Emi Sato-Wright arrived seven minutes later.</p>
+        <p>She stood in the entrance for a moment before moving. Not hesitation — assessment. She read the room the way she reads a fight: quietly, completely, from a distance that keeps her options open.</p>
+        <p>She is precise even when she is doing nothing. The bladed stance is not something she switches on for competition; it is apparently just how she stands. Her hands were loose at her sides. She looked at the circle, then at the people, then at Ainur.</p>
+        <p>Ainur was not looking back.</p>
+        <hr class="vault-divider">
+        <p>The fight has no pre-agreed narrative. No one told these women what story to tell tonight. What we know: Ainur Nazarbayeva learned to wrestle on concrete in a market in Shymkent before she was ten years old. What she does now is a formalised version of what the market already built.</p>
+        <p>What we know about Emi Sato-Wright: she grew up in the birthplace of Karate and spent her childhood proving she belonged to it. Her technique is textbook. Her fury is quiet. The two things together are harder to deal with than either would be alone.</p>
+        <p>One of them wants to close the distance. One of them needs to keep it open.</p>
+        <p>The circle is twelve feet across.</p>
+        <p>Twelve feet is not very far.</p>
+        <hr class="vault-divider">
+        <p>The lights above the circle hummed. Someone near the front shifted their weight. The warehouse smelled of concrete dust and something electric in the air that had no obvious source.</p>
+        <p>We did not see who gave the signal.</p>
+        <p class="vault-lead">We heard the room change.</p>
+        <div class="vault-quote">"Twelve feet is not very far." <span>— DRAGONS Circuit Dispatch</span></div>
+      `
+    },
     {
       id: 'v007',
       type: 'interview',
@@ -1494,7 +1563,7 @@
         <div class="vault-article-body">
           <p class="vault-lead">${v.description}</p>
           <div class="vault-quote">"${v.atmosphere}"</div>
-          ${v.fights.length ? `<h3>Fights Held Here</h3>${v.fights.map(f=>`<p>${f}</p>`).join('')}` : ''}
+          ${v.fights.length ? `<h3>Fights Held Here</h3>${v.fights.map(bout=>bout.url ? `<p><a href="${bout.url}" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)">${bout.label} ↗</a></p>` : `<p>${bout.label} <span style="color:var(--muted);font-size:12px">(not yet released)</span></p>`).join('')}` : ''}
         </div>
         <div class="fp-bottom-nav" style="margin-top:48px">
           <span class="btn btn-ghost" onclick="go('vault')" style="cursor:pointer">← Return to The Vault</span>
