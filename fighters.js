@@ -2861,7 +2861,7 @@ const FIGHTERS = [
     "division": "Strawweight",
     "color": "#c0263a",
     "record": { "w": 0, "l": 0, "ko": 0 },
-    "image": "haruka-endo.png",
+    "image": "ayaka-fujimoto.png",
     "gallery": ["ayaka-fujimoto-1.png","ayaka-fujimoto-2.png","ayaka-fujimoto-3.png","ayaka-fujimoto-4.png","ayaka-fujimoto-5.png"],
     "bio": {
       "origin": "Ayaka grew up in Kyoto, in a city built around the idea that tradition is worth protecting exactly as it was handed down. Her family's dojo has taught Judo for three generations, in the same converted machiya near the eastern hills, and she was on the mat before she can remember first setting foot on it. Judo in Kyoto carries a different weight than Judo anywhere else in the country — it is not a sport so much as an inheritance, and she has never once treated it as anything less.",
