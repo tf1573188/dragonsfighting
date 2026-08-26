@@ -67,9 +67,7 @@ const FIGHTERS = [
     "gallery": [
       "cheryl-ong-1.png",
       "cheryl-ong-2.png",
-      "cheryl-ong-3.png",
-"cheryl-ong-4.png",
-"cheryl-ong-5.png"
+      "cheryl-ong-3.png"
     ],
     "bio": {
       "origin": "Raised in a Bedok rental flat by a hawker mother who worked doubles, Cheryl learned early that nothing arrives unless you take it. She started in a void-deck wrestling club, then walked into a proper MMA gym at sixteen and refused to leave. Built her game on pure forward pressure because she never had the luxury of waiting.",
@@ -111,9 +109,7 @@ const FIGHTERS = [
     "gallery": [
       "jasmine-rahma-1.png",
       "jasmine-rahma-2.png",
-      "jasmine-rahma-3.png",
-      "jasmine-rahma-4.png",
-      "jasmine-rahma-5.png"
+      "jasmine-rahma-3.png"
     ],
     "bio": {
       "origin": "Jasmine grew up in Geylang, one of Singapore's grittiest neighbourhoods, the daughter of a Malay hawker family who never imagined a fighter in the house. She walked into a Muay Thai gym at sixteen to lose weight and walked out with a purpose. The only Malay fighter on a Chinese-dominated Singaporean roster, she carries that distinction like armour.",
@@ -155,9 +151,7 @@ const FIGHTERS = [
     "gallery": [
       "mandy-koh-1.png",
       "mandy-koh-2.png",
-      "mandy-koh-3.png",
-      "mandy-koh-4.png",
-      "mandy-koh-5.png"
+      "mandy-koh-3.png"
     ],
     "bio": {
       "origin": "Mandy came out of Jurong, the kid sister in a family of four brothers who learned to scrap before she learned to back down. She followed one of her brothers into a boxing gym at thirteen and discovered she was the only Koh with real timing. The brothers gave up. She didn't.",
@@ -200,8 +194,7 @@ const FIGHTERS = [
       "jessica-goh-1.png",
       "jessica-goh-2.png",
       "jessica-goh-3.png",
-      "jessica-goh-4.png",
-      "jessica-goh-5.png"
+      "jessica-goh-4.png"
     ],
     "bio": {
       "origin": "Jessica grew up in a strict household in Ang Mo Kio, the daughter of a doctor who expected a doctor in return. She took up Muay Thai in secret during junior college, fell in love with the discipline of it, and chose the ring over medical school in a decision her family is still negotiating.",
@@ -244,8 +237,7 @@ const FIGHTERS = [
       "amanda-lee-1.png",
       "amanda-lee-2.png",
       "amanda-lee-3.png",
-      "amanda-lee-4.png",
-      "amanda-lee-5.png"
+      "amanda-lee-4.png"
     ],
     "bio": {
       "origin": "The youngest fighter on the roster, Amanda came up boxing in a no-frills gym in Woodlands after a rough stretch in school left her looking for somewhere to put the anger. A trainer who saw something in her stubbornness kept her coming back. She turned a chip on her shoulder into a left hook.",
@@ -329,8 +321,7 @@ const FIGHTERS = [
       "ainur-nazar-1.png",
       "ainur-nazar-2.png",
       "ainur-nazar-3.png",
-      "ainur-nazar-4.png",
-      "ainur-nazar-5.png"
+      "ainur-nazar-4.png"
     ],
     "bio": {
       "origin": "Ainur grew up in the markets of Shymkent, the daughter of a man who competed in Kazakh Kuresh at every village festival. She was wrestling before she was ten — belt grabs on concrete, throws with no mat. The instinct was always there; the structure came when a coach formalised what the market had already built and channelled it into MMA.",
@@ -373,8 +364,7 @@ const FIGHTERS = [
       "safiya-aronov-1.png",
       "safiya-aronov-2.png",
       "safiya-aronov-3.png",
-      "safiya-aronov-4.png",
-      "safiya-aronov-5.png"
+      "safiya-aronov-4.png"
     ],
     "bio": {
       "origin": "Safiya came from a mountain village near the Kyrgyz border, the quiet one who learned to fight from older cousins and a stubborn streak. She made the long move to the city alone at seventeen, slept in the gym she trained at, and earned her spot the hardest way there is.",
@@ -541,9 +531,7 @@ const FIGHTERS = [
     "gallery": [
       "nong-pim-1.png",
       "nong-pim-2.png",
-      "nong-pim-3.png",
-      "nong-pim-4.png",
-      "nong-pim-5.png"
+      "nong-pim-3.png"
     ],
     "bio": {
       "origin": "Pim took her first fight at nine, in a ring strung up at a temple fair in Surin, for an envelope of cash that fed her family that week. She trained in the stadium tradition before crossing into mixed rules, carrying a lifetime of rounds in her body before she ever turned twenty.",
@@ -717,9 +705,7 @@ const FIGHTERS = [
     "gallery": [
       "yuna-seo-1.png",
       "yuna-seo-2.png",
-      "yuna-seo-3.png",
-      "yuna-seo-4.png",
-      "yuna-seo-5.png"
+      "yuna-seo-3.png"
     ],
     "bio": {
       "origin": "Yuna came out of a national taekwondo program in Busan, a medal prospect who walked away from the Olympic track when the amateur circuit stopped paying and the structure stopped fitting. She brought a lead leg nobody has quite solved into the harder, looser world of the circuit.",
@@ -762,8 +748,7 @@ const FIGHTERS = [
       "jia-park-1.png",
       "jia-park-2.png",
       "jia-park-3.png",
-      "jia-park-4.png",
-      "jia-park-5.png"
+      "jia-park-4.png"
     ],
     "bio": {
       "origin": "Jia grew up in Incheon splitting time between a kickboxing gym and a dance studio, and never fully chose between them. The footwork that makes her dangerous came from both. She turned to fighting full-time when she realised the cage gave her nerves somewhere to go.",
@@ -805,9 +790,7 @@ const FIGHTERS = [
     "gallery": [
       "hana-jung-1.png",
       "hana-jung-2.png",
-      "hana-jung-3.png",
-      "hana-jung-4.png",
-      "hana-jung-5.png"
+      "hana-jung-3.png"
     ],
     "bio": {
       "origin": "Hana grew up watching her grandfather compete in ssireum tournaments on the Han River banks, a childhood spent learning that the belt grab is not a beginning — it is the whole conversation. She trained through university, twice regional champion in the amateur circuit, before deciding that MMA was the only arena large enough for what ssireum had built in her.",
@@ -850,8 +833,7 @@ const FIGHTERS = [
       "li-wei-1.png",
       "li-wei-2.png",
       "li-wei-3.png",
-      "li-wei-4.png",
-      "li-wei-5.png"
+      "li-wei-4.png"
     ],
     "bio": {
       "origin": "Li Wei rose through the mainland Sanda circuit in Chengdu, a sports-school product drilled in discipline from childhood who blended that foundation with crisp boxing once she went professional. She came up on sharp footwork and a finishing instinct that the rigid amateur system never quite contained.",
@@ -894,8 +876,7 @@ const FIGHTERS = [
       "ying-ying-1.png",
       "ying-ying-2.png",
       "ying-ying-3.png",
-      "ying-ying-4.png",
-      "ying-ying-5.png"
+      "ying-ying-4.png"
     ],
     "bio": {
       "origin": "Ying Ying came up in the Shanghai sport-school system, a disciplined product of state athletics who chose the harder, freer world of the circuit over a safe coaching post. She drilled kickboxing fundamentals until they were reflex, then went looking for opponents who'd actually hit back.",
@@ -938,8 +919,7 @@ const FIGHTERS = [
       "shīhán-chen-1.png",
       "shīhán-chen-2.png",
       "shīhán-chen-3.png",
-      "shīhán-chen-4.png",
-      "shīhán-chen-5.png"
+      "shīhán-chen-4.png"
     ],
     "bio": {
       "origin": "Shīhán grew up in a Chongqing wushu academy, a sanda standout who turned professional young and brought a flashy, aggressive edge the rigid amateur world couldn't hold. She fights with something to prove and rarely hides it.",
@@ -981,9 +961,7 @@ const FIGHTERS = [
     "gallery": [
       "vanessa-chow-1.png",
       "vanessa-chow-2.png",
-      "vanessa-chow-3.png",
-      "vanessa-chow-4.png",
-      "vanessa-chow-5-png"
+      "vanessa-chow-3.png"
     ],
     "bio": {
       "origin": "Vanessa learned to fight in the cramped gyms above Kowloon's markets, a restless kid from a Sham Shui Po housing estate who skipped cram school to spar. She fights bright and fast, all flurries and angles, the most kinetic striker on the roster.",
@@ -1025,9 +1003,7 @@ const FIGHTERS = [
     "gallery": [
       "mei-lin-kuo-1.png",
       "mei-lin-kuo-2.png",
-      "mei-lin-kuo-3.png",
-      "mei-lin-kuo-4.png",
-      "mei-lin-kuo-5.png"
+      "mei-lin-kuo-3.png"
     ],
     "bio": {
       "origin": "Mei-Lin came up scrapping outside the structured gyms of Kaohsiung, a night-market kid who turned raw aggression into something controlled only after a string of bad decisions nearly ended her. She fights in bursts that overwhelm, then resets and does it again — unorthodox, relentless, impossible to prepare for cleanly.",
@@ -1069,9 +1045,7 @@ const FIGHTERS = [
     "gallery": [
       "nadia-hakim-1.png",
       "nadia-hakim-2.png",
-      "nadia-hakim-3.png",
-      "nadia-hakim-4.png",
-      "nadia-hakim-5.png"
+      "nadia-hakim-3.png"
     ],
     "bio": {
       "origin": "Nadia made her name in the Kuala Lumpur gym scene, a quiet engineering graduate who discovered silat as a child and boxing as an adult and fused the patience of one with the precision of the other. She picks apart bigger punchers with footwork and a jab that always arrives on schedule.",
@@ -1157,9 +1131,7 @@ const FIGHTERS = [
     "gallery": [
       "jenny-kwok-1.png",
       "jenny-kwok-2.png",
-      "jenny-kwok-3.png",
-      "jenny-kwok-4.png",
-      "jenny-kwok-5.png"
+      "jenny-kwok-3.png"
     ],
     "bio": {
       "origin": "Jenny grew up in Kuala Lumpur on a diet of K-pop and Muay Thai, training at a gym near her school and idolising the fighters she watched online. She turned a teenage obsession into a profession through sheer refusal to be told she was too small or too soft.",
@@ -1201,9 +1173,7 @@ const FIGHTERS = [
     "gallery": [
       "maya-lin-1.png",
       "maya-lin-2.png",
-      "maya-lin-3.png",
-      "maya-lin-4.png",
-      "maya-lin-5.png"
+      "maya-lin-3.png"
     ],
     "bio": {
       "origin": "Maya grew up in Los Angeles, a Chinese-American kid who found kickboxing at a strip-mall gym after a childhood of being the smallest and the loudest. She fought through the US amateur circuit and crossed the Pacific chasing the deeper talent and bigger stage the circuit offered.",
@@ -1245,9 +1215,7 @@ const FIGHTERS = [
     "gallery": [
       "chayanne-locklear-1.png",
       "chayanne-locklear-2.png",
-      "chayanne-locklear-3.png",
-      "chayanne-locklear-4.png",
-      "chayanne-locklear-5.png"
+      "chayanne-locklear-3.png"
     ],
     "bio": {
       "origin": "Chayanne grew up between Los Angeles and her family's Lumbee community in North Carolina, boxing at a community gym that became her second home. She carries her heritage with pride and a chip on her shoulder about being underestimated twice over.",
@@ -1377,9 +1345,7 @@ const FIGHTERS = [
     "gallery": [
       "rainie-yang-1.png",
       "rainie-yang-2.png",
-      "rainie-yang-3.png",
-      "rainie-yang-4.png",
-      "rainie-yang-5.png"
+      "rainie-yang-3.png"
     ],
     "bio": {
       "origin": "Rainie grew up in Shanghai's international quarter, the daughter of a businessman who sent her to a Judo academy in Tokyo at fifteen. She came back two years later with a black belt, a heavier frame than anyone expected, and a quiet certainty that she could throw anyone in any room.",
@@ -1421,9 +1387,7 @@ const FIGHTERS = [
     "gallery": [
       "emi-sato-wright-1.png",
       "emi-sato-wright-2.png",
-      "emi-sato-wright-3.png",
-      "emi-sato-wright-4.png",
-      "emi-sato-wright-5.png"
+      "emi-sato-wright-3.png"
     ],
     "bio": {
       "origin": "Born in Okinawa to a Japanese father and American mother — the birthplace of Karate — Emi grew up caught between two cultures and found her footing in the dojo. She trained traditional Okinawan Karate from childhood, the only half-American kid in a school that wasn't sure she belonged. She's been proving them wrong since.",
@@ -1465,9 +1429,7 @@ const FIGHTERS = [
     "gallery": [
       "sam-kessler-1.png",
       "sam-kessler-2.png",
-      "sam-kessler-3.png",
-      "sam-kessler-4.png",
-      "sam-kessler-5.png"
+      "sam-kessler-3.png"
     ],
     "bio": {
       "origin": "Sam came up in a Philadelphia boxing gym, red hair and a redder temper, the kind of kid who picked fights in the schoolyard and graduated to the ring when a coach told her she'd end up in jail if she didn't. She crossed the Pacific chasing harder competition and a circuit that wouldn't bore her.",
@@ -1509,9 +1471,7 @@ const FIGHTERS = [
     "gallery": [
       "lily-tang-1.png",
       "lily-tang-2.png",
-      "lily-tang-3.png",
-      "lily-tang-4.png",
-      "lily-tang-5.png"
+      "lily-tang-3.png"
     ],
     "bio": {
       "origin": "Lily grew up in the back alleys of Ho Chi Minh City's District 4, the roughest stretch in a rough city. No gym, no coach — she learned to fight the way the neighbourhood taught everyone, and she was better at it than most of the boys. She found the circuit through word of mouth and showed up with nothing but nerve.",
@@ -1553,9 +1513,7 @@ const FIGHTERS = [
     "gallery": [
       "rin-takahashi-1.png",
       "rin-takahashi-2.png",
-      "rin-takahashi-3.png",
-      "rin-takahashi-4.png",
-      "rin-takahashi-5.png"
+      "rin-takahashi-3.png"
     ],
     "bio": {
       "origin": "Rin trained at a traditional Shotokan dojo in Okinawa from the age of six, the youngest student her sensei ever accepted. She grew up on kata and kumite, won national junior championships, and turned to full-contact competition when point fighting stopped feeling real.",
@@ -1597,9 +1555,7 @@ const FIGHTERS = [
     "gallery": [
       "mio-hayashi-1.png",
       "mio-hayashi-2.png",
-      "mio-hayashi-3.png",
-      "mio-hayashi-4.png",
-      "mio-hayashi-5.png"
+      "mio-hayashi-3.png"
     ],
     "bio": {
       "origin": "Mio came up boxing in Osaka's Namba district, a left-hander who turned her natural southpaw stance into a career. She fought amateur in Japan's women's boxing circuit before the DRAGONS roster caught her eye — the chance to test her hands against strikers from every discipline, not just other boxers.",
@@ -1641,9 +1597,7 @@ const FIGHTERS = [
     "gallery": [
       "alex-moran-1.png",
       "alex-moran-2.png",
-      "alex-moran-3.png",
-      "alex-moran-4.png",
-      "alex-moran-5.png"
+      "alex-moran-3.png"
     ],
     "bio": {
       "origin": "Alex grew up on Detroit's east side, fighting since middle school, never in a gym. She found underground fight circuits in Michigan basements before the DRAGONS roster found her — someone filmed one of her wins, it went viral, and the invitation came the same week. No training camp, no system, just a phone call and a plane ticket.",
@@ -1685,9 +1639,7 @@ const FIGHTERS = [
     "gallery": [
       "isla-kamolwan-1.png",
       "isla-kamolwan-2.png",
-      "isla-kamolwan-3.png",
-      "isla-kamolwan-4.png",
-      "isla-kamolwan-5.png"
+      "isla-kamolwan-3.png"
     ],
     "bio": {
       "origin": "Born in London to a British father and Thai mother, Isla spent school holidays at her uncle's Muay Thai camp in Phuket and full terms at a comprehensive school in South London. She fought her first amateur bout at sixteen in a Thai stadium, and her first professional bout at nineteen in a London warehouse. Two countries made her; neither one fully claims her.",
@@ -1729,9 +1681,7 @@ const FIGHTERS = [
     "gallery": [
       "amihan-reyes-1.png",
       "amihan-reyes-2.png",
-      "amihan-reyes-3.png",
-      "amihan-reyes-4.png",
-      "amihan-reyes-5.png"
+      "amihan-reyes-3.png"
     ],
     "bio": {
       "origin": "Amihan trained at a respected Panantukan academy in Quezon City, the daughter of a former national team coach who drilled Filipino martial arts into her before she could read. She carries her father's technical legacy with pride and fights with the precision of someone who was never allowed to be sloppy.",
@@ -1861,9 +1811,7 @@ const FIGHTERS = [
     "gallery": [
       "ayu-prasetya-1.png",
       "ayu-prasetya-2.png",
-      "ayu-prasetya-3.png",
-      "ayu-prasetya-4.png",
-      "ayu-prasetya-5.png"
+      "ayu-prasetya-3.png"
     ],
     "bio": {
       "origin": "Ayu came up through Jakarta's Pencak Silat competition circuit, the national martial art of Indonesia, earning gold at the Southeast Asian Games before crossing into full-contact fighting. She carries the fluid, devastating striking and grappling of Silat with the composure of someone who has represented her country since she was fourteen.",
@@ -1957,7 +1905,7 @@ const FIGHTERS = [
       "\"I switch stances because one angle is never the whole picture. Katong taught me that.\""
     ],
     "stats": {
-      "age": "20",
+      "age": "23",
       "height": "170 cm (5'7\")",
       "weight": "54 kg (119 lb)",
       "reach": "170 cm (67 in)",
@@ -2739,7 +2687,7 @@ const FIGHTERS = [
       "\"They ask me if it's just Thai boxing with a different name. I ask them to step closer and find out.\"",
       "\"My grandfather trained where no one could see him. I fight where everyone can.\""
     ],
-    "stats": { "age": "21", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "22", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "risa-villanueva",
@@ -2766,7 +2714,7 @@ const FIGHTERS = [
       "\"My uncle taught me in a parking lot. Nobody in this ring has trained anywhere that honest.\"",
       "\"I'm not half of anything. I'm all of both.\""
     ],
-    "stats": { "age": "21", "height": "164 cm (5'4\")", "weight": "51 kg (112 lb)", "reach": "162 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "22", "height": "164 cm (5'4\")", "weight": "51 kg (112 lb)", "reach": "162 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "pak-jonghwa",
@@ -2793,7 +2741,7 @@ const FIGHTERS = [
       "\"I have always known how to be quiet. I am learning how to be loud.\"",
       "\"Whatever you have heard about where I am from, I am still just a woman who wants to win.\""
     ],
-    "stats": { "age": "19", "height": "166 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "165 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "21", "height": "166 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "165 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "tuyaa-petrova",
@@ -2820,7 +2768,7 @@ const FIGHTERS = [
       "\"Call me The Wild Ass all you want. Nobody's ever caught one of those either.\"",
       "\"I don't need to hit you hard. I need to hit the ground with you on the bottom.\""
     ],
-    "stats": { "age": "22", "height": "168 cm (5'6\")", "weight": "56 kg (123 lb)", "reach": "167 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "23", "height": "168 cm (5'6\")", "weight": "56 kg (123 lb)", "reach": "167 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "zoya-volkova",
@@ -2847,12 +2795,12 @@ const FIGHTERS = [
       "\"Everyone wants to end it fast. I have never been in a hurry.\"",
       "\"The winter here does not care how tough you think you are. Neither do I.\""
     ],
-    "stats": { "age": "21", "height": "169 cm (5'7\")", "weight": "54 kg (119 lb)", "reach": "170 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "24", "height": "169 cm (5'7\")", "weight": "54 kg (119 lb)", "reach": "170 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
-    "id": "ayaka-fujimoto",
-    "name": "Ayaka Fujimoto",
-    "alias": "Colorful Strength",
+    "id": "haruka-endo",
+    "name": "Haruka Endo",
+    "alias": "Distant Strength",
     "nationality": "Japan",
     "flag": "🇯🇵",
     "hometown": "Kyoto",
@@ -2861,10 +2809,10 @@ const FIGHTERS = [
     "division": "Strawweight",
     "color": "#c0263a",
     "record": { "w": 0, "l": 0, "ko": 0 },
-    "image": "ayaka-fujimoto.png",
-    "gallery": ["ayaka-fujimoto-1.png","ayaka-fujimoto-2.png","ayaka-fujimoto-3.png","ayaka-fujimoto-4.png","ayaka-fujimoto-5.png"],
+    "image": "haruka-endo.png",
+    "gallery": ["haruka-endo-1.png","haruka-endo-2.png","haruka-endo-3.png","haruka-endo-4.png","haruka-endo-5.png"],
     "bio": {
-      "origin": "Ayaka grew up in Kyoto, in a city built around the idea that tradition is worth protecting exactly as it was handed down. Her family's dojo has taught Judo for three generations, in the same converted machiya near the eastern hills, and she was on the mat before she can remember first setting foot on it. Judo in Kyoto carries a different weight than Judo anywhere else in the country — it is not a sport so much as an inheritance, and she has never once treated it as anything less.",
+      "origin": "Haruka grew up in Kyoto, in a city built around the idea that tradition is worth protecting exactly as it was handed down. Her family's dojo has taught Judo for three generations, in the same converted machiya near the eastern hills, and she was on the mat before she can remember first setting foot on it. Judo in Kyoto carries a different weight than Judo anywhere else in the country — it is not a sport so much as an inheritance, and she has never once treated it as anything less.",
       "style": "Patient to the point of unnerving — she does not chase the takedown, she waits for the opponent to give it to her, reading grips and weight distribution with a stillness most strikers mistake for hesitation. Once the fight goes to the ground, the waiting is over. Excellent positional control, a strong ground-and-pound once mounted, and an almost total refusal to rush a fight that isn't ready to be finished yet.",
       "personal": "Composed, deliberate, and quietly funny once she trusts the room — she still trains at her family's dojo between fights, still bows to the mat out of habit rather than performance, still prefers a slow morning and an empty street to anywhere crowded. Kyoto's pace has shaped her more than she probably realizes. She does not do anything quickly that doesn't need to be done quickly.",
       "rival": "The roster's other grapplers — Vanessa Chow and Rainie Yang particularly — represent the comparison she's most curious about, since Judo built on Kodokan lineage and Judo adapted for a modern cage are not always the same conversation. She has said she'd like to find out which approach actually holds up. Nobody has scheduled it yet.",
@@ -2874,7 +2822,7 @@ const FIGHTERS = [
       "\"You are welcome to hit me as many times as you like on the way to the ground. I only need to win once we get there.\"",
       "\"Strength that arrives immediately is rarely strength that lasts.\""
     ],
-    "stats": { "age": "20", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "163 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "24", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "163 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "rojbin-aslan",
@@ -2901,7 +2849,7 @@ const FIGHTERS = [
       "\"Where I am from, wrestling does not need leather trousers to be real.\"",
       "\"Get close enough and I will show you what four generations of grip-fighting actually feels like.\""
     ],
-    "stats": { "age": "22", "height": "168 cm (5'6\")", "weight": "56 kg (123 lb)", "reach": "167 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "23", "height": "168 cm (5'6\")", "weight": "56 kg (123 lb)", "reach": "167 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "nare-demir",
@@ -2928,7 +2876,197 @@ const FIGHTERS = [
       "\"I don't need the first round. I need the last one.\"",
       "\"Both halves of me learned to be patient a long time before I ever put on gloves.\""
     ],
-    "stats": { "age": "22", "height": "167 cm (5'6\")", "weight": "53 kg (117 lb)", "reach": "168 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "24", "height": "167 cm (5'6\")", "weight": "53 kg (117 lb)", "reach": "168 cm (66 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "natia-beridze",
+    "name": "Natia Beridze",
+    "alias": "Lightbringer",
+    "nationality": "Georgia",
+    "flag": "🇬🇪",
+    "hometown": "Tbilisi",
+    "baseStyle": "Chidaoba",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#8bbf42",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "natia-beridze.png",
+    "gallery": ["natia-beridze-1.png","natia-beridze-2.png","natia-beridze-3.png","natia-beridze-4.png","natia-beridze-5.png"],
+    "bio": {
+      "origin": "Natia grew up in Tbilisi's old town, in the shadow of the Narikala fortress, in a city that has been fought over and rebuilt more times than most countries have existed. Chidaoba — Georgian folk wrestling, practiced in the traditional chokha jackets at festivals that predate written record — was not a hobby in her family so much as an inheritance passed down the same way the recipes were. She wrestled boys twice her size at village festivals before she ever set foot in a formal gym, and lost more than she won for years before that stopped being true.",
+      "style": "Jacket-grip wrestling adapted for a cage that doesn't offer a jacket to grip — she compensates with an underhook game and a relentless top-control instinct that Chidaoba's throw-and-pin tradition built into her before she ever trained anywhere modern. Patient in the clinch, dangerous once she's established position, and comfortable grinding out a decision if the finish isn't there. She does not panic when a fight gets ugly. Ugly is where she was raised to win.",
+      "personal": "Watchful and warm in roughly equal measure — she still buys bread fresh most mornings, still knows which market stall has the best churchkhela, still takes her coffee slow on a balcony overlooking the same streets she grew up running through. Tbilisi shaped her more than any single training camp has. She carries the city's long, complicated history lightly, the way people do when it's simply where they're from rather than something to explain.",
+      "rival": "The roster's other wrestling-based fighters — Ainur Nazar, Tseyang Dolma, Tuyaa Petrova, Rojbin Aslan — have become, without anyone officially organizing it, an informal fraternity she considers herself part of. Five different grappling traditions, five different flags, one shared instinct. She has said she'd fight any of them happily and lose no sleep over the result either way.",
+      "goal": "Fights to put Georgia — a country the circuit's marketing has never once acknowledged — on a card built almost entirely around East and Southeast Asian traditions, and to prove that Chidaoba's centuries of village-festival wrestling translate to a modern cage without losing what made it dangerous in the first place."
+    },
+    "quotes": [
+      "\"My country has been invaded more times than I can count. We are still here. So am I.\"",
+      "\"Give me the clinch. I will find a way to win from there that you did not train for.\""
+    ],
+    "stats": { "age": "23", "height": "167 cm (5'6\")", "weight": "54 kg (119 lb)", "reach": "166 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "sitora-rakhimova",
+    "name": "Sitora Rakhimova",
+    "alias": "Star and Fate",
+    "nationality": "Tajikistan",
+    "flag": "🇹🇯",
+    "hometown": "Dushanbe",
+    "baseStyle": "Boxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#8c5723",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "sitora-rakhimova.png",
+    "gallery": ["sitora-rakhimova-1.png","sitora-rakhimova-2.png","sitora-rakhimova-3.png","sitora-rakhimova-4.png","sitora-rakhimova-5.png"],
+    "bio": {
+      "origin": "Sitora grew up in Dushanbe, in the shadow of the Pamir foothills, in a country most of the circuit's audience would struggle to place on a map. Boxing arrived in Tajikistan through Soviet-era sporting infrastructure and never really left — state gyms, disciplined coaching, and a culture that took the sport seriously long after the union that built the gyms was gone. She started at eleven, mostly because the gym was walking distance and her older brother trained there, and stayed because she turned out to have hands nobody expected from someone that size.",
+      "style": "Sharp, fast, and unwilling to sit still — she boxes off her back foot until the opening actually appears, then closes distance in a single committed burst rather than a slow walk-down. Her jab sets up everything; her right hand ends fights that go long enough to reach it. Not the most durable chin on the roster, but rarely needs to prove that, because she is rarely still standing directly in front of anyone when the return shot comes.",
+      "personal": "Composed and a little private, carrying herself with the quiet certainty of someone who was never once the biggest fighter in the gym and stopped needing to be. Keeps a small circle, trusts it completely, and has no interest in performing a bigger personality than the one she actually has. Dushanbe is home in the plain, unglamorous sense of the word — not a backdrop, just where she's from.",
+      "rival": "Nare Demir and Rojbin Aslan, the roster's two Turkish-flag entries, sit in an odd adjacent category for her — close enough in region and history that she feels a kinship with both, distant enough that neither is quite the same story as hers. She has said she'd like to fight either of them eventually. Neither has been scheduled.",
+      "goal": "Fights to put Tajikistan on a card that has never once mentioned it, and to prove that a boxer built in a gym most of the world has never heard of can still out-hand anyone the circuit puts in front of her."
+    },
+    "quotes": [
+      "\"Nobody has heard of where I am from. They will hear of me.\"",
+      "\"My name means star and fate. I intend to earn both halves of it.\""
+    ],
+    "stats": { "age": "22", "height": "165 cm (5'5\")", "weight": "51 kg (112 lb)", "reach": "164 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "shirin-yusupova",
+    "name": "Shirin Yusupova",
+    "alias": "Sweetheart",
+    "nationality": "Uzbekistan",
+    "flag": "🇺🇿",
+    "hometown": "Tashkent",
+    "baseStyle": "Kurash",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#56bfad",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "shirin-yusupova.png",
+    "gallery": ["shirin-yusupova-1.png","shirin-yusupova-2.png","shirin-yusupova-3.png","shirin-yusupova-4.png","shirin-yusupova-5.png"],
+    "bio": {
+      "origin": "Shirin grew up in Tashkent, where Kurash — the ancient jacket-wrestling tradition that Uzbekistan formalized into an Olympic-recognized sport — is taught in school gym classes the way other countries teach basketball. She started young, built a frame heavier and stronger than most of the circuit's lighter strikers, and never had much interest in leaning it out for the sake of looking a certain way. The build does the work. She has never once apologized for it.",
+      "style": "Grip-first, jacket-wrestling instincts translated onto bare skin — she fights for the collar tie and the underhook the way Kurash trained her to fight for the belt and sleeve, and once she has that grip an opponent's night gets considerably harder. Bigger, stronger, and more comfortable in a clinch than almost anyone she's faced. She does not need a highlight-reel finish. She needs forty-five seconds of control and the fight tends to end itself.",
+      "personal": "Warm, direct, and entirely unbothered by her own reputation for being the strongest handshake on the roster — the nickname started as a joke about the gap between how gentle she is outside the gym and how little that gentleness survives contact with an actual opponent. Cooks for whoever's around, laughs easily, and has never once tried to make herself smaller to fit anyone's idea of what a fighter should look like.",
+      "rival": "Aygül Bayramova, Turkmenistan's own wrestling-forward entry, is the comparison everyone on the roster keeps bringing up unprompted — two Central Asian grapplers, similar builds, neighboring countries, styles that would collide in genuinely interesting ways. Neither has objected to the framing. Neither has been booked yet either.",
+      "goal": "Fights to put Uzbekistan and Kurash — a sport most of the circuit's audience has never heard of, let alone watched — in front of people who are about to learn exactly how effective a jacket-wrestling base can be without the jacket."
+    },
+    "quotes": [
+      "\"They call me Sweetheart until the clinch starts. Ask anyone who's been in it with me.\"",
+      "\"I did not build this frame to apologize for it.\""
+    ],
+    "stats": { "age": "24", "height": "170 cm (5'7\")", "weight": "61 kg (134 lb)", "reach": "169 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "aygul-bayramova",
+    "name": "Aygül Bayramova",
+    "alias": "Moon Rose",
+    "nationality": "Turkmenistan",
+    "flag": "🇹🇲",
+    "hometown": "Ashgabat",
+    "baseStyle": "Göreş",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#a54a68",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "aygul-bayramova.png",
+    "gallery": ["aygul-bayramova-1.png","aygul-bayramova-2.png","aygul-bayramova-3.png","aygul-bayramova-4.png","aygul-bayramova-5.png"],
+    "bio": {
+      "origin": "Aygul grew up in Ashgabat, a city built almost entirely of white marble and largely unknown to anyone who hasn't been there, in a family that took Göreş — Turkmen folk wrestling — as seriously as any sport the country produces. She is built heavier and stronger than most of the circuit's roster and has never seen a reason to train that away. Wrestling in Turkmenistan rewards exactly the frame she was born with. She spent her adolescence being told she was built right for once, and it stuck.",
+      "style": "Heavy hands married to an even heavier base — she is difficult to move, harder to take down, and comfortable turning any exchange into a physical contest of who wants it more. Not the fastest fighter on the roster and has never needed to be. Wears opponents down through sheer physical insistence, round after round, until the fight becomes a question of whose body gives out first.",
+      "personal": "Blunt, warm, and entirely without pretense — she says what she means, trains harder than almost anyone watching gives her credit for, and has no patience for the idea that a fighter needs to look a particular way to be taken seriously. Proud of where she's from in a straightforward, uncomplicated way. Ashgabat rarely gets mentioned by anyone outside it. She intends to be the reason that changes.",
+      "rival": "Shirin Yusupova, Uzbekistan's Kurash specialist, is the matchup the whole roster keeps circling — neighboring countries, comparable builds, two different wrestling traditions that have never once been tested against each other in a cage. Aygul has said she'd take that fight tomorrow if the circuit offered it.",
+      "goal": "Fights to put Turkmenistan — one of the least-covered countries on the entire circuit's map — somewhere people are actually paying attention, and to prove that strength built the old way still wins against strength built in a modern gym."
+    },
+    "quotes": [
+      "\"Nobody trains this build away where I am from. Nobody wants to.\"",
+      "\"Come find out how heavy heavy actually is.\""
+    ],
+    "stats": { "age": "25", "height": "171 cm (5'7\")", "weight": "63 kg (139 lb)", "reach": "170 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "aruuke-jeenbekova",
+    "name": "Aruuke Jeenbekova",
+    "alias": "Wildfire",
+    "nationality": "Kyrgyzstan",
+    "flag": "🇰🇬",
+    "hometown": "Bishkek",
+    "baseStyle": "Kyrgyz Kuresh",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#3f728c",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "aruuke-jeenbekova.png",
+    "gallery": ["aruuke-jeenbekova-1.png","aruuke-jeenbekova-2.png","aruuke-jeenbekova-3.png","aruuke-jeenbekova-4.png","aruuke-jeenbekova-5.png"],
+    "bio": {
+      "origin": "Aruuke grew up in Bishkek with the Tian Shan mountains visible from nearly every street in the city, in a family that took Kyrgyz Kuresh as seriously as the country itself does — wrestling festivals here are not a niche interest, they are a national institution. Auburn hair in a country where it draws a second look everywhere she goes has made her memorable since childhood, long before anyone knew what she could do on a mat. She wrestled boys at every village festival her family attended and stopped losing to them earlier than anyone expected.",
+      "style": "Explosive and aggressive in exactly the way her nickname promises — fast entries, committed takedowns, and a scrambling top game that punishes any hesitation. She does not wait for the perfect opening the way some of the roster's more patient grapplers do; she creates one through sheer forward pressure and finishes the exchange before her opponent has fully processed what happened. High-output, high-risk, and dangerous specifically because she rarely slows down long enough to be read.",
+      "personal": "As warm as she is intense, with a temper that runs hot and burns out fast rather than smoldering — she laughs loudly, argues passionately about nothing important, and has never once been accused of hiding how she feels about anything. Fiercely proud of Bishkek and the mountains around it. Impossible to miss in a crowd, and has made peace with that a long time ago.",
+      "rival": "Shirin Yusupova and Aygul Bayramova, the roster's other two Central Asian wrestlers, represent both close kinship and the obvious next question — three neighboring wrestling traditions, three distinct styles of aggression, all circling the same weight class. Aruuke has said, loudly and often, that she'd fight either of them first if the circuit let her pick.",
+      "goal": "Fights to put Kyrgyzstan — the smallest and least-discussed of the circuit's Central Asian entries — somewhere impossible to overlook, and to prove that speed and aggression beat patience often enough to matter."
+    },
+    "quotes": [
+      "\"They see the hair before they see anything else. Then the fight starts.\"",
+      "\"I do not wait for the opening. I make one.\""
+    ],
+    "stats": { "age": "22", "height": "166 cm (5'5\")", "weight": "53 kg (117 lb)", "reach": "165 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "shira-cohen",
+    "name": "Shira Cohen",
+    "alias": "Selah",
+    "nationality": "Israel",
+    "flag": "🇮🇱",
+    "hometown": "Tel Aviv",
+    "baseStyle": "Krav Maga",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#458c3f",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "shira-cohen.png",
+    "gallery": ["shira-cohen-1.png","shira-cohen-2.png","shira-cohen-3.png","shira-cohen-4.png","shira-cohen-5.png"],
+    "bio": {
+      "origin": "Shira grew up in Tel Aviv, in a city that never really stops moving, and started Krav Maga the way most Israelis eventually do — through mandatory service, though she kept training long after her service ended because she'd found something in it she wasn't ready to put down. Krav Maga was never built for competition; it was built for the worst five seconds of someone's life, all efficiency and no ceremony. Adapting it into something that could win a scored fight rather than just end a street encounter took her longer than she expected, and she is still, by her own account, not finished adapting it.",
+      "style": "Brutally efficient and entirely unconcerned with looking good doing it — no wasted motion, no flourish, every strike aimed at ending the exchange as fast as possible rather than building toward one. She fights like someone who was trained to assume the worst about how much time she has. Dangerous at close range, comfortable turning a clinch violent, and allergic to a fight that goes long for no reason.",
+      "personal": "Direct to the point of bluntness, with a dry sense of humor that catches people off guard given how serious she seems on first impression. Named for song and rarely without music in her ears between sessions — the nickname started as a joke about the gap between how she sounds when she talks and how she moves when she fights, and it stuck because it was true. Loves Tel Aviv specifically, unreservedly, the way people do about a city they've never wanted to leave.",
+      "rival": "The roster has no obvious comparison for her yet — Krav Maga's practical, no-wasted-motion philosophy doesn't map neatly onto any other style currently on the card. She has said she finds that more interesting than frustrating. Nobody has to be her mirror. She'd rather be the first of something than the echo of anything else.",
+      "goal": "Fights to bring a style built for survival into a sport built for spectacle, and to prove efficiency wins as often as flash does, if not more."
+    },
+    "quotes": [
+      "\"Krav Maga was never meant to look good. It was meant to work. I intend to make it do both.\"",
+      "\"I don't need three rounds. I need the shortest path to the end of one.\""
+    ],
+    "stats": { "age": "24", "height": "166 cm (5'5\")", "weight": "53 kg (117 lb)", "reach": "165 cm (65 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "sua-kang",
+    "name": "Sua Kang",
+    "alias": "Live Wire",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Seoul",
+    "baseStyle": "Kickboxing",
+    "ruleset": "Kickboxing",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "credit": { "label": "Guest Fighter:", "name": "@_sua_kang_ai", "url": "https://www.instagram.com/_sua_kang_ai/" },
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "sua-kang.png",
+    "gallery": ["sua-kang-1.png","sua-kang-2.png","sua-kang-3.png","sua-kang-4.png","sua-kang-5.png"],
+    "bio": {
+      "origin": "Sua spent her twenties as an intelligence analyst in Seoul, the kind of job that looks like spreadsheets until it very suddenly doesn't. A field assignment went wrong — badly, publicly wrong, in a way she still won't discuss in detail — and she was held and hurt by the people she'd been sent to watch, longer than anyone above her wanted to admit out loud. What came out the other side of that was not the analyst who went in. She rebuilt herself in a gym the way some people rebuild themselves in therapy: methodically, obsessively, because the alternative was staying broken. The people responsible were eventually made to answer for it. She has never said how, and nobody who knows her well enough to guess has ever repeated it.",
+      "style": "Fast, acrobatic, and built to break an opponent down round by round rather than end things in one clean shot — spinning attacks, unpredictable angles, and a pace that never lets up long enough for anyone to find their rhythm against her. She reads an opponent's output in real time and matches pressure exactly where it hurts most, so a fight against her feels like it costs more with every passing minute. Opponents rarely lose to one big moment. They lose to all the smaller ones she never stopped taking.",
+      "personal": "Playful, magnetic, and impossible to read when she wants to be — she hikes alone on her days off, swims early before the city wakes up, plays a genuinely competitive game of tennis, and has a well-earned reputation for teasing every man who tries too hard at a club and immediately loses interest the moment he stops being fun to tease. The lightness is real. It sits directly on top of something considerably harder that she does not show most people, and does not owe anyone a look at.",
+      "rival": "Rin Takahashi is the fight the circuit has been building toward — Sua's speed and chaos against Rin's precision and stillness, an analyst's read-and-react instinct against a lifetime of Karate discipline. Neither has said much publicly. Both know exactly what DRAGONS 7 is going to ask of them.",
+      "goal": "Fights because stillness stopped being safe for her a long time ago, and because getting stronger, however far it goes, has never once felt like enough."
+    },
+    "quotes": [
+      "\"I used to read people for a living. Now I just take what I read from them.\"",
+      "\"You get one big moment against most fighters. Against me you need thirty small ones. Good luck finding them.\""
+    ],
+    "stats": { "age": "28", "height": "173 cm (5'8\")", "weight": "56 kg (123 lb)", "reach": "172 cm (68 in)", "stance": "Orthodox", "debut": "2026" }
   }
 ];
 
