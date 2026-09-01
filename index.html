@@ -683,12 +683,55 @@
     <section style="border-top:1px solid var(--line)">
       <div class="wrap">
         <div class="sec-head"><div><span class="eyebrow">Fight Week</span><h2>Coming Up</h2></div>
-        <p>DRAGONS 6 — details drop soon.</p></div>
+        <p>The circuit's sixth bout. Cast your prediction before it drops.</p></div>
         <div class="featured-fight">
-          <div class="ff-coming-soon">
-            <div class="ff-coming-soon-glyph">龍</div>
-            <div class="ff-coming-soon-text">Fight 6 · DRAGONS</div>
-            <div class="ff-coming-soon-sub">Matchup to be announced.</div>
+          <div class="ff-fighters">
+          <div class="ff-fighter" onclick="go('fighter/chae-rin-oh')">
+            <div class="ff-img">
+              <img src="images/chae-rin-oh.png" alt="Chae-Rin Oh" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#1fb6c9"></div>
+            <div class="ff-info">
+              <div class="ff-name">Chae-Rin Oh</div>
+              <div class="ff-alias">"Dokkaebi"</div>
+              <div class="ff-nation">🇰🇷 South Korea · Muay Thai</div>
+            </div>
+          </div>
+          <div class="ff-vs">
+            <span class="ff-vs-glyph">対</span>
+            <span class="ff-vs-label">Fight 6 · DRAGONS</span>
+          </div>
+          <div class="ff-fighter" onclick="go('fighter/hana-jung')">
+            <div class="ff-img">
+              <img src="images/hana-jung.png" alt="Hana Jung" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="ff-fighter-accent" style="background:#1fb6c9"></div>
+            <div class="ff-info">
+              <div class="ff-name">Hana Jung</div>
+              <div class="ff-alias">"Seolla"</div>
+              <div class="ff-nation">🇰🇷 South Korea · Ssireum</div>
+            </div>
+          </div>
+          <div class="ff-poll" id="ff-poll-6">
+            <div class="ff-poll-header">
+              <span class="ff-poll-label">WHO WINS?</span>
+              <span class="ff-poll-status" id="poll-status-6"></span>
+            </div>
+            <div class="ff-poll-bar" id="poll-bar-6">
+              <button class="ff-poll-side ff-poll-left" onclick="castVote(6,'left')" id="poll-left-6">
+                <span class="ff-poll-name">Chae-Rin Oh</span>
+                <span class="ff-poll-pct" id="poll-pct-left-6"></span>
+              </button>
+              <button class="ff-poll-side ff-poll-right" onclick="castVote(6,'right')" id="poll-right-6">
+                <span class="ff-poll-name">Hana Jung</span>
+                <span class="ff-poll-pct" id="poll-pct-right-6"></span>
+              </button>
+            </div>
+            <div class="ff-poll-fill" id="poll-fill-6"></div>
+          </div>
+          <div class="ff-cta">
+            <button class="btn btn-ghost" onclick="go('roster')">Meet the Fighters</button>
+          </div>
           </div>
         </div>
       </div>
@@ -2140,7 +2183,8 @@ function commission(){
   window.revealAll=revealAll;
   /* FIGHT PREDICTION POLL */
   const POLL_CONFIG = {
-    5: { left: 'Saki Mori', right: 'Celeste De Souza', seedLeft: 50, seedRight: 50, closed: false, result: null }
+    5: { left: 'Saki Mori', right: 'Celeste De Souza', seedLeft: 50, seedRight: 50, closed: false, result: null },
+    6: { left: 'Chae-Rin Oh', right: 'Hana Jung', seedLeft: 50, seedRight: 50, closed: false, result: null }
   };
 
   function initPolls() {
