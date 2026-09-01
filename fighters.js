@@ -2798,8 +2798,8 @@ const FIGHTERS = [
     "stats": { "age": "24", "height": "169 cm (5'7\")", "weight": "54 kg (119 lb)", "reach": "170 cm (67 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
-    "id": "haruka-endo",
-    "name": "Haruka Endo",
+    "id": "ayaka-fujimoto",
+    "name": "Ayaka Fujimoto",
     "alias": "Distant Strength",
     "nationality": "Japan",
     "flag": "🇯🇵",
@@ -2809,10 +2809,10 @@ const FIGHTERS = [
     "division": "Strawweight",
     "color": "#c0263a",
     "record": { "w": 0, "l": 0, "ko": 0 },
-    "image": "haruka-endo.png",
-    "gallery": ["haruka-endo-1.png","haruka-endo-2.png","haruka-endo-3.png","haruka-endo-4.png","haruka-endo-5.png"],
+    "image": "ayaka-fujimoto.png",
+    "gallery": ["ayaka-fujimoto-1.png","ayaka-fujimoto-2.png","ayaka-fujimoto-3.png","ayaka-fujimoto-4.png","ayaka-fujimoto-5.png"],
     "bio": {
-      "origin": "Haruka grew up in Kyoto, in a city built around the idea that tradition is worth protecting exactly as it was handed down. Her family's dojo has taught Judo for three generations, in the same converted machiya near the eastern hills, and she was on the mat before she can remember first setting foot on it. Judo in Kyoto carries a different weight than Judo anywhere else in the country — it is not a sport so much as an inheritance, and she has never once treated it as anything less.",
+      "origin": "Ayaka grew up in Kyoto, in a city built around the idea that tradition is worth protecting exactly as it was handed down. Her family's dojo has taught Judo for three generations, in the same converted machiya near the eastern hills, and she was on the mat before she can remember first setting foot on it. Judo in Kyoto carries a different weight than Judo anywhere else in the country — it is not a sport so much as an inheritance, and she has never once treated it as anything less.",
       "style": "Patient to the point of unnerving — she does not chase the takedown, she waits for the opponent to give it to her, reading grips and weight distribution with a stillness most strikers mistake for hesitation. Once the fight goes to the ground, the waiting is over. Excellent positional control, a strong ground-and-pound once mounted, and an almost total refusal to rush a fight that isn't ready to be finished yet.",
       "personal": "Composed, deliberate, and quietly funny once she trusts the room — she still trains at her family's dojo between fights, still bows to the mat out of habit rather than performance, still prefers a slow morning and an empty street to anywhere crowded. Kyoto's pace has shaped her more than she probably realizes. She does not do anything quickly that doesn't need to be done quickly.",
       "rival": "The roster's other grapplers — Vanessa Chow and Rainie Yang particularly — represent the comparison she's most curious about, since Judo built on Kodokan lineage and Judo adapted for a modern cage are not always the same conversation. She has said she'd like to find out which approach actually holds up. Nobody has scheduled it yet.",
@@ -2822,7 +2822,7 @@ const FIGHTERS = [
       "\"You are welcome to hit me as many times as you like on the way to the ground. I only need to win once we get there.\"",
       "\"Strength that arrives immediately is rarely strength that lasts.\""
     ],
-    "stats": { "age": "24", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "163 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
+    "stats": { "age": "21", "height": "165 cm (5'5\")", "weight": "52 kg (115 lb)", "reach": "163 cm (64 in)", "stance": "Orthodox", "debut": "2026" }
   },
   {
     "id": "rojbin-aslan",
