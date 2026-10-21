@@ -567,6 +567,7 @@
     fight6:  "https://dragonsfighting.gumroad.com/l/gkcrt",
     fight7:  "https://dragonsfighting.gumroad.com/l/ezlhvr",
     fight8:  "https://dragonsfighting.gumroad.com/l/vgijbj",
+    fight9:  "https://dragonsfighting.gumroad.com/l/dofca",
     kofi:    "https://ko-fi.com/dragonsfighting",
     instagram: "https://www.instagram.com/dragonsfighting123/",
     tiktok:    "https://www.tiktok.com/@dragonsfighting"
@@ -633,34 +634,34 @@
         <p>The circuit's latest bout. Watch it now on Gumroad.</p></div>
         <div class="featured-fight">
           <div class="ff-fighters">
-          <div class="ff-fighter" onclick="go('fighter/dewi-sukarno')">
+          <div class="ff-fighter" onclick="go('fighter/talia-faleolo')">
             <div class="ff-img">
-              <img src="images/dewi-sukarno.png" alt="Dewi Sukarno" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/talia-faleolo.png" alt="Talia Faleolo" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#c75a3a"></div>
+            <div class="ff-fighter-accent" style="background:#00843d"></div>
             <div class="ff-info">
-              <div class="ff-name">Dewi Sukarno</div>
-              <div class="ff-alias">"Kintamani"</div>
-              <div class="ff-nation">🇮🇩 Indonesia · Muay Thai</div>
+              <div class="ff-name">Talia Faleolo</div>
+              <div class="ff-alias">"Westie"</div>
+              <div class="ff-nation">🇦🇺 Australia · Kickboxing</div>
             </div>
           </div>
           <div class="ff-vs">
             <span class="ff-vs-glyph">対</span>
-            <span class="ff-vs-label">Fight 8 · DRAGONS</span>
+            <span class="ff-vs-label">Fight 9 · DRAGONS</span>
           </div>
-          <div class="ff-fighter" onclick="go('fighter/sora-kim')">
+          <div class="ff-fighter" onclick="go('fighter/amihan-reyes')">
             <div class="ff-img">
-              <img src="images/sora-kim.png" alt="Sora Kim" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/amihan-reyes.png" alt="Amihan Reyes" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="ff-fighter-accent" style="background:#1fb6c9"></div>
+            <div class="ff-fighter-accent" style="background:#7B2D8E"></div>
             <div class="ff-info">
-              <div class="ff-name">Sora Kim</div>
-              <div class="ff-alias">"Hafu"</div>
-              <div class="ff-nation">🇰🇷 South Korea · Kickboxing</div>
+              <div class="ff-name">Amihan Reyes</div>
+              <div class="ff-alias">"Hurricane"</div>
+              <div class="ff-nation">🇵🇭 Philippines · Panantukan</div>
             </div>
           </div>
           <div class="ff-cta">
-            <a class="btn btn-gold" href="${SHOP.fight8}" target="_blank" rel="noopener">Watch Fight 8 ↗</a>
+            <a class="btn btn-gold" href="${SHOP.fight9}" target="_blank" rel="noopener">Watch Fight 9 ↗</a>
             <button class="btn btn-ghost" onclick="go('vault')">The Vault</button>
           </div>
           </div>
@@ -1080,7 +1081,8 @@
       description: 'The Rooftop is never the same building twice. The circuit picks a new rooftop for every card — sometimes a hotel, sometimes a parking structure, sometimes a building nobody watching would recognise — and strings it with bare bulbs an hour before the first fight. The skyline changes. The single red neon glow bleeding in from whatever building happens to be next door does not. Fighters say it is the venue with the least room to hide: no walls, no crowd noise to disappear into, just the drop on every side and however many floors of city underneath.',
       atmosphere: 'Quiet, exposed, and lit like the last hour before something happens.',
       fights: [
-        { label: 'DRAGONS 5: Saki Mori vs. Celeste De Souza', url: SHOP.fight5 }
+        { label: 'DRAGONS 5: Saki Mori vs. Celeste De Souza', url: SHOP.fight5 },
+        { label: 'DRAGONS 9: Talia Faleolo vs. Amihan Reyes', url: SHOP.fight9 }
       ]
     },
     {
@@ -1604,6 +1606,7 @@
     { winner:"sua-kang", loser:"rin-takahashi", method:"TKO", date:"2026-09-20", event:"DRAGONS 7", video:"sua-vs-rin", shopUrl: SHOP.fight7, released:true },
     // DRAW: draw:true means no winner. "winner"/"loser" just hold fighter A / fighter B (keeps the schema; display order only).
     { winner:"dewi-sukarno", loser:"sora-kim", draw:true, method:"Double KO", date:"2026-10-05", event:"DRAGONS 8", video:"dewi-vs-sora", shopUrl: SHOP.fight8, released:true },
+    { winner:"amihan-reyes", loser:"talia-faleolo", method:"KO", date:"2026-10-21", event:"DRAGONS 9", video:"talia-vs-amihan", shopUrl: SHOP.fight9, released:true },
   ];
   // Only released fights count toward records and appear on the Spoilers page.
   // Flip released:true when a fight goes live.
