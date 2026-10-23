@@ -3067,6 +3067,33 @@ const FIGHTERS = [
       "\"You get one big moment against most fighters. Against me you need thirty small ones. Good luck finding them.\""
     ],
     "stats": { "age": "28", "height": "173 cm (5'8\")", "weight": "56 kg (123 lb)", "reach": "172 cm (68 in)", "stance": "Orthodox", "debut": "2026" }
+  },
+  {
+    "id": "yerin-han",
+    "name": "Yerin Han",
+    "alias": "Nightbloom",
+    "nationality": "South Korea",
+    "flag": "🇰🇷",
+    "hometown": "Pohang",
+    "baseStyle": "Judo",
+    "ruleset": "MMA",
+    "division": "Strawweight",
+    "color": "#1fb6c9",
+    "record": { "w": 0, "l": 0, "ko": 0 },
+    "image": "yerin-han.png",
+    "gallery": ["yerin-han-1.png","yerin-han-2.png","yerin-han-3.png","yerin-han-4.png","yerin-han-5.png"],
+    "bio": {
+      "origin": "Yerin grew up in Pohang, the steel city on the east coast, where the mills never fully shut down and half the neighbourhood works nights. Her father was one of them. Judo came at eight through a school club, because it was free and the hall was warm, and by fifteen she was among the best in her province in a sport the country runs as a pipeline: you are selected for the programme above you or you quietly disappear. She was not selected. Nobody told her why, and she stopped asking. She kept training anyway, alone in the club's empty yudojang after midnight, while the caretaker found reasons to look the other way.",
+      "style": "A Judo fighter in an MMA cage, built around the one thing a striker cannot drill in a gym: being thrown without warning. She works from collar ties and underhooks, and she is most dangerous when you attack. Uchi mata and sweeping foot attacks arrive timed to the step you just committed to, and she turns the fall into a pin or an arm attack before you have found the floor. Her striking is plain and functional, there to make you reach. She does not need it to be good. She needs it to be annoying.",
+      "personal": "Quiet, dry, and visibly unbothered by how she looks — her hair stays loose until the walkout and barely gets tied back even then. Keeps night hours, sleeps through mornings, and eats Pohang's cold mulhoe and chewy dried gwamegi because her father does. The lily tattoo down her left side and across her lower back went on at nineteen. She keeps it covered around family out of manners rather than shame, and has not decided whether her mother already knows.",
+      "rival": "Korean yudo has a long and proud medal record and Yerin holds none of it, which makes Ayaka Fujimoto — three generations of Kyoto dojo behind her, the same rulebook, the opposite upbringing — the opponent she most wants across from her. Hana Jung's belt-grip ssireum is the other Korean grappling argument on the roster, and Yerin is certain she would win it from the first collar tie. She has watched Vanessa Chow and Rainie Yang tape and has opinions about both.",
+      "goal": "Fights to be seen by the programme that looked past her, on a stage it does not control, and to prove that a flower that opens at night is still a flower."
+    },
+    "quotes": [
+      "\"밤에 피는 꽃도 꽃이야.\" (A flower that blooms at night is still a flower.)",
+      "\"I don't need your best punch. I need you to take one step forward.\""
+    ],
+    "stats": { "age": "21", "height": "168 cm (5'6\")", "weight": "53 kg (117 lb)", "reach": "168 cm (66 in)", "stance": "Southpaw", "debut": "2026" }
   }
 ];
 
